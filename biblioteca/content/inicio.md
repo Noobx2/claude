@@ -55,7 +55,7 @@ Está pensada para tenerla abierta mientras programas. Cada módulo tiene ejempl
 | **Lenguajes** | [Python](#python) · [Java](#java) · [Java sin frameworks](#java-datos) · [C#](#csharp) · [C# sin frameworks](#csharp-datos) · [Go](#go) · [Rust](#rust) |
 | **Dispositivos y hardware** | [Flutter](#flutter) · [Android](#android) · [Hardware](#hardware) |
 | **Seguridad y redes** | [Marco ético](#seguridad-marco) · [Redes](#redes) · [Criptografía](#cripto) · [Monitorización](#monitoreo) · [VPN](#vpn) · [Endurecimiento](#hardening) · [Laboratorio](#lab-etico) · [Honeypots](#honeypots) |
-| **Datos y avanzado** | [SQL](#sql) · [Spring Boot](#spring) · [Recetario](#recetas) · [Configuración](#config) · [Glosario](#glosario) · [Glosario moderno](#glosario-moderno) |
+| **Datos y avanzado** | [SQL](#sql) · [Anexo A: tipos de BD](#anexo-bd-tipos) · [Anexo B: curso de SQL](#anexo-sql-curso) · [Anexo C: NoSQL y ORM](#anexo-nosql-orm) · [Spring Boot](#spring) · [Recetario](#recetas) · [Configuración](#config) · [Glosario](#glosario) · [Glosario moderno](#glosario-moderno) |
 
 ## Meta
 
