@@ -1,0 +1,123 @@
+# Infraestructura, nube y DevOps
+Infraestructura | Servidores, redes, almacenamiento y servicios sobre los que corre el software. |
+Sysadmin / administrador de sistemas | Persona que mantiene servidores y servicios. |
+DevOps engineer / SRE / platform engineer / cloud engineer | Perfiles que automatizan despliegues, fiabilidad y plataformas. |
+Entorno / environment | Dev, test, staging, producción. |
+Paridad de entornos | Que dev y producción se parezcan lo más posible. |
+Servidor bare metal | Máquina física sin virtualizar. |
+Hipervisor | Programa que crea y gestiona máquinas virtuales (VirtualBox, KVM, VMware, Hyper-V). |
+Instancia | Una máquina virtual o servicio en ejecución en la nube. |
+Imagen de máquina (AMI) / plantilla | Copia base para crear instancias. |
+Grupo de seguridad / firewall | Reglas de qué tráfico entra y sale. |
+VPC / subred / gateway NAT / ruta | Red privada virtual en la nube / división / salida a internet / camino del tráfico. |
+Bastión (jump host) | Máquina de entrada segura para acceder a las internas. |
+VPN | Túnel cifrado entre redes o equipos. |
+DNS (registro A, CNAME, MX, TXT) | Traduce nombres a direcciones; tipos de registros. |
+Certificado TLS / Let's Encrypt | Prueba de identidad y cifrado de un sitio / entidad gratuita que los emite. |
+Balanceador L4 / L7 | Reparte por conexión / por contenido de la petición. |
+Proxy inverso / ingress | Puerta de entrada del tráfico a los servicios. |
+Contenedor / imagen / capa | Paquete ejecutable / plantilla / cada paso acumulado de una imagen. |
+Dockerfile / multi-stage build | Receta para construir una imagen / construir en varias fases para que la final sea pequeña. |
+Volumen / bind mount | Almacenamiento persistente de un contenedor. |
+Red de contenedores / puerto publicado | Conexión entre contenedores / puerto accesible desde fuera. |
+Docker Compose | Define y levanta varios contenedores con un archivo. |
+Podman / containerd / OCI | Alternativas a Docker / motor de contenedores / estándar de formato. |
+Registro (registry) / etiqueta (tag) / digest | Almacén de imágenes / nombre de versión / huella única de contenido. |
+Kubernetes (K8s) | Orquestador de contenedores. |
+Pod / ReplicaSet / Deployment / StatefulSet / DaemonSet | Unidad mínima / réplicas / despliegue gestionado / para apps con estado / uno por nodo. |
+Service / Ingress / ConfigMap / Secret / Namespace | Acceso estable a pods / entrada HTTP / configuración / datos sensibles / espacio de nombres. |
+Nodo / plano de control / kubelet | Máquina del clúster / cerebro / agente en cada nodo. |
+HPA / autoescalado | Escala el número de pods según la carga. |
+Helm / Kustomize / operador | Paquetes / personalización de manifiestos / automatiza software complejo en K8s. |
+Service mesh (Istio, Linkerd) | Gestiona la comunicación entre servicios. |
+Serverless / FaaS / BaaS | Sin gestionar servidores / funciones / backend como servicio. |
+IaC / Terraform / Pulumi / CloudFormation / Bicep | Infraestructura descrita con código. |
+Ansible / Chef / Puppet | Gestión de configuración de máquinas. |
+Estado de Terraform (state) | Registro de lo que Terraform ha creado. |
+Drift (deriva) | La realidad difiere de lo declarado en el código. |
+Inmutable / mutable | No se modifica una máquina, se reemplaza / se modifica. |
+Pets vs cattle | Servidores únicos y mimados / piezas intercambiables. |
+Pipeline CI/CD / etapa / trabajo / artefacto | Cadena automática / fase / tarea / resultado. |
+GitHub Actions / GitLab CI / Jenkins / Azure DevOps / CircleCI | Plataformas de CI/CD. |
+Runner / agente | Máquina que ejecuta los trabajos. |
+Caché de dependencias | Guardar lo descargado para acelerar el pipeline. |
+Matriz de pruebas | Ejecutar lo mismo en varias versiones o sistemas. |
+Quality gate | Condición que debe cumplirse para continuar el pipeline. |
+Despliegue (deploy) / release / promoción | Poner una versión en un entorno / publicarla / pasarla de un entorno al siguiente. |
+Estrategias de despliegue | Recreate, rolling, blue-green, canary, shadow. |
+Rollback / roll forward | Volver atrás / corregir hacia delante. |
+Feature flags / dark launch | Activar funciones sin redesplegar / lanzar oculto. |
+GitOps (Argo CD, Flux) | El repositorio es la fuente de verdad de la infraestructura. |
+Reproducible build | Mismo código → mismo artefacto. |
+SLSA / firma de artefactos | Marco de seguridad de la cadena de suministro / firmar lo construido. |
+Observabilidad (logs, métricas, trazas) | Entender el sistema desde sus datos. |
+Prometheus / Grafana / Loki / Tempo | Métricas / paneles / logs / trazas. |
+ELK / OpenSearch / Splunk / Datadog / New Relic | Pila y plataformas de logs y monitorización. |
+OpenTelemetry (OTel) | Estándar para emitir datos de observabilidad. |
+Trace / span / correlation ID | Recorrido de una petición / cada paso dentro / identificador que la sigue. |
+Alerta / umbral / pager | Aviso al superar un límite / límite / sistema de guardia. |
+Alert fatigue | Demasiadas alertas: se ignoran. |
+Golden signals | Latencia, tráfico, errores y saturación. |
+Métricas RED / USE | Rate-Errors-Duration (servicios) / Utilization-Saturation-Errors (recursos). |
+SLI / SLO / SLA / error budget | Indicador / objetivo / acuerdo con el cliente / margen de fallo. |
+Incidente / severidad (SEV1…) | Interrupción del servicio / su gravedad. |
+Incident commander | Persona que coordina la respuesta a un incidente. |
+War room / bridge | Sala o llamada de coordinación durante un incidente. |
+Postmortem sin culpa (blameless) | Análisis para aprender, no para culpar. |
+Runbook / playbook | Guía operativa paso a paso. |
+On-call / guardia / rotación | Turno de atención a incidentes. |
+Capacity planning | Prever los recursos necesarios. |
+Toil | Trabajo manual repetitivo que conviene automatizar. |
+Chaos engineering | Provocar fallos para comprobar la resiliencia. |
+Disaster recovery / RPO / RTO | Recuperación ante desastres / pérdida máxima de datos / tiempo máximo de recuperación. |
+HA (alta disponibilidad) / 99,9 % («tres nueves») | Que no se caiga / unos 8,8 horas de caída al año. |
+Zona / región de disponibilidad | Centro de datos / área geográfica. |
+Multi-cuenta / landing zone | Organización de cuentas cloud con reglas comunes. |
+IAM | Gestión de identidades y permisos en la nube. |
+Rol / política / principal | Conjunto de permisos / reglas de permiso / quién actúa. |
+Mínimo privilegio | Solo los permisos necesarios. |
+FinOps / etiquetado de costes (tags) | Gestión del gasto en nube / marcar recursos para saber quién gasta. |
+Instancia reservada / spot | Descuento por compromiso / máquina barata que pueden retirar. |
+Plataforma interna de desarrolladores (IDP) | Portal con herramientas para desplegar sin ser experto. |
+Golden path | Camino recomendado y ya preparado para hacer algo. |
+Backstage | Plataforma de portal de desarrolladores. |
+Dev container / entorno en la nube | Entorno de desarrollo reproducible. |
+# Redes y protocolos
+Red | Equipos conectados que intercambian datos. |
+LAN / WAN / WLAN | Red local / extensa / inalámbrica. |
+Modelo OSI / TCP/IP | Los dos modelos de capas de red (física, enlace, red, transporte, aplicación…). |
+Dirección IP (IPv4 / IPv6) | Identificador de un equipo en la red. |
+IP pública / privada | Visible en internet / solo en una red interna (192.168.x.x, 10.x.x.x). |
+Máscara / CIDR (`/24`) | Define qué parte de la IP es la red. |
+Puerta de enlace (gateway) | Salida hacia otra red. |
+DHCP | Asigna direcciones IP automáticamente. |
+NAT | Traduce direcciones privadas a públicas. |
+Dirección MAC | Identificador físico de una tarjeta de red. |
+Switch / router / punto de acceso / módem | Equipos de red. |
+VLAN | Red virtual separada dentro de una red física. |
+Puerto / socket | Número de servicio en un equipo / extremo de conexión. |
+TCP / UDP | Transporte fiable con conexión / rápido sin garantías. |
+Handshake | Intercambio inicial para establecer una conexión. |
+HTTP / HTTPS / HTTP/2 / HTTP/3 (QUIC) | Protocolo web y sus versiones. |
+TLS / SSL | Cifrado de las comunicaciones. |
+DNS / DoH / DoT | Resolución de nombres y sus variantes cifradas. |
+SMTP / IMAP / POP3 | Correo: enviar / leer. |
+FTP / SFTP | Transferencia de archivos. |
+SSH | Acceso remoto cifrado. |
+RDP / VNC | Escritorio remoto. |
+MQTT | Protocolo ligero de mensajes para IoT. |
+AMQP | Protocolo de colas (RabbitMQ). |
+WebSocket / gRPC / GraphQL | Protocolos de aplicación modernos. |
+ICMP / ping / traceroute | Mensajes de control de red / prueba de alcance / ruta. |
+Latencia / ancho de banda / jitter / pérdida de paquetes | Retardo / capacidad / variación del retardo / paquetes perdidos. |
+MTU | Tamaño máximo de un paquete. |
+Firewall / ACL | Filtro de tráfico / lista de reglas. |
+IDS / IPS | Detección / prevención de intrusiones. |
+Proxy / proxy inverso / balanceador | Intermediarios. |
+CDN / anycast | Red de distribución / una misma dirección en muchos lugares. |
+Wireshark / tcpdump | Herramientas para capturar y analizar tráfico. |
+Zero trust network access (ZTNA) | Acceso por identidad, no por estar dentro de la red. |
+WireGuard / OpenVPN / IPsec | Tecnologías de VPN. |
+Malla (mesh) | Red donde los nodos se interconectan. |
+Segmentación de red | Dividir en zonas para limitar daños. |
+DMZ | Zona intermedia para servicios expuestos. |

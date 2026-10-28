@@ -1,0 +1,114 @@
+# Arquitectura de software
+Arquitectura monolítica | Todo en un único programa desplegable. |
+Arquitectura cliente-servidor | Unos programas piden (clientes) y otros responden (servidores). | Un cliente y un camarero.
+Arquitectura de tres capas (3-tier) | Presentación, lógica de negocio y datos, separadas. |
+Arquitectura de n capas (n-tier) | Variante con más capas. |
+Peer-to-peer (P2P) | Todos los nodos son a la vez clientes y servidores (BitTorrent). |
+Arquitectura de microkernel / plug-in | Un núcleo pequeño y extensiones que se enchufan (editores de código, navegadores). |
+Pipes y filtros (pipe and filter) | Una cadena de pasos donde cada uno transforma los datos y los pasa al siguiente. | La cadena de montaje.
+Arquitectura de pizarra (blackboard) | Varios componentes leen y escriben en un espacio común hasta resolver un problema. |
+Arquitectura basada en espacio (space-based) | Datos y proceso replicados en memoria para aguantar picos enormes de carga. |
+Arquitectura basada en servicios | Pocos servicios grandes (más que un monolito, menos que microservicios). |
+Arquitectura orientada a recursos (ROA) | Diseño basado en recursos con direcciones propias (la base de REST). |
+Arquitectura limpia (clean) | Dependencias hacia el centro; el negocio no conoce la tecnología. |
+Arquitectura hexagonal | Puertos y adaptadores alrededor del núcleo de negocio. |
+Arquitectura en cebolla (onion) | Capas concéntricas con el dominio en el centro. |
+Arquitectura de referencia | Modelo base de una organización para nuevos sistemas. |
+Arquitectura empresarial (enterprise architecture) | Cómo encajan procesos, sistemas y tecnología de toda una empresa (TOGAF, Zachman). |
+TOGAF | Marco de arquitectura empresarial muy conocido. |
+Modelo C4 | Forma de dibujar la arquitectura en cuatro niveles: contexto, contenedores, componentes y código. | Mapas con distinto zoom.
+UML | Lenguaje estándar para dibujar diagramas de software (clases, secuencia…). |
+Diagrama de clases / de secuencia / de componentes / de despliegue | Estructura / orden de mensajes en el tiempo / piezas del sistema / dónde corre cada pieza. |
+Diagrama de contexto | Muestra el sistema como una caja y con quién se relaciona. |
+Atributos de calidad (requisitos no funcionales) | Cómo debe comportarse el sistema: rendimiento, seguridad, disponibilidad, mantenibilidad… |
+Requisito funcional | Qué debe **hacer** el sistema. |
+Requisito no funcional (RNF) | Qué tan bien lo debe hacer (rapidez, fiabilidad). |
+Trade-off (compromiso) | Ganar algo a cambio de perder otra cosa; toda decisión de arquitectura tiene alguno. |
+Fitness function | Prueba automática que comprueba que la arquitectura sigue cumpliendo sus objetivos. |
+Arquitectura evolutiva | Diseñar para poder cambiar con facilidad. |
+Última responsabilidad / «el momento más tardío responsable» | Retrasar decisiones difíciles de revertir hasta tener información. |
+Deuda de arquitectura | Decisiones que hoy impiden evolucionar con comodidad. |
+Big ball of mud (gran bola de barro) | Sistema sin estructura reconocible. |
+Arquitectura del sistema vs. del software | Del sistema: hardware, red, nube. Del software: código y componentes. |
+Multi-tenant (multiinquilino) | Una **misma instancia** de la aplicación atiende a varios clientes (tenants) con sus datos separados. | Un edificio de apartamentos.
+Single-tenant | Cada cliente tiene su propia instalación. | Una casa por cliente.
+Tenant (inquilino) | Cada cliente u organización dentro de un sistema multi-tenant. |
+Aislamiento de tenants | Separación de datos y recursos: base por tenant, esquema por tenant o columna `tenant_id`. |
+Noisy neighbor (vecino ruidoso) | Un cliente que consume tantos recursos que perjudica a los demás. |
+Multi-región | Sistema repartido por varias regiones geográficas. |
+Multi-cloud | Usar varios proveedores de nube. |
+Multi-AZ | Replicado en varios centros de datos de una región. |
+Activo-activo / activo-pasivo | Todas las réplicas atienden / una espera como reserva. |
+Failover / failback | Pasar a la reserva al fallar / volver al principal. |
+Disaster recovery (DR) | Plan para recuperar el sistema tras un desastre. |
+Backup / restore | Copia de seguridad / recuperación. |
+Escalabilidad | Capacidad de crecer para atender más carga. |
+Elasticidad | Crecer y reducirse automáticamente según la carga. |
+Autoscaling (escalado automático) | Añadir o quitar servidores según la demanda. |
+Stateless / stateful | Sin estado (cada petición es independiente) / con estado (recuerda). |
+Sesión pegajosa (sticky session) | El balanceador envía a un usuario siempre al mismo servidor. |
+Almacenamiento de objetos | Guardar archivos como objetos con identificador (S3). |
+Almacenamiento en bloque / en archivos | Como un disco / como carpetas compartidas. |
+Quórum / consenso (Raft, Paxos) | Acuerdo entre varias máquinas sobre un valor aunque alguna falle. |
+Líder / seguidor | Un nodo coordina; los demás copian. |
+Split brain | Dos partes del clúster creen ser el líder a la vez. |
+Particionamiento por rango / por hash | Dividir datos según un intervalo o el hash de la clave. |
+Hot spot (punto caliente) | Parte del sistema que recibe mucho más tráfico que el resto. |
+Consistent hashing | Reparto de claves que cambia poco al añadir o quitar servidores. |
+Cache aside / write-through / write-back | Estrategias para mantener la caché sincronizada con la base. |
+TTL (time to live) | Cuánto vive un dato en caché antes de caducar. |
+Outbox pattern | Guardar el evento junto al dato en la misma transacción para enviarlo después con seguridad. |
+Dead letter queue (DLQ) | Cola donde van los mensajes que no se pudieron procesar. |
+Exactly-once / at-least-once / at-most-once | Garantías de entrega de mensajes: una vez exacta / al menos una (puede repetirse) / como mucho una (puede perderse). |
+Backpressure (contrapresión) | El que recibe avisa al emisor de que vaya más despacio. |
+Orquestación / coreografía | Orquestación: un coordinador manda. Coreografía: cada servicio reacciona a eventos. | Un director de orquesta frente a un baile.
+Strangler / anticorruption layer | Capa que traduce entre el sistema nuevo y el viejo para que no se contaminen. |
+Fachada (facade) | Interfaz simple que oculta un subsistema complejo. |
+Adaptador (adapter) | Convierte una interfaz en otra. |
+Gateway / puerta de enlace | Punto de entrada o de conexión con otros sistemas. |
+Mediador / bus de eventos | Intermediario que desacopla componentes. |
+Plugin | Extensión que añade funciones sin tocar el núcleo. |
+Headless | Sistema sin interfaz propia, accesible por API. |
+Composable architecture | Montar el sistema con piezas independientes intercambiables. |
+Dominio / subdominio | Área del negocio / parte de ella (central, de soporte, genérica). |
+Mapa de contextos (context map) | Cómo se relacionan los contextos de un sistema. |
+Event storming | Taller para descubrir el negocio colocando notas con eventos. |
+# Patrones de diseño y principios
+Patrón de diseño | Solución habitual a un problema repetido. |
+Patrones GoF | Los 23 patrones clásicos del libro de la «banda de los cuatro». |
+Patrones creacionales | Cómo crear objetos: Singleton, Factory, Abstract Factory, Builder, Prototype. |
+Patrones estructurales | Cómo combinar objetos: Adapter, Decorator, Facade, Proxy, Composite, Bridge, Flyweight. |
+Patrones de comportamiento | Cómo colaboran: Observer, Strategy, Command, State, Template Method, Iterator, Visitor, Mediator, Memento, Chain of Responsibility. |
+Factory (fábrica) | Objeto o método que crea otros objetos. |
+Builder | Construye objetos complejos paso a paso. |
+Decorator | Añade comportamiento a un objeto envolviéndolo. |
+Strategy | Intercambia algoritmos en ejecución. |
+State | Un objeto cambia de comportamiento según su estado. |
+Command | Convierte una acción en un objeto (permite deshacer y encolar). |
+Template Method | Define los pasos de un algoritmo y deja que las subclases rellenen algunos. |
+Proxy | Representante que controla el acceso a otro objeto. |
+Composite | Trata igual a un objeto y a un grupo de ellos. |
+Iterator | Recorre una colección sin conocer su estructura. |
+Chain of responsibility | La petición pasa por una cadena hasta que alguien la atiende. |
+Dependency Injection (DI) | Entregar desde fuera lo que una clase necesita. |
+Service locator | Pedir las dependencias a un registro central (suele considerarse antipatrón). |
+Unit of Work | Agrupa cambios y los guarda de una vez. |
+Specification | Regla de negocio encapsulada y combinable. |
+Active Record / Data Mapper | Dos formas de mapear objetos a base de datos: el objeto se guarda a sí mismo / un mapeador lo hace. |
+SOLID | S: una responsabilidad. O: abierto a extensión y cerrado a modificación. L: sustitución de Liskov. I: interfaces pequeñas. D: depender de abstracciones. |
+Principio de responsabilidad única (SRP) | Una clase, una razón para cambiar. |
+Principio abierto/cerrado (OCP) | Extender sin modificar. |
+Principio de segregación de interfaces (ISP) | Muchas interfaces pequeñas mejor que una gigante. |
+Principio de inversión de dependencias (DIP) | Lo importante no depende de los detalles. |
+Composición sobre herencia | Preferir «tiene un» a «es un». |
+Separation of Concerns | Cada parte se ocupa de una sola cosa. |
+Principio de menor sorpresa | El código debe comportarse como se espera. |
+Fail fast | Fallar pronto y con claridad al detectar un problema. |
+Programación defensiva | Comprobar entradas y casos raros. |
+Diseño por contrato | Precondiciones, postcondiciones e invariantes explícitas. |
+Convención sobre configuración | Valores por defecto razonables; configuras solo lo que cambia. |
+Regla de tres | Repite dos veces; a la tercera, abstrae. |
+Optimización prematura | Optimizar antes de saber que hace falta. |
+Over-engineering | Hacer algo más complejo de lo que el problema exige. |
+Gold plating | Añadir extras que nadie pidió. |
+Cargo cult programming | Copiar código o técnicas sin entender por qué funcionan. |

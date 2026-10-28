@@ -1,0 +1,67 @@
+# Concurrencia, procesos y paralelismo
+Proceso | Programa **en ejecución**, con su propia memoria y recursos aislados del resto. | Un restaurante entero con su cocina y su personal.
+Multiproceso (multiprocessing) | Usar **varios procesos** a la vez para trabajar en paralelo; no comparten memoria, se comunican por canales. | Varios restaurantes que se pasan notas.
+Hilo (thread) | Línea de ejecución **dentro** de un proceso; los hilos de un proceso comparten memoria. | Los cocineros de un mismo restaurante.
+Multihilo (multithreading) | Usar varios hilos dentro de un proceso. |
+Monohilo (single-thread) | Un único hilo de ejecución (JavaScript en el navegador, Node). |
+Concurrencia | Gestionar varias tareas **que avanzan solapadas** (aunque no a la vez). | Un camarero que atiende varias mesas.
+Paralelismo | Ejecutar tareas **realmente al mismo tiempo** en varios núcleos. | Varios camareros.
+Núcleo (core) / CPU | Unidad que ejecuta instrucciones; un procesador moderno tiene varios. |
+Cambio de contexto (context switch) | Cuando el sistema deja de ejecutar una tarea y pasa a otra; tiene coste. |
+Planificador (scheduler) | Parte del sistema que decide qué tarea se ejecuta y cuándo. |
+Tiempo compartido (time slicing) | Cada tarea usa la CPU un rato breve por turnos. |
+Preemptivo / cooperativo | Preemptivo: el sistema interrumpe las tareas. Cooperativo: cada tarea cede el control por voluntad propia. |
+Sección crítica | Trozo de código que **no puede ejecutarse a la vez** por dos hilos. | Un baño con una sola llave.
+Condición de carrera (race condition) | Resultado que depende del orden impredecible en que se ejecutan los hilos. |
+Exclusión mutua (mutex / lock) | Cerrojo: solo un hilo entra a la vez en la sección crítica. | La llave del baño.
+Semáforo | Contador que limita cuántos hilos pueden acceder a un recurso a la vez. | Las plazas de un aparcamiento.
+Monitor | Mecanismo que agrupa datos, cerrojo y condiciones de espera. |
+Variable de condición | Permite a un hilo **esperar** hasta que se cumpla algo. |
+Deadlock (interbloqueo) | Dos o más hilos se esperan mutuamente para siempre. | Dos personas que se ceden el paso eternamente en una puerta.
+Livelock | Los hilos no se bloquean pero cambian de estado sin avanzar. | Dos personas que esquivan y se vuelven a cruzar.
+Starvation (inanición) | Un hilo nunca consigue los recursos porque otros se los llevan. |
+Operación atómica | Operación **indivisible**: nadie puede ver un estado a medias. |
+Compare-and-swap (CAS) | Instrucción atómica: «si vale X, cámbialo por Y». |
+Memoria compartida | Zona de memoria que usan varios hilos o procesos. |
+Paso de mensajes | Comunicarse enviando mensajes en vez de compartir memoria. |
+Modelo de actores | Cada actor tiene su estado y se comunica solo por mensajes (Akka, Erlang). |
+Canal (channel) | Conducto para pasar datos entre tareas (Go, Rust). |
+Goroutine | Tarea ligera de Go. |
+Pool de hilos (thread pool) | Conjunto de hilos reutilizables que atienden tareas. | Una plantilla fija de empleados.
+Cola de tareas / work queue | Lista de trabajos pendientes que van cogiendo los trabajadores. |
+Productor / consumidor | Un lado genera tareas, otro las consume, con una cola entre medias. |
+Hilo demonio (daemon thread) | Hilo secundario que no impide que el programa termine. |
+Join | Esperar a que un hilo termine. |
+Thread-safe (seguro para hilos) | Código que funciona bien aunque lo usen varios hilos a la vez. |
+Estado compartido mutable | Origen de casi todos los errores de concurrencia. |
+Variable volátil (volatile) | Marca que obliga a leer siempre el valor real de memoria. |
+Barrera de memoria / modelo de memoria | Reglas sobre cuándo los cambios de un hilo son visibles para otros. |
+Lock-free / wait-free | Algoritmos concurrentes sin cerrojos. |
+Spinlock | Cerrojo en el que el hilo espera dando vueltas sin dormir. |
+Hilo de interfaz (UI thread) | El hilo que dibuja la pantalla; nunca debe bloquearse. |
+Asíncrono (async) | No se bloquea esperando; la tarea continúa más tarde. |
+E/S bloqueante / no bloqueante | Bloqueante: el hilo espera. No bloqueante: sigue y se le avisa. |
+Event loop (bucle de eventos) | Bucle que recoge eventos y ejecuta sus manejadores uno a uno. |
+Reactor / Proactor | Patrones para gestionar E/S con bucle de eventos. |
+Hilos virtuales (virtual threads) | Hilos muy ligeros gestionados por el runtime (Java 21+). |
+Task / Task Parallel Library (TPL) | Abstracción de tarea asíncrona en .NET. |
+CompletableFuture | Tipo de Java para encadenar resultados asíncronos. |
+Fork/Join | Dividir una tarea en subtareas paralelas y juntar los resultados. |
+MapReduce | Modelo: repartir trabajo (map) y combinar resultados (reduce) en muchas máquinas. |
+Ley de Amdahl | Límite de cuánto se acelera algo al paralelizarlo: lo que no se puede paralelizar frena el conjunto. |
+Escalado de CPU (CPU-bound) / de E/S (I/O-bound) | Tareas limitadas por cálculo / por esperas de disco o red. |
+GIL (Global Interpreter Lock) | Cerrojo de Python que impide que dos hilos ejecuten código Python a la vez. |
+IPC (comunicación entre procesos) | Mecanismos para que procesos se hablen: tuberías, sockets, memoria compartida. |
+Tubería (pipe) | Canal que lleva la salida de un proceso a la entrada de otro. |
+Socket | Extremo de una conexión de red o entre procesos. |
+Señal (signal) | Aviso que el sistema envía a un proceso (SIGTERM: «termina», SIGKILL: «mátalo»). |
+Proceso zombi | Proceso terminado cuyo padre aún no ha recogido su estado. |
+Proceso huérfano | Proceso cuyo padre murió. |
+Fork | En sistemas Unix, crear un proceso copia de otro. |
+PID | Número que identifica a un proceso. |
+Demonio (daemon) / servicio | Proceso que corre en segundo plano sin interfaz. |
+Prioridad (nice) | Nivel de preferencia de un proceso ante el planificador. |
+Contenedor de procesos (cgroups, namespaces) | Funciones del sistema que aíslan y limitan procesos; base de los contenedores. |
+Sandbox | Entorno restringido donde un proceso no puede dañar al resto. |
+Trabajo en segundo plano (background job) | Tarea que se ejecuta fuera de la petición del usuario. |
+Cron / tarea programada | Ejecución de tareas a horas o intervalos fijos. |

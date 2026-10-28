@@ -1,0 +1,145 @@
+# Inteligencia artificial y aprendizaje automático
+Inteligencia artificial (IA) | Campo que construye sistemas capaces de hacer tareas que normalmente requieren inteligencia humana (entender lenguaje, reconocer imágenes, decidir). |
+IA estrecha / IA general (AGI) | Estrecha: hace bien **una** tarea. General: capaz de aprender cualquier tarea intelectual humana (todavía no existe). |
+Aprendizaje automático (machine learning, ML) | Sistemas que **aprenden patrones a partir de datos** en vez de seguir reglas escritas a mano. | Aprender a reconocer perros viendo miles de fotos, no leyendo una definición.
+Aprendizaje profundo (deep learning) | ML con redes neuronales de muchas capas. |
+Red neuronal | Modelo formado por capas de «neuronas» artificiales que transforman números. |
+Neurona / capa / pesos / parámetros | Unidad básica / grupo de neuronas / valores que el modelo ajusta al aprender / el conjunto de todos esos valores (los modelos grandes tienen miles de millones). |
+Entrenamiento (training) | Proceso de ajustar los pesos con datos para que el modelo acierte. |
+Inferencia | Usar el modelo ya entrenado para obtener respuestas. |
+Dataset (conjunto de datos) | Colección de ejemplos para entrenar o evaluar. |
+Entrenamiento / validación / prueba (train / validation / test) | Tres partes del dataset: aprender / ajustar / medir el resultado final. |
+Etiqueta (label) / anotación | La respuesta correcta de un ejemplo. |
+Aprendizaje supervisado / no supervisado / por refuerzo | Con respuestas correctas / buscando estructura sin respuestas / por prueba y error con recompensas. |
+Autosupervisado (self-supervised) | El modelo genera sus propias etiquetas (predecir la siguiente palabra). |
+Sobreajuste (overfitting) | El modelo memoriza los ejemplos y falla con datos nuevos. | Un alumno que memoriza el examen.
+Subajuste (underfitting) | El modelo es demasiado simple y no aprende lo suficiente. |
+Generalización | Que acierte con datos que no ha visto. |
+Función de pérdida (loss) | Número que mide cuánto se equivoca el modelo. |
+Descenso del gradiente / retropropagación | Método para ajustar los pesos reduciendo el error. |
+Época / lote (batch) | Una pasada completa por los datos / grupo de ejemplos procesados a la vez. |
+Hiperparámetro | Ajuste que eliges tú antes de entrenar (tasa de aprendizaje, tamaño). |
+Tasa de aprendizaje (learning rate) | Cuánto se corrigen los pesos en cada paso. |
+Regularización / dropout | Técnicas para evitar el sobreajuste. |
+Sesgo (bias) | Tendencias injustas del modelo heredadas de los datos. También: parámetro de una neurona. |
+Equidad (fairness) / explicabilidad / interpretabilidad | Que el modelo no discrimine / poder justificar sus decisiones / entender qué hace por dentro. |
+Caja negra | Sistema cuyo funcionamiento interno no se entiende. |
+Deriva de datos / de concepto (drift) | Los datos reales cambian con el tiempo y el modelo pierde precisión. |
+Precisión / exhaustividad (recall) / F1 | Cuántas de las respuestas positivas eran correctas / cuántos casos reales se encontraron / medida combinada. |
+Matriz de confusión | Tabla de aciertos y fallos por clase. |
+Falso positivo / falso negativo | Dice que sí cuando era no / dice que no cuando era sí. |
+Clasificación / regresión / agrupamiento (clustering) | Predecir una categoría / un número / agrupar por parecido. |
+Detección de anomalías | Encontrar lo que se sale de lo normal. |
+Sistema de recomendación | Sugiere productos o contenidos. |
+Visión por computador | IA que interpreta imágenes y vídeo. |
+Procesamiento del lenguaje natural (PLN / NLP) | IA que trabaja con texto y lenguaje. |
+Reconocimiento de voz / síntesis de voz (ASR / TTS) | Voz a texto / texto a voz. |
+OCR | Reconocer texto en imágenes. |
+IA generativa | Modelos que **crean** contenido nuevo: texto, imágenes, audio, código, vídeo. |
+Modelo de lenguaje (LM) | Modelo que predice la siguiente palabra (o trozo de palabra). |
+LLM (modelo de lenguaje grande) | Modelo de lenguaje enorme entrenado con muchísimo texto (ChatGPT, Claude, Gemini, Llama…). |
+SLM (modelo de lenguaje pequeño) | Modelo más pequeño, rápido y barato; puede correr en un portátil o móvil. |
+Modelo fundacional (foundation model) | Modelo general muy grande que se adapta a muchas tareas. |
+Transformer | Arquitectura de red neuronal en la que se basan los LLM actuales. |
+Atención (attention) | Mecanismo con el que el modelo decide a qué partes del texto «mirar». |
+Tokenización / token | Dividir el texto en trozos (tokens) que el modelo entiende; una palabra suele ser 1–3 tokens. |
+Ventana de contexto | Cantidad máxima de tokens que el modelo puede manejar a la vez (entrada + salida). | La memoria de trabajo del modelo.
+Embedding | Lista de números que representa el **significado** de un texto o imagen; los parecidos quedan cerca. |
+Base de datos vectorial / búsqueda semántica | Almacén de embeddings / buscar por significado, no por palabras exactas. |
+Similitud coseno | Medida de parecido entre dos embeddings. |
+Prompt | Instrucción o texto de entrada que se le da al modelo. |
+System prompt (instrucciones del sistema) | Instrucciones de fondo que fijan el papel y las reglas del asistente. |
+Prompt de usuario / de asistente | Mensaje del usuario / respuesta del modelo en una conversación. |
+Ingeniería de prompts (prompt engineering) | Diseñar instrucciones claras para obtener buenos resultados. |
+Zero-shot / one-shot / few-shot | Sin ejemplos / con uno / con varios ejemplos en el prompt. |
+Chain of thought (cadena de pensamiento) | Pedir al modelo que razone paso a paso. |
+Razonamiento (reasoning models) | Modelos que «piensan» más antes de responder. |
+Temperatura | Ajuste de aleatoriedad: baja = respuestas más estables; alta = más creativas. |
+Top-p / top-k | Otros ajustes que limitan qué palabras puede elegir el modelo. |
+Máximo de tokens (max tokens) | Tope de longitud de la respuesta. |
+Stop sequence | Texto que, al generarse, detiene la respuesta. |
+Streaming (de respuesta) | Recibir la respuesta según se genera. |
+Alucinación | El modelo **inventa** datos falsos con aire convincente. |
+Grounding (anclaje) | Basar las respuestas en fuentes verificables. |
+RAG (generación aumentada por recuperación) | Buscar documentos relevantes y dárselos al modelo antes de responder. |
+Chunking (troceado) | Dividir documentos en fragmentos para indexarlos. |
+Reranking | Reordenar los resultados de una búsqueda para quedarse con los mejores. |
+Fine-tuning (ajuste fino) | Reentrenar un modelo con datos propios para una tarea o estilo. |
+LoRA / PEFT | Técnicas para ajustar un modelo cambiando solo una pequeña parte. |
+Destilación (distillation) | Entrenar un modelo pequeño para imitar a uno grande. |
+Cuantización | Reducir la precisión de los pesos para que el modelo ocupe y consuma menos. |
+Pre-entrenamiento / post-entrenamiento | Fase de aprender del texto bruto / fase de pulir el comportamiento. |
+RLHF | Entrenamiento con valoraciones humanas para que el modelo responda de forma útil y segura. |
+Alineamiento (alignment) | Que el modelo haga lo que queremos y respete valores humanos. |
+Guardrails (barreras) | Reglas y filtros que limitan lo que el sistema hace o dice. |
+Jailbreak | Intentar saltarse las restricciones de un modelo. |
+Inyección de prompt (prompt injection) | Texto malicioso incrustado en datos que intenta dar órdenes al modelo. |
+Fuga de datos / privacidad en IA | Riesgo de que el modelo revele información sensible. |
+Red teaming (en IA) | Probar el sistema intentando que falle de formas dañinas. |
+Evals (evaluaciones) | Pruebas sistemáticas que miden la calidad de un sistema de IA. |
+Benchmark | Conjunto de pruebas estándar para comparar modelos. |
+LLM como juez | Usar un modelo para valorar respuestas de otro. |
+Golden set | Conjunto de ejemplos de referencia con la respuesta ideal. |
+Latencia / tokens por segundo / coste por token | Tiempo de respuesta / velocidad de generación / precio de uso. |
+Caché de prompt (prompt caching) | Reutilizar la parte repetida de un prompt para ahorrar coste y tiempo. |
+Cuota / límite de uso (rate limit) | Máximo de peticiones o tokens por periodo. |
+API de un modelo / SDK | Interfaz para usar el modelo desde código. |
+Salida estructurada (structured output) | Obligar al modelo a responder en un formato (JSON con un esquema). |
+Llamada a funciones / uso de herramientas (tool use) | El modelo decide llamar a una función o servicio externo y recibe el resultado. |
+Agente (agent) | Sistema en que el modelo **decide pasos, usa herramientas y repite** hasta lograr un objetivo. |
+IA agéntica (agentic) | Enfoque con agentes que actúan de forma más autónoma. |
+Bucle del agente | Pensar → actuar → observar el resultado → seguir. |
+Multiagente | Varios agentes que colaboran con roles distintos. |
+Orquestador / subagente | Agente que reparte trabajo / el que lo recibe. |
+Memoria del agente | Información que el agente conserva entre pasos o sesiones. |
+Planificación | El agente descompone un objetivo en pasos. |
+MCP (Model Context Protocol) | Estándar abierto para conectar modelos con herramientas y fuentes de datos. |
+Skill (habilidad) | Paquete de instrucciones y recursos que un agente carga para una tarea concreta. |
+Plugin / extensión de IA | Complemento que da nuevas capacidades al asistente. |
+Hooks | Acciones automáticas que se ejecutan en momentos concretos del trabajo del agente. |
+Subagente / worktree | Agente secundario / copia aislada del repositorio donde trabaja. |
+Human in the loop (humano en el circuito) | Una persona revisa o aprueba las acciones importantes. |
+Autonomía / permisos del agente | Qué puede hacer sin preguntar. |
+Asistente de código / copiloto | Herramienta de IA que sugiere o escribe código (GitHub Copilot, Claude Code, Cursor…). |
+Autocompletado con IA | Sugerencias mientras escribes. |
+Chat de código / edición en línea | Conversar sobre el código / pedir un cambio dentro del editor. |
+Agente de programación | Agente que lee el proyecto, edita archivos, ejecuta pruebas y propone cambios. |
+Vibe coding | Programar pidiendo a la IA y aceptando el resultado sin revisarlo a fondo. |
+Spec-driven development | Escribir primero una especificación clara y dejar que la IA la implemente. |
+Revisión de código con IA | Un modelo señala errores y mejoras en un cambio. |
+Pruebas generadas con IA | Casos de prueba creados por un modelo; deben revisarse. |
+Contexto del proyecto (CLAUDE.md, AGENTS.md, reglas) | Archivo con normas y datos del proyecto que el agente lee siempre. |
+Context engineering | Seleccionar y organizar la información que se da al modelo. |
+Context rot / ventana saturada | Pérdida de calidad cuando el contexto está lleno. |
+Compactación | Resumir la conversación para liberar contexto. |
+Prompt reutilizable / plantilla de prompt | Instrucción con huecos para rellenar. |
+Roles en el prompt | Pedir al modelo que actúe como un perfil (revisor, tutor). |
+Delimitadores | Marcas (comillas, etiquetas) que separan instrucciones de datos. |
+Verificación / «confía pero verifica» | Comprobar siempre lo que genera la IA ejecutándolo y contrastándolo. |
+Modelo abierto / de pesos abiertos | Modelo cuyos pesos se pueden descargar y ejecutar (Llama, Mistral, Qwen…). |
+Modelo propietario / cerrado | Solo se usa por API. |
+Local / on-device | Ejecutar el modelo en tu equipo. |
+Ollama / llama.cpp / vLLM | Herramientas para ejecutar modelos propios. |
+Hugging Face | Plataforma con modelos y datasets abiertos. |
+GPU / TPU / VRAM | Procesadores y memoria que aceleran la IA. |
+CUDA | Plataforma de NVIDIA para programar GPU. |
+MLOps | Prácticas DevOps aplicadas a modelos (entrenar, desplegar, vigilar). |
+LLMOps | MLOps para aplicaciones con LLM. |
+Feature store | Almacén de variables reutilizables para entrenar modelos. |
+Experimento / seguimiento (MLflow, Weights & Biases) | Registro de ejecuciones de entrenamiento. |
+Pipeline de ML | Cadena automática de datos → entrenamiento → evaluación → despliegue. |
+Despliegue de modelo / endpoint de inferencia | Poner el modelo a disposición como servicio. |
+Observabilidad de IA | Registrar prompts, respuestas, costes y errores. |
+Gobernanza de IA | Reglas y controles para usar IA con responsabilidad. |
+Ley de IA (EU AI Act) | Reglamento europeo que clasifica sistemas de IA por riesgo. |
+Deepfake | Contenido falso hiperrealista generado por IA. |
+Marca de agua / procedencia (C2PA) | Señales para identificar contenido generado. |
+Modelo de difusión | Modelos que generan imágenes eliminando ruido paso a paso. |
+Texto a imagen / imagen a imagen / inpainting | Generar una imagen desde texto / transformar una / rellenar una zona. |
+Multimodal | Modelos que manejan texto, imagen, audio y vídeo. |
+Visión-lenguaje (VLM) | Modelos que entienden imagen y texto a la vez. |
+Agente de uso de ordenador (computer use) | Agente que maneja un entorno de escritorio como una persona. |
+Automatización robótica (RPA) | Robots de software que repiten tareas de interfaz; anterior a los agentes. |
+Chatbot / asistente virtual | Programa conversacional. |
+Prompt del día a día | «Resume este texto», «explícame este error», «escribe una prueba para esta función». |
+Token de acceso (API key) | Clave para usar un servicio de IA; **no se publica ni se sube al repositorio**. |

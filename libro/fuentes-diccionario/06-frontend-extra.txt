@@ -1,0 +1,85 @@
+# Web y frontend
+DOM | Representación en árbol de la página que el navegador manipula. |
+Shadow DOM | DOM encapsulado dentro de un componente. |
+BOM / window | Objetos del navegador (ventana, historial, ubicación). |
+Evento / event bubbling / delegación | Aviso de una acción / el evento sube por los padres / escuchar en un padre para todos los hijos. |
+Renderizado / repaint / reflow | Dibujar la página / redibujar / recalcular posiciones. |
+Hidratación parcial / islands | Hacer interactivas solo algunas zonas de la página. |
+Streaming SSR | El servidor envía la página por trozos. |
+ISR (regeneración estática incremental) | Páginas estáticas que se regeneran en segundo plano. |
+Edge rendering | Generar páginas en servidores cercanos al usuario. |
+Server Components | Componentes que se ejecutan solo en el servidor (React). |
+Rutas / router / enrutamiento | Relacionar direcciones con pantallas. |
+Estado global / store | Datos compartidos por toda la aplicación (Redux, Pinia, Zustand, Context). |
+Flux / Redux | Patrón de flujo de datos en un solo sentido con acciones y reductores. |
+Reducer / action | Función que calcula el nuevo estado / orden que describe un cambio. |
+Signals | Valores reactivos que avisan a quien los usa cuando cambian. |
+Prop drilling | Pasar datos por muchos componentes intermedios. |
+Context | Forma de compartir datos sin pasarlos de padre a hijo. |
+Efecto (effect) / ciclo de vida | Código que reacciona a cambios / fases de un componente (montar, actualizar, desmontar). |
+Memoización (memo, useMemo) | Evitar recalcular o redibujar si nada cambió. |
+Keys (claves) | Identificadores para que el framework distinga elementos de una lista. |
+JSX / TSX / plantilla (template) | Sintaxis que mezcla HTML y código / su versión con tipos / el HTML de un componente. |
+SFC (Single File Component) | Componente en un solo archivo (Vue). |
+Composition API / Options API | Dos formas de escribir componentes en Vue. |
+Directivas | Atributos especiales en plantillas (`v-if`, `*ngIf`). |
+Binding (enlace de datos) | Conectar datos con la interfaz (unidireccional o bidireccional). |
+Formulario controlado | Formulario cuyos valores gobierna el estado de la aplicación. |
+Validación en cliente / en servidor | Siempre se necesita la del servidor; la del cliente mejora la experiencia. |
+Debounce / throttle | Esperar a que termine una ráfaga de eventos / limitar la frecuencia. |
+Lazy loading / code splitting | Cargar partes de la aplicación solo cuando se necesitan. |
+Prefetch / preload | Cargar de antemano lo que se prevé necesitar. |
+Bundle / chunk | Paquete final de JavaScript / trozo del paquete. |
+Minificación | Reducir el tamaño del código quitando espacios y acortando nombres. |
+Source map | Archivo que relaciona el código final con el original para depurar. |
+HMR (hot module replacement) | Actualizar el módulo cambiado sin recargar la página. |
+Vite / Webpack / esbuild / Rollup / Turbopack | Herramientas de empaquetado y desarrollo. |
+npm / pnpm / yarn / Bun / Deno | Gestores de paquetes y entornos de ejecución JavaScript. |
+ESLint / Prettier / Biome / Oxlint | Linter y formateadores de JavaScript. |
+TypeScript / tipos / interfaz / genéricos / `any` / `unknown` | JavaScript con tipos; descripciones de forma; tipos parametrizados; «cualquier cosa» (evitar) / «desconocido» (seguro). |
+Módulos ES (`import`/`export`) / CommonJS (`require`) | Dos sistemas de módulos de JavaScript. |
+Transpilar (Babel, SWC) | Traducir código moderno a otro soportado. |
+Framework vs. librería de UI | React es librería; Angular, Next o Nuxt son frameworks. |
+Next.js / Nuxt / Remix / SvelteKit / Astro | Frameworks de aplicaciones web de nueva generación. |
+Angular / Svelte / Solid / Lit | Otros frameworks y librerías de interfaz. |
+Tailwind / CSS Modules / CSS-in-JS / BEM / Sass | Formas de organizar y escribir estilos. |
+Flexbox / Grid | Sistemas de maquetación de CSS. |
+Media query / container query | Estilos según la pantalla / el contenedor. |
+Variables CSS (custom properties) | Valores reutilizables en CSS. |
+Unidades relativas (rem, em, vw, %) | Tamaños que se adaptan. |
+Viewport | Área visible del navegador. |
+Breakpoint | Ancho a partir del cual cambia el diseño. |
+Mobile first | Diseñar primero para móvil. |
+Design tokens | Valores de diseño con nombre (colores, espacios). |
+Storybook | Herramienta para ver y probar componentes aislados. |
+Atomic design | Organizar componentes en átomos, moléculas, organismos, plantillas y páginas. |
+Z-index / stacking context | Orden de apilado de elementos. |
+Accesibilidad (a11y) / ARIA / WCAG / lector de pantalla | Uso para todos / atributos de accesibilidad / pautas de referencia / software que lee la pantalla. |
+Contraste / foco / navegación por teclado | Legibilidad de colores / elemento activo / usar sin ratón. |
+Semántica HTML | Usar las etiquetas por su significado (`<nav>`, `<main>`, `<button>`). |
+i18n / l10n / RTL | Internacionalización / localización / escritura de derecha a izquierda. |
+SEO técnico / meta tags / sitemap / canonical | Cómo ayudar a los buscadores. |
+Open Graph | Datos que se muestran al compartir un enlace. |
+Core Web Vitals (LCP, INP, CLS) | Métricas de carga, respuesta y estabilidad visual. |
+Lighthouse | Herramienta que audita rendimiento y accesibilidad. |
+TTFB / FCP / TTI | Tiempo hasta el primer byte / primer contenido / interactividad. |
+CDN / caché del navegador / Service Worker | Red de distribución / almacenamiento local / script que permite uso sin conexión. |
+Cookie (HttpOnly, Secure, SameSite) | Pequeño dato del navegador y sus protecciones. |
+localStorage / sessionStorage / IndexedDB | Almacenamiento del navegador. |
+CORS / preflight | Regla de acceso entre sitios y su consulta previa. |
+CSP (Content Security Policy) | Reglas que limitan qué código puede ejecutar la página. |
+XSS / CSRF / clickjacking | Ataques web frecuentes. |
+PWA / manifest / push notification | Aplicación web instalable / su descripción / notificación enviada al usuario. |
+WebAssembly / WebGL / WebGPU / Canvas / SVG | Código casi nativo / gráficos 3D / gráficos con GPU / dibujo / gráficos vectoriales. |
+WebRTC / MediaStream | Comunicación en tiempo real (vídeo, audio). |
+Micro-frontends / Module Federation | Interfaz dividida en partes independientes. |
+Monorepo (Nx, Turborepo) | Varios proyectos en un repositorio con herramientas de construcción. |
+Headless UI | Componentes con comportamiento pero sin estilo. |
+Optimistic UI | Mostrar el resultado antes de que el servidor confirme. |
+Skeleton / spinner | Esquema de carga / indicador de espera. |
+Toast / modal / dropdown / tooltip | Mensaje breve / ventana encima / lista desplegable / ayuda emergente. |
+Infinite scroll / paginación | Cargar más al bajar / páginas numeradas. |
+Dark mode / tema | Modo oscuro / conjunto de estilos. |
+Estado vacío / de error / de carga | Pantallas que deben diseñarse además del caso feliz. |
+Flash of unstyled content (FOUC) | Parpadeo de la página sin estilos al cargar. |
+Layout shift | Saltos visuales mientras carga. |

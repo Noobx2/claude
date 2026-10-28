@@ -1,0 +1,47 @@
+# Perfiles de un equipo de software
+Desarrollador / programador (developer) | Escribe, prueba y mantiene código. Sinónimos: ingeniero de software, software engineer. |
+Desarrollador frontend | Construye lo que ve y toca el usuario en el navegador: HTML, CSS, JavaScript/TypeScript, React, Vue, Angular; cuida accesibilidad y rendimiento. |
+Desarrollador backend | Construye la lógica del servidor, las APIs, la seguridad y el acceso a datos (Java, C#, Python, Go, Node…). |
+Desarrollador full-stack | Trabaja en frontend y backend (y a menudo base de datos y despliegue). |
+Desarrollador móvil | Crea aplicaciones para Android e iOS (nativas o multiplataforma). |
+Desarrollador de escritorio | Crea aplicaciones para Windows, Linux o macOS. |
+Desarrollador embebido / firmware | Programa dispositivos y microcontroladores. |
+Desarrollador de videojuegos | Programa juegos y herramientas de juego. |
+Ingeniero de datos (data engineer) | Construye los flujos que mueven y preparan datos. |
+Analista de datos | Consulta y analiza datos para responder preguntas de negocio. |
+Científico de datos (data scientist) | Modela y predice con estadística y aprendizaje automático. |
+Ingeniero de ML / de IA (ML/AI engineer) | Lleva modelos a producción y construye aplicaciones con IA. |
+Ingeniero de prompts / de contexto | Diseña instrucciones y contexto para sistemas de IA (rol emergente). |
+DBA | Administra bases de datos. |
+Arquitecto de software | Toma las decisiones grandes de estructura y tecnología de un sistema. |
+Arquitecto de soluciones | Diseña soluciones que encajan necesidades de negocio con tecnología (a menudo en cloud). |
+Arquitecto de la empresa | Alinea sistemas y negocio en toda la organización. |
+Tech lead | Guía técnica del equipo; sigue programando. |
+Staff / principal engineer | Ingeniero senior de impacto en varios equipos. |
+Engineering manager | Gestiona personas, carreras y entrega del equipo. |
+CTO / VP Engineering | Dirección técnica de la empresa. |
+Tester manual | Prueba el software a mano y reporta defectos. |
+QA engineer / ingeniero de calidad | Garantiza calidad en todo el proceso. |
+SDET / QA automation | Programa las pruebas automáticas. |
+Performance engineer | Especialista en rendimiento y pruebas de carga. |
+DevOps engineer | Automatiza construcción, despliegue y operación. |
+SRE | Mantiene la fiabilidad con ingeniería. |
+Platform engineer | Construye la plataforma interna que usan los desarrolladores. |
+Cloud engineer / cloud architect | Diseña y opera infraestructura en la nube. |
+Administrador de sistemas / de redes | Mantiene servidores y redes. |
+Ingeniero de seguridad / AppSec | Protege aplicaciones e infraestructura. |
+Pentester / analista SOC | Ataca de forma autorizada / vigila alertas. |
+Product Owner | Gestiona el backlog y maximiza el valor. |
+Product Manager | Define estrategia y visión del producto. |
+Project Manager / delivery manager | Planifica y controla plazos, coste y riesgos. |
+Scrum Master / agile coach | Facilita la forma de trabajar. |
+Business analyst (analista funcional) | Traduce necesidades del negocio en requisitos. |
+Analista técnico | Detalla requisitos técnicos y de integración. |
+UX / UI designer / product designer | Diseña la experiencia y la interfaz. |
+UX researcher | Investiga a los usuarios. |
+Technical writer | Escribe la documentación. |
+Developer relations (DevRel) | Conecta la empresa con la comunidad de desarrolladores. |
+Soporte técnico / customer success | Atiende a los clientes. |
+Data steward / DPO | Responsable de la calidad de los datos / de la protección de datos. |
+Becario / junior / mid / senior / lead | Niveles de experiencia. |
+T-shaped / generalista / especialista | Profundo en una cosa y amplio en otras / de todo un poco / experto en una. |

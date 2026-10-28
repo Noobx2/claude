@@ -1,0 +1,62 @@
+# Móvil, escritorio, embebido y videojuegos
+App nativa / híbrida / multiplataforma / web app | Hecha para una plataforma / mezcla web y nativo / un código para varias / en el navegador. |
+Android / iOS | Los dos sistemas móviles principales. |
+Kotlin / Java / Swift / Objective-C | Lenguajes nativos de Android e iOS. |
+Jetpack Compose / SwiftUI | Interfaces declarativas modernas de Android e iOS. |
+XML layout / Storyboard | Formas clásicas de diseñar pantallas. |
+Flutter / Dart | Framework multiplataforma de Google y su lenguaje. |
+React Native / Kotlin Multiplatform / .NET MAUI / Xamarin / Ionic / Capacitor | Otras tecnologías multiplataforma. |
+Widget | Pieza de interfaz (en Flutter, todo es un widget). |
+StatelessWidget / StatefulWidget | Sin estado / con estado. |
+Activity / Fragment / Intent / Service / BroadcastReceiver | Piezas de Android: pantalla / parte de pantalla / petición entre componentes / tarea en segundo plano / receptor de eventos del sistema. |
+ViewModel / LiveData / Flow | Piezas de arquitectura de Android. |
+Ciclo de vida de la app | Estados: iniciar, pausar, reanudar, detener, destruir. |
+Manifest (AndroidManifest / Info.plist) | Archivo que declara permisos y componentes. |
+Permiso (runtime) | Autorización que el usuario concede (cámara, ubicación). |
+Sensores (acelerómetro, giroscopio, GPS) | Hardware del dispositivo accesible por API. |
+Notificación push / FCM / APNs | Mensaje enviado al dispositivo. |
+Deep link / universal link | Enlace que abre una pantalla concreta de la app. |
+Platform channel / puente (bridge) | Comunicación entre Flutter o React Native y el código nativo. |
+APK / AAB / IPA | Paquetes de instalación de Android / de Google Play / de iOS. |
+Firma de la app / keystore | Certificado que identifica al autor. |
+Google Play / App Store / TestFlight | Tiendas y distribución de pruebas. |
+Emulador / simulador / dispositivo real | Móvil simulado / en el ordenador / físico. |
+ADB | Herramienta para comunicarse con dispositivos Android. |
+Gradle (Android) | Sistema de construcción. |
+ProGuard / R8 | Reducen y ofuscan el código de Android. |
+Responsive / adaptativo | Se ajusta a distintos tamaños de pantalla. |
+Offline first | Funciona sin conexión y sincroniza después. |
+Sincronización / resolución de conflictos | Igualar datos entre dispositivo y servidor. |
+SQLite / Room / Core Data / Realm | Bases locales móviles. |
+Escritorio (desktop) | Aplicaciones para ordenador: WinForms, WPF, WinUI, Qt, GTK, Swing, JavaFX, Electron, Tauri. |
+Electron / Tauri | Aplicaciones de escritorio con tecnología web / versión ligera con Rust. |
+WPF / XAML / MVVM | Interfaces de Windows / lenguaje de marcado / patrón de enlace de datos. |
+Event loop de interfaz / hilo de UI | Bucle que atiende la interfaz. |
+Instalador (MSI, MSIX, DEB, DMG) | Paquete de instalación. |
+Sistema embebido | Ordenador pequeño dentro de otro aparato. |
+Firmware | Software grabado en un dispositivo. |
+Microcontrolador (MCU) | Chip con procesador y memoria (Arduino, ESP32, STM32). |
+Placa de desarrollo (Raspberry Pi, Arduino) | Placas para prototipos. |
+GPIO | Pines de entrada y salida de propósito general. |
+I2C / SPI / UART / CAN | Protocolos de comunicación entre chips. |
+PWM / ADC / DAC | Señal modulada / conversión analógico-digital / digital-analógico. |
+Interrupción (interrupt) | Aviso del hardware que detiene lo que se hace. |
+RTOS | Sistema operativo de tiempo real. |
+Tiempo real duro / blando | Plazo imprescindible / deseable. |
+Bootloader | Programa que arranca el dispositivo. |
+Cross-compilation | Compilar en un equipo para otro distinto. |
+JTAG / SWD / depurador | Interfaces para depurar hardware. |
+IoT | Internet de las cosas: dispositivos conectados. |
+Gateway IoT / edge | Pasarela entre sensores y la nube / procesamiento local. |
+OTA (over the air) | Actualización inalámbrica. |
+Puerto serie / USB / HID / Bluetooth LE | Comunicación con periféricos. |
+Driver / libusb | Controlador / biblioteca de acceso USB. |
+Videojuegos: motor (engine) | Unity, Unreal, Godot: base para crear juegos. |
+Game loop | Bucle que actualiza y dibuja el juego muchas veces por segundo. |
+Frame / FPS / delta time | Imagen / fotogramas por segundo / tiempo entre fotogramas. |
+Sprite / tilemap / mesh / shader / textura | Imagen 2D / mapa de baldosas / malla 3D / programa gráfico / imagen de superficie. |
+Colisión / física / hitbox | Detección de choques / simulación / zona de impacto. |
+Entity-Component-System (ECS) | Arquitectura de juegos por entidades, componentes y sistemas. |
+Netcode / lag / rollback | Red de un juego / retardo / corrección de predicciones. |
+Pipeline de assets | Cómo se preparan imágenes y modelos. |
+Build de juego / parche / DLC | Versión / actualización / contenido adicional. |

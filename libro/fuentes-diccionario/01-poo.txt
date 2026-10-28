@@ -1,0 +1,149 @@
+# Programación orientada a objetos (POO)
+POO (programación orientada a objetos) | Estilo de programar en el que el programa se organiza en **objetos** que juntan datos y las operaciones que los manejan. | Una oficina con empleados: cada uno guarda su información y sabe hacer su trabajo.
+Clase | Plantilla que describe cómo son y qué saben hacer los objetos de un tipo. | El molde de las galletas.
+Objeto / instancia | Cada ejemplar concreto creado a partir de una clase. | Cada galleta hecha con el molde.
+Atributo / campo / propiedad | Dato que guarda un objeto (nombre, precio). | La ficha de un empleado: nombre, sueldo.
+Método | Función que pertenece a una clase y actúa sobre sus objetos. | Lo que sabe hacer el empleado: facturar, archivar.
+Constructor | Método especial que **crea y prepara** un objeto al nacer. | El alta de un empleado nuevo.
+Destructor / finalizador | Método que se ejecuta al destruirse el objeto (en C++; en Java/C# se evita usarlo). | La baja del empleado.
+this / self | Referencia al propio objeto dentro de sus métodos. | «Yo mismo».
+Encapsulamiento | Esconder los datos internos y permitir tocarlos solo por métodos controlados. | Un cajero automático: no ves el dinero, solo usas los botones.
+Abstracción | Mostrar solo lo esencial y ocultar los detalles. | Conducir sin saber cómo funciona el motor.
+Herencia | Una clase hereda atributos y métodos de otra y los amplía. | «Un coche es un vehículo» y añade sus propias cosas.
+Polimorfismo | Un mismo mensaje produce comportamientos distintos según el objeto que lo recibe. | «Hacer ruido»: el perro ladra, el gato maúlla.
+Clase base / superclase / padre | La clase de la que otras heredan. |
+Clase derivada / subclase / hija | La que hereda de otra. |
+Sobrecarga (overload) | Varios métodos con el **mismo nombre y distintos parámetros**. | «Calcular(a)» y «Calcular(a, b)».
+Sobrescritura / anulación (override) | Una subclase **redefine** un método heredado. |
+Clase abstracta | Clase que no se puede instanciar y sirve de base; puede tener métodos sin implementar. | Un plano genérico, no una casa.
+Interfaz (interface) | Contrato que lista qué métodos debe ofrecer quien lo cumple, sin decir cómo. | El estándar de un enchufe.
+Implementar una interfaz | Cumplir su contrato escribiendo los métodos. |
+Composición | Construir un objeto **a partir de otros** («tiene un»). Suele preferirse a la herencia. | Un coche tiene motor.
+Agregación | Composición débil: las partes pueden existir por separado. | Un equipo y sus jugadores.
+Asociación | Relación general entre dos clases. |
+Dependencia | Una clase usa a otra ocasionalmente. |
+Herencia múltiple | Heredar de varias clases a la vez (C++, Python; Java y C# no lo permiten con clases). |
+Modificadores de acceso | Reglas de visibilidad: `public` (todos), `private` (solo la clase), `protected` (la clase y sus hijas), `internal`/paquete. |
+Getter / setter | Métodos para leer y modificar un atributo privado. |
+Propiedad (en C#) | Forma de C# de exponer un campo con lectura/escritura controlada. |
+Miembro estático (static) | Pertenece a la **clase**, no a cada objeto. | Un contador de empleados de la empresa.
+Clase sellada / final | Clase de la que **no se puede heredar**. |
+Clase anidada / interna | Clase definida dentro de otra. |
+Clase anónima | Clase sin nombre definida en el mismo punto de uso. |
+Enum (enumeración) | Tipo con un conjunto fijo de valores con nombre (LUNES, MARTES…). | Los días de la semana.
+Record | Clase pensada para **guardar datos inmutables** con poco código (Java, C#). | Una ficha impresa.
+Tipo valor / tipo referencia | Valor: la variable contiene el dato. Referencia: contiene la dirección de dónde está. | Una nota con el dato frente a una nota con la dirección del armario.
+Autoboxing / boxing | Conversión automática entre un tipo simple (`int`) y su versión objeto (`Integer`). |
+Genéricos (generics) | Clases y métodos que funcionan con **cualquier tipo**, elegido al usarlos (`List<T>`). | Una caja que vale para cualquier cosa, pero etiquetada.
+Tipo parametrizado | `List<String>`: lista de un tipo concreto. |
+Covarianza / contravarianza | Reglas sobre cuándo un tipo genérico puede sustituir a otro. |
+Reflexión (reflection) | Capacidad de un programa de **examinarse a sí mismo** en ejecución (qué clases y métodos tiene). |
+Atributos / anotaciones | Etiquetas que se ponen sobre clases o métodos para dar información (`@Override`, `[Obsolete]`). | Un post-it pegado al método.
+Serialización | Convertir un objeto en un formato (JSON, binario) para guardarlo o enviarlo. | Desmontar un mueble para mandarlo en caja.
+Deserialización | El camino contrario: reconstruir el objeto. | Montarlo al llegar.
+Igualdad vs identidad | Igualdad: tienen los mismos datos. Identidad: son el **mismo objeto**. | Dos billetes de 10 € iguales frente al mismo billete.
+Hash code | Número que resume un objeto, usado por mapas y conjuntos. |
+Clon / copia superficial / copia profunda | Superficial: copia el objeto pero comparte lo que contiene. Profunda: copia también lo de dentro. |
+Singleton | Patrón: **una sola instancia** en todo el programa. |
+Ley de Demeter | «No hables con extraños»: un objeto solo habla con sus vecinos directos. |
+Tell, don't ask | Dile al objeto qué hacer; no le pidas sus datos para decidir tú. |
+Principio de sustitución de Liskov | Una subclase debe poder usarse donde se espera la base sin romper nada. |
+Duck typing | «Si anda como un pato y hace cuac, es un pato»: lo que importa es lo que el objeto sabe hacer, no su tipo declarado (Python, JavaScript). |
+Mixin | Trozo de comportamiento que se mezcla en una clase sin ser su padre. |
+Trait | Conjunto de métodos reutilizable que una clase puede incorporar (Rust, PHP, Scala). |
+Clase de datos (data class) | Clase pensada solo para guardar datos (Kotlin). |
+Objeto nulo (null object) | Objeto «que no hace nada» que sustituye al `null` para evitar comprobaciones. |
+Delegación | Un objeto encarga una tarea a otro. |
+Interfaz fluida (fluent interface) | Encadenar métodos para que se lea como una frase (`builder.nombre("x").edad(3).build()`). |
+Inmutable | Objeto que no cambia tras crearse. |
+Encapsular lo que varía | Principio: aísla la parte que cambiará más. |
+Bajo acoplamiento, alta cohesión | Meta de diseño: pocas dependencias entre clases y clases enfocadas en una sola tarea. |
+Programación orientada a aspectos (AOP) | Separar tareas transversales (registro, seguridad) para no repetirlas por todo el código. |
+Programación orientada a componentes | Construir con piezas reutilizables con interfaces claras. |
+Modelo de dominio | Clases que representan los conceptos del negocio. |
+Anemic domain model (modelo anémico) | Antipatrón: clases con solo datos y toda la lógica fuera. |
+# Programación funcional y otros paradigmas
+Paradigma | Manera de enfocar y organizar la programación (orientada a objetos, funcional, imperativa, declarativa…). | Estilos de cocina.
+Programación imperativa | Se escribe **paso a paso cómo** hacer las cosas. | Una receta con pasos.
+Programación declarativa | Se describe **qué** se quiere y no cómo (SQL, HTML). | Pedir en un restaurante sin dar la receta.
+Programación estructurada | Uso de secuencias, condicionales y bucles sin saltos arbitrarios (`goto`). |
+Programación procedural | Organizar el código en procedimientos o funciones. |
+Programación funcional | Construir el programa con **funciones puras** que transforman datos, sin cambiar estado. | Una cadena de montaje: entra pieza, sale pieza.
+Función pura | Siempre devuelve lo mismo para los mismos datos y no tiene efectos secundarios. | Una calculadora.
+Efecto secundario (side effect) | Cualquier cosa que una función hace además de devolver un valor (escribir un archivo, cambiar una variable). |
+Función de orden superior | Función que recibe o devuelve otras funciones (`map`, `filter`). |
+Lambda / función anónima | Función breve sin nombre, escrita donde se usa. |
+Closure (clausura) | Función que **recuerda las variables** del lugar donde se creó. | Una nota que lleva anotados los datos del sitio donde se escribió.
+Currying | Convertir una función de varios parámetros en una cadena de funciones de uno. |
+Aplicación parcial | Fijar algunos parámetros de una función y obtener otra. |
+Composición de funciones | Encadenar funciones: la salida de una es la entrada de la siguiente. |
+Map / filter / reduce | `map`: transforma cada elemento. `filter`: se queda con los que cumplen una condición. `reduce`: combina todos en un solo valor. | Máquina de zumo: lavar (map), descartar fruta mala (filter), exprimir todo en un vaso (reduce).
+Recursión | Una función que **se llama a sí misma** para resolver un problema más pequeño. | Muñecas rusas.
+Caso base | Condición que detiene la recursión. |
+Recursión de cola (tail recursion) | La llamada recursiva es lo último que se hace; permite optimizar el uso de pila. |
+Evaluación perezosa (lazy) | No se calcula un valor hasta que hace falta. |
+Evaluación ansiosa (eager) | Se calcula de inmediato. |
+Memoización | Guardar el resultado de una función para no recalcularlo con los mismos datos. |
+Mónada | Patrón para encadenar operaciones que pueden fallar o tener efectos (`Option`, `Result`, `Promise`). |
+Option / Maybe | Tipo que representa «hay un valor» o «no hay nada». |
+Result / Either | Tipo que representa éxito o error, sin lanzar excepciones. |
+Tipo algebraico (ADT) | Tipos construidos combinando otros: «uno u otro» (suma) y «todos juntos» (producto). |
+Coincidencia de patrones (pattern matching) | Comprobar la forma de un dato y extraer sus partes en un solo paso. |
+Desestructuración | Sacar partes de una lista u objeto en variables sueltas. |
+Transparencia referencial | Se puede sustituir una expresión por su valor sin cambiar el programa. |
+Programación reactiva | Programar con **flujos de datos** que reaccionan a cambios. | Una hoja de cálculo: cambias una celda y se recalculan las demás.
+Programación basada en eventos | El flujo lo determinan eventos (clic, mensaje). |
+Programación lógica | Se declaran hechos y reglas y el sistema deduce (Prolog). |
+Metaprogramación | Programas que **generan o modifican código**. |
+Macro | Código que se expande en otro código antes de compilar. |
+Generador (generator) / iterador | Objeto que **produce valores uno a uno** bajo demanda. |
+Corrutina (coroutine) | Función que puede **pausarse y reanudarse**. |
+Async/await | Sintaxis para escribir código asíncrono como si fuera secuencial. |
+Promesa (Promise) / Future | Objeto que representa un resultado **que llegará más tarde**. | El resguardo de la tintorería.
+Callback | Función que se pasa a otra para que la llame **cuando termine** algo. | «Llámame cuando esté listo».
+Callback hell | Funciones anidadas dentro de funciones que dejan el código ilegible. |
+Observer (observador) | Patrón: los interesados se suscriben y reciben aviso de cambios. |
+# Estructuras de datos y algoritmos
+Estructura de datos | Forma de organizar datos en memoria para usarlos con eficiencia. | Estantería, cajón o archivador.
+Algoritmo | Secuencia finita de pasos para resolver un problema. | Una receta.
+Array (vector, arreglo) | Lista de elementos contiguos con acceso por posición (índice). | Una fila de casillas numeradas.
+Lista enlazada | Elementos unidos por referencias: cada uno apunta al siguiente. | Una cadena de eslabones.
+Pila (stack) | Se añade y se saca por el mismo extremo: **LIFO** (último en entrar, primero en salir). | Una pila de platos.
+Cola (queue) | Entra por un extremo y sale por el otro: **FIFO** (primero en entrar, primero en salir). | La cola del supermercado.
+Cola doble (deque) | Cola que permite añadir y sacar por ambos extremos. |
+Cola de prioridad | Sale primero el elemento más prioritario. | Urgencias de un hospital.
+Mapa / diccionario / tabla hash | Pares clave → valor con búsqueda rápida. | Una agenda de contactos.
+Conjunto (set) | Colección **sin repetidos**. |
+Árbol | Estructura jerárquica de nodos con un padre y varios hijos. | Un organigrama.
+Árbol binario | Cada nodo tiene como mucho dos hijos. |
+Árbol binario de búsqueda (BST) | Árbol ordenado que permite buscar rápido. |
+Árbol balanceado (AVL, rojo-negro) | Árbol que se reorganiza para no deformarse. |
+Montículo (heap) | Árbol que mantiene siempre el mayor (o menor) en la cima. |
+Trie | Árbol de prefijos para buscar palabras (autocompletado). |
+Grafo | Nodos (vértices) unidos por aristas. | Un mapa de metro.
+Nodo / vértice / arista | Elementos de un grafo o árbol: los puntos y las conexiones. |
+Notación O grande (Big O) | Manera de expresar **cómo crece el tiempo o la memoria** al crecer los datos. O(1) constante, O(log n) logarítmica, O(n) lineal, O(n²) cuadrática. | Cuánto tarda en buscar a alguien: en una fila entera (n) o abriendo un diccionario por la mitad (log n).
+Complejidad temporal / espacial | Cuánto tarda / cuánta memoria usa. |
+Búsqueda lineal / binaria | Lineal: mirar uno a uno. Binaria: partir por la mitad en una lista ordenada. | Buscar una palabra en un diccionario abriéndolo por el medio.
+Ordenación (sorting) | Colocar elementos en orden (burbuja, inserción, mezcla/merge, rápida/quick). |
+Divide y vencerás | Dividir el problema en partes pequeñas, resolverlas y combinar. |
+Programación dinámica | Resolver subproblemas una vez y reutilizar el resultado. |
+Algoritmo voraz (greedy) | Elige siempre la mejor opción inmediata. |
+Backtracking (vuelta atrás) | Probar caminos y retroceder si no sirven. | Salir de un laberinto.
+Búsqueda en anchura / en profundidad (BFS / DFS) | Recorrer un grafo por niveles / por ramas hasta el fondo. |
+Algoritmo de Dijkstra | Calcula el camino más corto en un grafo con pesos. | El GPS.
+Heurística | Regla práctica que da buenas soluciones sin garantía de ser la mejor. |
+Fuerza bruta | Probar todas las posibilidades. |
+Aleatoriedad / semilla (seed) | Números «al azar» generados por un algoritmo; la semilla fija la secuencia. |
+Hash (función hash) | Convierte datos en un número de tamaño fijo. |
+Colisión (hash) | Dos datos distintos dan el mismo hash. |
+Filtro de Bloom | Estructura que dice «seguro que no» o «quizá sí» ocupando muy poca memoria. |
+Bit / byte | Bit: 0 o 1. Byte: 8 bits. |
+Endianness (orden de bytes) | Orden en que se guardan los bytes de un número (little-endian, big-endian). |
+Binario / hexadecimal / octal | Sistemas numéricos de base 2, 16 y 8. |
+Punto flotante | Forma de guardar decimales (`double`); puede dar pequeños errores (0,1+0,2). |
+Unicode / UTF-8 / ASCII | Estándares para representar texto; UTF-8 es el más usado. |
+Expresión regular (regex) | Patrón para buscar y validar texto. | Un comodín muy potente.
+Parsear (parseo) | Analizar un texto y convertirlo en datos estructurados. |
+AST (árbol de sintaxis abstracta) | Representación en árbol del código tras analizarlo. |
+Tokenizar / lexer | Dividir texto en piezas con significado (palabras, números, símbolos). |

@@ -1,0 +1,80 @@
+# Producto, gestión y diseño
+Producto vs proyecto | Producto: algo que evoluciona con el tiempo. Proyecto: esfuerzo con principio y fin. |
+Product Owner (PO) | Responsable del valor del producto: decide **qué** y en qué orden se construye. |
+Product Manager (PM) | Define la estrategia y la visión del producto; une negocio, usuarios y tecnología. |
+Project Manager (PM, jefe de proyecto) | Gestiona plazos, presupuesto, riesgos y recursos de un proyecto. |
+Program manager | Coordina varios proyectos relacionados. |
+Scrum Master / agile coach | Facilita el método ágil y quita obstáculos / acompaña la transformación. |
+Delivery manager / release manager | Asegura que lo planificado se entrega / gestiona los lanzamientos. |
+Engineering manager (EM) | Dirige personas de un equipo de ingeniería. |
+Tech lead | Guía técnica de un equipo. |
+CTO / VP Engineering / CPO | Máximo responsable técnico / de ingeniería / de producto. |
+Stakeholder / sponsor | Interesado / quien patrocina o financia. |
+Visión / misión / estrategia / roadmap | Hacia dónde / para qué / cómo / en qué orden. |
+OKR / KPI / North Star Metric | Objetivos y resultados / indicadores / métrica que resume el éxito. |
+Discovery / delivery | Descubrir qué construir / construirlo. |
+Problema / solución / hipótesis | Se valida el problema antes de la solución. |
+Entrevista de usuario / persona / customer journey | Conversación / usuario tipo / recorrido del cliente. |
+Jobs to be done (JTBD) | Qué «trabajo» contrata el usuario al usar el producto. |
+Priorización: MoSCoW, RICE, WSJF, Kano | Técnicas para ordenar: debe/debería/podría/no, alcance-impacto-confianza-esfuerzo, coste del retraso, satisfacción. |
+Backlog / refinamiento (grooming) | Lista de pendientes / aclararlos y estimarlos. |
+Épica / historia / tarea / subtarea / spike | Niveles de trabajo; spike: investigación acotada. |
+Criterios de aceptación / DoR / DoD | Cuándo está bien / listo para empezar / terminado. |
+Historia de usuario (INVEST) | Independiente, negociable, valiosa, estimable, pequeña, comprobable. |
+Story points / T-shirt sizing / planning poker | Estimación relativa / por tallas / con cartas. |
+Velocidad / burndown / burnup / cycle time / lead time | Medidas del ritmo del equipo y del flujo. |
+WIP limit | Límite de trabajo en curso. |
+Sprint planning / daily / review / retro | Ceremonias de Scrum. |
+Increment (incremento) | Resultado utilizable de un sprint. |
+Definition of Ready | Condiciones para entrar en un sprint. |
+Capacidad / compromiso / forecast | Esfuerzo disponible / lo prometido / lo previsto. |
+Impediment / blocker | Lo que impide avanzar. |
+Escalado ágil (SAFe, LeSS, Nexus) | Marcos para muchos equipos. |
+Squad / tribe / chapter / guild | Estructura de equipos de Spotify. |
+Equipo multifuncional (cross-functional) | Con todos los perfiles necesarios. |
+Trabajo asíncrono / remoto | Sin coincidir en tiempo y lugar. |
+Riesgo / mitigación / plan de contingencia | Qué puede ir mal / cómo reducirlo / plan B. |
+Alcance (scope) / scope creep | Lo incluido / crecimiento sin control. |
+Triple restricción | Alcance, tiempo y coste. |
+Camino crítico | Tareas que determinan la fecha final. |
+Gantt / PERT / EDT (WBS) | Diagrama de barras / de redes / descomposición del trabajo. |
+Hito / entregable | Punto de control / resultado entregable. |
+RACI | Responsable, aprobador, consultado, informado. |
+Cambio de alcance / control de cambios | Gestionar modificaciones pedidas. |
+Pliego / RFP / propuesta / SOW | Petición de ofertas / propuesta / descripción del trabajo contratado. |
+Contrato precio cerrado / tiempo y materiales | Importe fijo / se paga por horas. |
+Presupuesto / ROI / TCO / CAPEX / OPEX | Plan económico / retorno / coste total / inversión / gasto operativo. |
+Time-to-market | Tiempo hasta lanzar. |
+Go-to-market | Plan para llevarlo al mercado. |
+MVP / MLP / prototipo / PoC | Mínimo viable / mínimo atractivo / maqueta / prueba de concepto. |
+Product-market fit / pivotar | Encaje con el mercado / cambiar de rumbo. |
+Churn / retención / conversión / ARPU / LTV / CAC | Abandono / permanencia / paso a cliente / ingreso por usuario / valor de vida / coste de captación. |
+MRR / ARR | Ingresos recurrentes mensuales / anuales. |
+Funnel (embudo) / cohorte | Pasos hasta convertir / grupo de usuarios con algo en común. |
+Analítica de producto | Medir cómo usan el producto (Amplitude, Mixpanel, GA). |
+Feature flag / lanzamiento gradual | Activar por fases. |
+Deprecación / sunset | Retirada planificada. |
+Documentación de producto: PRD / one-pager / spec | Documento de requisitos / resumen de una página / especificación. |
+UX (experiencia de usuario) | Cómo se siente al usar el producto. |
+UI (interfaz de usuario) | Lo visual: pantallas, colores, componentes. |
+UX researcher / UX writer / product designer | Investiga usuarios / escribe textos de interfaz / diseña el producto. |
+Wireframe / mockup / prototipo | Boceto / diseño visual / simulación navegable. |
+Figma / Sketch / Adobe XD | Herramientas de diseño. |
+Heurísticas de Nielsen | Diez reglas de usabilidad. |
+Arquitectura de la información / navegación | Cómo se organiza el contenido. |
+Test de usuario / card sorting / tree testing | Probar con personas / agrupar contenidos / probar la navegación. |
+Design system / componentes / tokens | Sistema de diseño común. |
+Handoff | Entrega del diseño a desarrollo. |
+Microcopy | Textos pequeños de la interfaz. |
+Dark pattern | Diseño que engaña al usuario. |
+Accesibilidad / inclusión | Diseñar para todas las personas. |
+Onboarding / empty state / error state | Primera experiencia / pantalla sin datos / pantalla de fallo. |
+Service design / blueprint | Diseñar todo el servicio, incluidos procesos internos. |
+Gestión del cambio | Ayudar a las personas a adoptar algo nuevo. |
+Trazabilidad | Poder seguir un requisito hasta su prueba y su código. |
+Gobierno de TI / ITIL / COBIT | Marcos de gestión de servicios y control. |
+Incidencia / problema / cambio / petición (ITIL) | Tipos de gestión de servicio. |
+Service desk / soporte N1, N2, N3 | Atención al usuario por niveles. |
+SLA / OLA | Acuerdo con el cliente / acuerdo interno. |
+Mesa de ayuda / ticket | Sistema de atención y su solicitud. |
+Madurez / estándar / CMMI | Niveles de madurez de procesos. |

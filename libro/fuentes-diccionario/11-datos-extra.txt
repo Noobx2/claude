@@ -1,0 +1,71 @@
+# Bases de datos y datos
+DBA (administrador de bases de datos) | Persona que cuida el rendimiento, copias y seguridad de las bases. |
+SGBD (DBMS) | Programa que gestiona una base de datos (PostgreSQL, MySQL, SQL Server, Oracle, SQLite, MongoDB). |
+Tabla / fila / columna / registro / campo | Estructura de datos relacional. |
+Clave primaria (PK) / clave foránea (FK) | Identifica una fila / apunta a otra tabla. |
+Relación 1:1, 1:N, N:M | Uno a uno, uno a muchos, muchos a muchos (tabla intermedia). |
+Restricción (constraint) | Regla: NOT NULL, UNIQUE, CHECK, FK. |
+SQL (DDL, DML, DCL, TCL) | Definición / manipulación / permisos / transacciones. |
+SELECT / INSERT / UPDATE / DELETE | Leer / insertar / modificar / borrar. |
+JOIN (INNER, LEFT, RIGHT, FULL, CROSS) | Unir tablas. |
+GROUP BY / HAVING / ORDER BY / LIMIT | Agrupar / filtrar grupos / ordenar / limitar. |
+Subconsulta / CTE / ventana (window function) | Consulta dentro de otra / consulta con nombre / cálculo sobre un grupo de filas. |
+Vista / vista materializada | Consulta guardada / con resultados guardados. |
+Procedimiento almacenado / función / trigger | Código dentro de la base / función propia / se dispara con un cambio. |
+Índice (B-tree, hash, GIN, compuesto) | Acelera búsquedas; tipos. |
+Plan de ejecución (EXPLAIN) | Cómo ejecutará la base una consulta. |
+Full table scan | Leer toda la tabla. |
+Transacción / COMMIT / ROLLBACK / savepoint | Operaciones todo o nada / confirmar / deshacer. |
+ACID | Atomicidad, consistencia, aislamiento y durabilidad. |
+Nivel de aislamiento | Cuánto se ven entre sí las transacciones (read committed, repeatable read, serializable). |
+Bloqueo (lock) / deadlock / MVCC | Reserva de datos / interbloqueo / versiones para leer sin bloquear. |
+Normalización (1FN, 2FN, 3FN) / desnormalización | Evitar repetición / repetir a propósito por rendimiento. |
+Esquema / migración / seed | Estructura / cambio versionado / datos iniciales. |
+Flyway / Liquibase / EF Migrations | Herramientas de migraciones. |
+ORM / consulta nativa / query builder | Mapeo objetos-tablas / SQL directo / construir consultas con código. |
+Pool de conexiones | Conexiones reutilizables. |
+Replicación (primaria/réplica) / lectura en réplica | Copias de la base. |
+Particionado / sharding | Dividir tablas / dividir entre servidores. |
+Backup completo / incremental / diferencial / PITR | Copias y recuperación a un instante exacto. |
+Vacuum / mantenimiento | Limpieza interna (PostgreSQL). |
+NoSQL / documental / clave-valor / columnar / grafos | Familias de bases no relacionales. |
+MongoDB / Redis / Cassandra / DynamoDB / Neo4j / Elasticsearch | Ejemplos de cada familia. |
+BSON | Formato binario de documentos de MongoDB. |
+Agregación (pipeline de agregación) | Cadena de etapas para transformar documentos. |
+Teorema CAP / consistencia eventual | Compromisos en sistemas distribuidos. |
+Esquema flexible (schema-less) | Documentos sin estructura fija obligatoria. |
+Búsqueda de texto completo | Buscar palabras dentro de textos largos. |
+Base de datos en memoria | Datos en RAM para máxima velocidad. |
+NewSQL | Bases relacionales distribuidas. |
+Base de series temporales (TSDB) | Optimizada para datos con marca de tiempo. |
+Base vectorial (pgvector, Pinecone, Qdrant, Chroma) | Para embeddings. |
+Data engineer / data analyst / data scientist | Construye flujos de datos / analiza e informa / modela y predice. |
+ETL / ELT / reverse ETL | Extraer-transformar-cargar / cargar y luego transformar / devolver datos a las aplicaciones. |
+Pipeline de datos / orquestador (Airflow, Dagster) | Cadena de procesamiento / programa que la coordina. |
+Data warehouse (BigQuery, Snowflake, Redshift) | Almacén para análisis. |
+Data lake / lakehouse / Delta / Iceberg | Datos en bruto / mezcla / formatos de tablas abiertas. |
+Data mart | Subconjunto del almacén para un área. |
+Modelo dimensional / estrella / copo de nieve | Diseño para análisis: hechos y dimensiones. |
+Dimensión / hecho | Contexto (cliente, fecha) / medidas (importe). |
+OLTP / OLAP / cubo | Transaccional / analítico / datos multidimensionales. |
+Batch / streaming / micro-batch | Por lotes / continuo / lotes muy pequeños. |
+Kafka / Flink / Spark / Beam | Plataformas de eventos y procesamiento. |
+CDC | Captura de cambios. |
+Calidad de datos / linaje / catálogo / gobierno | Fiabilidad / de dónde viene / inventario / reglas de uso. |
+Master data / MDM | Datos maestros únicos de la empresa. |
+Data contract | Acuerdo sobre la forma de los datos entre productor y consumidor. |
+Data mesh / data product | Datos gestionados como producto por cada equipo. |
+BI (inteligencia de negocio) / dashboard / KPI | Informes y paneles / indicadores. |
+Power BI / Tableau / Looker / Metabase / Grafana | Herramientas de visualización. |
+Hoja de cálculo / CSV / Parquet / Avro / JSON Lines | Formatos y herramientas de datos. |
+Pandas / NumPy / Polars / Jupyter | Bibliotecas y cuadernos de análisis en Python. |
+Estadística: media, mediana, moda, desviación | Medidas básicas de un conjunto de datos. |
+Correlación / causalidad | Que dos cosas varíen juntas no significa que una cause la otra. |
+Valor atípico (outlier) | Dato muy distinto del resto. |
+Muestreo / sesgo de muestra | Elegir una parte / muestra no representativa. |
+A/B testing / significancia estadística | Experimento entre dos variantes / confianza en que la diferencia no es azar. |
+Ingeniería de características (feature engineering) | Preparar las variables que usa un modelo. |
+Normalización / estandarización | Poner los valores en la misma escala. |
+Datos faltantes / imputación | Valores vacíos / rellenarlos. |
+Datos sintéticos | Datos generados artificialmente. |
+Privacidad diferencial | Añadir ruido para proteger a las personas de un dataset. |

@@ -1,0 +1,82 @@
+# Pruebas y calidad (QA)
+QA (Quality Assurance, aseguramiento de calidad) | Prevenir defectos mejorando el **proceso**. |
+QC (Quality Control, control de calidad) | Detectar defectos en el **producto**. |
+Tester / QA engineer / SDET | Persona que prueba / ingeniero de calidad / desarrollador especializado en automatización de pruebas. |
+Plan de pruebas | Documento con alcance, enfoque, recursos y calendario. |
+Estrategia de pruebas | Enfoque general: qué se prueba, con qué nivel y herramientas. |
+Caso de prueba (test case) | Pasos, datos y resultado esperado de una comprobación. |
+Escenario de prueba | Situación a probar, que agrupa varios casos. |
+Suite de pruebas | Conjunto de pruebas que se ejecutan juntas. |
+Resultado esperado / obtenido | Lo que debería pasar / lo que pasó. |
+Defecto / incidencia / bug | Fallo detectado. |
+Severidad / prioridad | Gravedad técnica del fallo / urgencia de arreglarlo. |
+Reproducible / pasos para reproducir | Poder repetir un fallo / descripción de cómo. |
+Ciclo de vida del bug | Nuevo → asignado → corregido → verificado → cerrado (o reabierto). |
+Triage | Clasificar los defectos por gravedad y prioridad. |
+Verificación / validación | ¿Lo hemos construido bien? / ¿Hemos construido lo correcto? |
+Pruebas funcionales / no funcionales | Qué hace / cómo lo hace (rendimiento, seguridad, usabilidad). |
+Caja negra / caja blanca / caja gris | Probar sin ver el código / viéndolo / parcialmente. |
+Pruebas exploratorias | Probar investigando sin guion fijo. |
+Pruebas de aceptación (UAT) | El cliente valida que cumple lo pedido. |
+Pruebas alfa / beta | Con usuarios internos / con usuarios externos reales. |
+Pruebas de humo (smoke) / de cordura (sanity) | Lo esencial arranca / un cambio concreto funciona. |
+Pruebas de regresión | Lo anterior sigue funcionando. |
+Pruebas de integración / de sistema / end-to-end | Piezas juntas / todo el sistema / flujo completo de usuario. |
+Pruebas de contrato | Cliente y servidor cumplen el mismo acuerdo. |
+Pruebas de componente | Una pieza completa con sus dependencias simuladas. |
+Pruebas de API | Se prueban las direcciones y respuestas sin interfaz. |
+Pruebas de interfaz (UI) | Se manejan pantallas (Selenium, Playwright, Cypress). |
+Pruebas visuales / de capturas (snapshot) | Comparar imágenes o salidas con una referencia. |
+Pruebas de rendimiento | Miden velocidad y consumo. |
+Pruebas de carga / estrés / pico / resistencia (soak) | Tráfico esperado / más allá del límite / subida brusca / carga larga. |
+Pruebas de escalabilidad | Cómo responde al crecer. |
+Pruebas de seguridad / de penetración | Buscan fallos de seguridad. |
+Pruebas de usabilidad | ¿Se entiende y se usa fácilmente? |
+Pruebas de accesibilidad | ¿Pueden usarlo personas con discapacidad? |
+Pruebas de compatibilidad / multinavegador / multidispositivo | En distintos navegadores y dispositivos. |
+Pruebas de localización | Idiomas, formatos, monedas. |
+Pruebas de instalación / actualización / migración | Se instala, actualiza y migra sin perder datos. |
+Pruebas de recuperación / caos | Cómo se recupera ante fallos. |
+Pruebas A/B | Comparar dos versiones con usuarios reales. |
+Pruebas en producción / canary / shadow | Probar con tráfico real controlado. |
+TDD / BDD / ATDD | Pruebas primero / comportamiento en lenguaje natural / pruebas de aceptación primero. |
+Gherkin / Cucumber / Given-When-Then | Lenguaje y herramienta para escribir escenarios: «Dado… cuando… entonces…». |
+Page Object | Patrón que encapsula una pantalla para las pruebas de interfaz. |
+Locator / selector | Cómo se identifica un elemento en pantalla. |
+Espera explícita / implícita (wait) | Esperar a que algo aparezca antes de actuar. |
+Test flaky (inestable) | Prueba que falla o pasa sin cambios en el código. |
+Datos de prueba (test data) | Información usada en las pruebas. |
+Datos sintéticos / anonimizados | Datos inventados / datos reales sin identidad. |
+Fixture / setup / teardown | Preparación / antes / después de cada prueba. |
+Mock / stub / spy / fake / dummy | Simulaciones de dependencias: responde lo programado / respuesta fija / registra llamadas / implementación simple / relleno. |
+Doble de prueba (test double) | Término general para mock, stub, fake… |
+Aislamiento de pruebas | Que una prueba no dependa de otra. |
+Cobertura de código (líneas, ramas, condiciones) | Porcentaje de código ejecutado por las pruebas. |
+Cobertura de requisitos / trazabilidad | Que cada requisito tenga pruebas asociadas. |
+Pruebas de mutación | Se estropea el código para ver si las pruebas lo notan. |
+Property-based testing | Se definen propiedades y la herramienta genera casos aleatorios. |
+Pirámide / trofeo / panal de pruebas | Modelos de cómo repartir los tipos de pruebas. |
+Shift-left / shift-right | Probar antes en el proceso / vigilar y probar también en producción. |
+Pruebas continuas | Ejecutar pruebas automáticamente en cada cambio. |
+Entorno de pruebas / staging / sandbox | Copia donde probar sin tocar producción. |
+Gestor de pruebas (TestRail, Zephyr, Xray) | Herramienta para organizar casos y ejecuciones. |
+Criterios de entrada / de salida | Condiciones para empezar / dar por terminada una fase de pruebas. |
+Definición de hecho (DoD) / criterios de aceptación | Lo que debe cumplirse para dar algo por terminado. |
+Go / no-go | Decisión de publicar o no. |
+Métrica de defectos (densidad, fuga) | Defectos por tamaño / defectos que escapan a producción. |
+MTTD / MTTR | Tiempo medio de detección / de recuperación. |
+Error budget | Fallo permitido antes de frenar los cambios. |
+Revisión por pares / inspección / walkthrough | Revisar el trabajo entre compañeros. |
+Análisis estático (SAST) / linter | Revisar el código sin ejecutarlo. |
+Análisis dinámico (DAST) | Revisar la aplicación en marcha. |
+Valor límite / partición de equivalencia | Técnicas de diseño de casos: probar los bordes / un caso por cada grupo parecido. |
+Tabla de decisión / transición de estados | Técnicas para probar combinaciones y cambios de estado. |
+Pairwise (combinatoria por pares) | Reducir combinaciones probando todos los pares de valores. |
+Adivinanza de errores (error guessing) | Probar donde la experiencia dice que suele fallar. |
+Fuzzing | Datos aleatorios para provocar fallos. |
+Heurística de pruebas | Regla práctica para decidir qué probar. |
+Testabilidad | Lo fácil que es probar un sistema. |
+Observabilidad para pruebas | Poder ver qué ocurre dentro durante las pruebas. |
+Pruebas con IA | Generar casos, datos y scripts con modelos; también probar aplicaciones de IA con evals. |
+Self-healing tests | Pruebas que se reparan solas cuando cambia un selector (con IA). |
+Evals de LLM | Conjuntos de pruebas para medir respuestas de modelos. |

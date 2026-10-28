@@ -1,0 +1,84 @@
+# Sistema operativo, terminal y línea de comandos
+Sistema operativo (SO) | Software que gestiona el equipo y deja que los programas usen CPU, memoria y dispositivos (Windows, Linux, macOS). | El director del edificio.
+Kernel (núcleo) | La parte central del sistema operativo, con acceso total al hardware. |
+Espacio de usuario / espacio de kernel | Donde corren los programas normales / donde corre el núcleo. |
+Llamada al sistema (syscall) | Petición de un programa al núcleo (abrir un archivo). |
+Controlador (driver) | Programa que enseña al sistema a usar un dispositivo. |
+Shell | Programa que interpreta lo que escribes en la terminal (bash, zsh, PowerShell). |
+Terminal / consola | Ventana para escribir comandos. |
+Emulador de terminal | Programa gráfico que simula una terminal. |
+CLI (interfaz de línea de comandos) | Programa que se maneja escribiendo comandos. |
+GUI (interfaz gráfica) | Programa que se maneja con ventanas y ratón. |
+TUI (interfaz de texto) | Interfaz con ventanas dibujadas con caracteres en la terminal. |
+Comando | Orden que se escribe en la terminal. |
+Argumento (parámetro posicional) | Dato que se pasa a un comando: `cp **origen destino**`. |
+**Flag / opción / switch** | Modificador de un comando que cambia su comportamiento: `ls -l` (la `-l` es el flag). Los cortos llevan un guion (`-l`), los largos dos (`--long`). | Los botones de una lavadora: un programa, varias opciones.
+Flag corto / largo | Corto: una letra (`-v`). Largo: palabra (`--verbose`). |
+Flag booleano | Se pone o no se pone: activa algo (`--force`). |
+Opción con valor | Flag que recibe un dato (`--output archivo.txt`, `-p 8080`). |
+Subcomando | Comando dentro de un comando (`git commit`, `dotnet run`). |
+`--` (doble guion solo) | Separador: lo que va después no se interpreta como opciones. |
+`--help` / `-h` | Muestra la ayuda de un comando. |
+`man` | Manual del sistema: `man ls`. |
+Dry run (`--dry-run`) | Simula lo que haría sin hacerlo. |
+Verbose (`-v`) / quiet (`-q`) | Más información / menos información. |
+Flag de bits (bit flag) | En programación, un número cuyos bits individuales son interruptores de opciones. |
+Máscara de bits (bitmask) | Valor para activar, apagar o consultar bits concretos. |
+Operadores de bits | `&` (y), `|` (o), `^` (xor), `~` (no), `<<` y `>>` (desplazamiento). |
+Feature flag | Interruptor en la aplicación para activar o desactivar una función. |
+Variable de entorno | Pareja nombre-valor disponible para los programas (`PATH`, `HOME`). |
+PATH | Lista de carpetas donde el sistema busca los comandos. |
+Directorio de trabajo (cwd) | Carpeta en la que estás ahora. |
+Ruta absoluta / relativa | Absoluta: desde la raíz (`/home/ana/x`). Relativa: desde donde estás (`../x`). |
+Directorio home | La carpeta personal del usuario (`~`). |
+Comodín (glob) | `*` y `?` para designar varios archivos (`*.txt`). |
+Entrada estándar (stdin) | Por donde un programa lee datos (el teclado por defecto). |
+Salida estándar (stdout) | Por donde escribe resultados (la pantalla). |
+Error estándar (stderr) | Canal aparte para mensajes de error. |
+Redirección (`>`, `>>`, `<`) | Enviar la salida a un archivo / añadir / leer desde un archivo. |
+Tubería (`|`, pipe) | Conecta la salida de un comando con la entrada del siguiente. | Una cinta transportadora entre dos máquinas.
+Código de salida (exit code) | Número con el que termina un programa: 0 = bien; otro = error. |
+Script | Archivo con una lista de comandos que se ejecutan en secuencia. |
+Shebang (`#!`) | Primera línea de un script que indica con qué programa se ejecuta. |
+Alias | Nombre corto para un comando largo. |
+Historial | Lista de comandos escritos antes (`history`, flecha arriba). |
+Autocompletado (Tab) | Completar nombres de comandos y rutas con la tecla Tab. |
+Permisos (rwx) | Lectura, escritura y ejecución para propietario, grupo y otros. |
+Propietario / grupo | Usuario dueño de un archivo y grupo con ciertos permisos. |
+`chmod` / `chown` | Cambiar permisos / cambiar propietario. |
+`sudo` / root | Ejecutar como administrador / el superusuario. |
+Enlace simbólico (symlink) | Acceso directo a otro archivo o carpeta. |
+Sistema de archivos | Forma en que se organizan los datos en un disco (ext4, NTFS). |
+Punto de montaje | Carpeta donde se «engancha» un disco o partición. |
+Partición | Trozo de un disco con su propio sistema de archivos. |
+Gestor de paquetes del sistema | `apt`, `dnf`, `brew`, `winget`: instala programas desde repositorios. |
+Repositorio de paquetes | Servidor con programas listos para instalar. |
+Servicio / systemd | Programa de fondo; `systemd` es el que los arranca y supervisa en Linux. |
+`journalctl` / logs del sistema | Visor de registros del sistema. |
+Cron | Programador de tareas periódicas. |
+SSH | Conexión **segura** a otra máquina para ejecutar comandos. |
+Clave SSH (pública/privada) | Par de claves para entrar sin contraseña: la pública se deja en el servidor y la privada **nunca se comparte**. |
+SCP / SFTP / rsync | Formas de copiar archivos entre máquinas. |
+Puerto | Número que identifica un servicio en una máquina (80 web, 22 SSH). |
+`localhost` / 127.0.0.1 | Tu propio equipo. |
+Variable `$?` | En bash, el código de salida del último comando. |
+Bash / zsh / PowerShell | Intérpretes de comandos: los dos primeros en Linux/macOS, PowerShell en Windows. |
+WSL | Subsistema de Windows para ejecutar Linux. |
+Dotfiles | Archivos de configuración ocultos (`.bashrc`). |
+Expansión de llaves | `a{1,2}` se convierte en `a1 a2`. |
+Here-document | Bloque de texto que se entrega como entrada de un comando. |
+Subshell | Shell hija que ejecuta un grupo de comandos aparte. |
+Proceso en primer plano / segundo plano | Foreground: ocupa la terminal. Background (`&`): corre sin bloquearla. |
+Ctrl+C / Ctrl+Z / Ctrl+D | Interrumpir / suspender / fin de entrada. |
+`grep` / `sed` / `awk` / `cut` / `sort` / `uniq` / `wc` | Herramientas clásicas para buscar y transformar texto. |
+`find` / `xargs` | Buscar archivos / construir comandos a partir de una lista. |
+`curl` / `wget` | Descargar o hacer peticiones HTTP desde la terminal. |
+`jq` | Herramienta para filtrar y transformar JSON desde la terminal. |
+`tmux` / `screen` | Multiplexores: varias sesiones de terminal que sobreviven a la desconexión. |
+`top` / `htop` / `ps` | Ver los procesos y su uso de CPU y memoria. |
+`kill` | Enviar una señal a un proceso. |
+`df` / `du` | Espacio libre del disco / espacio ocupado por carpetas. |
+`ss` / `netstat` | Ver conexiones y puertos de red. |
+`ping` / `traceroute` / `dig` | Probar conectividad / ver la ruta / consultar DNS. |
+`tar` / `gzip` / `zip` | Empaquetar y comprimir archivos. |
+`env` / `export` | Ver variables de entorno / definirlas para los procesos hijos. |

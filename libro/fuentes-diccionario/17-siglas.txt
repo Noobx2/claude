@@ -1,0 +1,58 @@
+# Siglas y abreviaturas habituales
+API | Interfaz de programación de aplicaciones. |
+SDK | Kit de desarrollo de software. |
+IDE | Entorno de desarrollo integrado (editor, compilador y depurador en uno). |
+CLI | Interfaz de línea de comandos. |
+GUI | Interfaz gráfica de usuario. |
+UI / UX | Interfaz de usuario / experiencia de usuario. |
+CRUD | Crear, leer (read), actualizar y borrar (delete): las cuatro operaciones básicas sobre datos. |
+REST | Estilo de API basado en recursos y HTTP. |
+JSON / XML / YAML / CSV | Formatos de datos. |
+HTML / CSS / JS / TS | Lenguajes de la web. |
+SQL / NoSQL | Lenguaje de consulta / bases no relacionales. |
+ORM | Mapeo objeto-relacional. |
+DOM | Modelo de objetos del documento. |
+SPA / MPA / SSR / SSG / CSR | Tipos de aplicación y renderizado web. |
+PWA | Aplicación web progresiva. |
+CDN | Red de distribución de contenidos. |
+DNS | Sistema de nombres de dominio. |
+HTTP / HTTPS / TLS / SSL | Protocolo web y su cifrado. |
+TCP / UDP / IP | Protocolos de red. |
+VPN / VPC / LAN / WAN | Redes privadas virtuales y locales/extensas. |
+SSH / SFTP / FTP | Acceso y transferencia segura/clásica. |
+OS / SO | Sistema operativo. |
+VM / VPS | Máquina virtual / servidor virtual privado. |
+CPU / GPU / TPU / RAM / SSD | Componentes de hardware. |
+I/O (E/S) | Entrada y salida. |
+IaaS / PaaS / SaaS / FaaS / BaaS | Modelos de servicio en la nube. |
+IaC | Infraestructura como código. |
+CI / CD / CI/CD | Integración continua / entrega o despliegue continuo. |
+DevOps / DevSecOps / GitOps / MLOps | Prácticas de operación integradas. |
+SRE | Ingeniería de fiabilidad. |
+SLA / SLO / SLI | Acuerdo / objetivo / indicador de nivel de servicio. |
+RPO / RTO | Pérdida / tiempo de recuperación máximos admisibles. |
+MTTR / MTBF / MTTD | Tiempo medio de reparación / entre fallos / de detección. |
+HA / DR / BCP | Alta disponibilidad / recuperación ante desastres / continuidad de negocio. |
+RBAC / ABAC / IAM | Control de acceso por roles / atributos / gestión de identidades. |
+MFA / 2FA / SSO | Autenticación multifactor / de dos factores / inicio único. |
+JWT / OAuth / OIDC / SAML | Tokens y protocolos de identidad. |
+XSS / CSRF / SQLi / RCE / SSRF | Ataques frecuentes. |
+CVE / CVSS / OWASP | Vulnerabilidades, gravedad y organización de seguridad web. |
+SAST / DAST / SCA / SBOM | Análisis de seguridad y lista de componentes. |
+SIEM / SOC / EDR / WAF / IDS / IPS | Herramientas y centros de seguridad. |
+GDPR / RGPD / LOPDGDD | Normativa de protección de datos. |
+KPI / OKR / ROI / TCO | Indicadores y economía. |
+MVP / PoC / MLP | Producto mínimo viable / prueba de concepto / mínimo atractivo. |
+PRD / BRD / SRS | Documentos de requisitos de producto / de negocio / de software. |
+RFC / ADR / RFP | Propuesta técnica / decisión de arquitectura / petición de ofertas. |
+UAT / QA / QC | Pruebas de aceptación / aseguramiento / control de calidad. |
+TDD / BDD / DDD / CQRS | Enfoques de desarrollo y diseño. |
+SOLID / DRY / KISS / YAGNI | Principios de diseño. |
+OOP / POO / FP | Programación orientada a objetos / funcional. |
+JVM / CLR / JIT / GC | Máquinas virtuales de Java y .NET, compilación al vuelo, recolector de basura. |
+JDK / JRE / SDK .NET | Kit y entorno de ejecución de Java; kit de .NET. |
+LTS / EOL / GA / RC / beta / alpha | Soporte largo / fin de vida / disponibilidad general / candidata / versiones de prueba. |
+PR / MR / LGTM / WIP / NIT | Solicitud de integración / aprobación / en curso / detalle menor. |
+TL;DR / FYI / ASAP / ETA / EOD / OOO / IMO / AFAIK | «Demasiado largo, no lo leí» / para tu información / cuanto antes / hora estimada / fin del día / fuera de la oficina / en mi opinión / que yo sepa. |
+RTFM / FOSS / FAQ | «Lee el manual» / software libre y de código abierto / preguntas frecuentes. |
+LLM / SLM / RAG / MCP / NLP / ML / DL / AGI | Siglas de IA. |

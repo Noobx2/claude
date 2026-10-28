@@ -1,0 +1,38 @@
+# Control de versiones y colaboración
+Control de versiones (VCS) | Sistema que guarda el historial de cambios de los archivos. |
+Git | El sistema de control de versiones más usado; distribuido. |
+Repositorio / clon / remoto (origin) | Proyecto con historial / copia local / copia en el servidor. |
+GitHub / GitLab / Bitbucket / Azure Repos | Plataformas que alojan repositorios. |
+Commit | Instantánea de cambios con mensaje. |
+Mensaje de commit / Conventional Commits | Descripción / convención (`feat:`, `fix:`, `docs:`). |
+Rama (branch) / rama principal (main) / HEAD | Línea de desarrollo / principal / apuntador a donde estás. |
+Staging area (índice) | Zona donde se preparan cambios antes del commit. |
+Working tree / directorio de trabajo | Archivos tal como los ves. |
+Add / commit / push / pull / fetch / clone | Preparar / guardar / subir / traer y unir / traer sin unir / copiar. |
+Checkout / switch / restore | Cambiar de rama o restaurar archivos. |
+Merge / fast-forward / merge commit | Unir ramas. |
+Rebase / rebase interactivo / squash | Reescribir historial sobre otra base / reordenar / fusionar commits. |
+Cherry-pick | Copiar un commit a otra rama. |
+Conflicto de merge | Dos cambios chocan; hay que resolverlo a mano. |
+Stash | Guardar cambios sin commit temporalmente. |
+Reset / revert / reflog | Mover la rama / deshacer con un commit nuevo / historial de movimientos de HEAD. |
+Tag / release | Etiqueta de versión. |
+.gitignore | Lista de archivos que Git no sigue. |
+Submódulo / subtree | Repositorio dentro de otro. |
+Fork / pull request / merge request | Copia propia / solicitud de incorporación. |
+Revisión (review) / aprobación / comentario | Proceso de revisar un PR. |
+Branch protection / CODEOWNERS | Reglas sobre ramas / dueños de rutas. |
+Squash and merge / rebase and merge | Formas de integrar un PR. |
+Trunk-based / GitFlow / GitHub Flow | Estrategias de ramas. |
+Monorepo / polyrepo | Un repositorio para todo / uno por proyecto. |
+Hook de Git / pre-commit | Script que se ejecuta antes o después de una acción. |
+Git LFS | Gestión de archivos grandes. |
+Blame / bisect / log / diff | Quién cambió cada línea / buscar el commit que rompió algo / historial / diferencias. |
+Issue / label / milestone / project board | Tarea o incidencia / etiqueta / hito / tablero. |
+Wiki / README / CONTRIBUTING / LICENSE / CHANGELOG | Documentos habituales de un repositorio. |
+Semantic Versioning / release notes | Numeración de versiones / notas de la versión. |
+Dependabot / Renovate | Bots que actualizan dependencias. |
+Open source / inner source | Código abierto / abierto dentro de la empresa. |
+Licencia (MIT, Apache 2.0, GPL, BSD) | Condiciones de uso del código. |
+Copyleft / permisiva | Obliga a mantener abierta la licencia / permite casi todo. |
+CLA / DCO | Acuerdos de contribución. |

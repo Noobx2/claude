@@ -1,0 +1,92 @@
+# Backend y APIs
+Backend | La parte del sistema que **no se ve**: lógica, datos, seguridad, integraciones. | La cocina y la oficina del restaurante.
+Servidor web | Programa que atiende peticiones HTTP (Nginx, Apache, Kestrel, Tomcat). |
+Servidor de aplicaciones | Entorno que ejecuta aplicaciones de servidor (Tomcat, Jetty, WildFly). |
+Contenedor de servlets | Parte de un servidor Java que ejecuta servlets. |
+Petición (request) / respuesta (response) | Lo que envía el cliente / lo que devuelve el servidor. |
+Método HTTP | GET (leer), POST (crear), PUT (reemplazar), PATCH (modificar en parte), DELETE (borrar). |
+Código de estado HTTP | 200 OK, 201 creado, 204 sin contenido, 301/302 redirección, 400 petición mala, 401 no autenticado, 403 prohibido, 404 no encontrado, 409 conflicto, 422 no procesable, 429 demasiadas peticiones, 500 error del servidor, 502/503/504 puerta de enlace / no disponible / tiempo agotado. |
+Cabeceras (headers) | Metadatos de una petición o respuesta (`Content-Type`, `Authorization`). |
+Cuerpo (body) | Los datos que se envían. |
+Query string / parámetros de ruta | `?q=ana` / `/users/7`. |
+JSON | Formato de texto para datos (`{"nombre":"Ana"}`). |
+XML | Formato de datos con etiquetas. |
+YAML / TOML | Formatos legibles para configuración. |
+Protobuf | Formato binario compacto de Google. |
+Content negotiation | El cliente indica qué formato prefiere. |
+Endpoint | Dirección concreta de una API. |
+Ruta (route) | Asociación entre una dirección y el código que la atiende. |
+Controlador (controller) | Clase que recibe las peticiones. |
+Servicio (service) | Clase con la lógica de negocio. |
+Repositorio (repository) | Clase que accede a los datos. |
+Middleware | Código que se ejecuta **antes o después** de cada petición (autenticar, registrar). | Un control de seguridad en el pasillo.
+Filtro / interceptor | Parecido a middleware en Java/Spring. |
+Pipeline de petición | Cadena de middlewares por la que pasa cada petición. |
+Validación | Comprobar que los datos recibidos son correctos. |
+Serialización / deserialización | Convertir objetos a JSON y al revés. |
+DTO / ViewModel | Objeto que transporta datos hacia fuera o dentro de la API. |
+Mapeo (mapper) | Convertir entre entidades y DTO. |
+Paginación | Devolver los datos por trozos (página 2 de 10). |
+Filtrado / ordenación | Parámetros para pedir solo algunos datos y en cierto orden. |
+Cursor / offset | Dos formas de paginar: por marcador / por posición. |
+Versionado de API | Mantener varias versiones a la vez (`/v1`, `/v2`). |
+HATEOAS | REST con enlaces a las acciones posibles dentro de las respuestas. |
+Nivel de madurez de Richardson | Escala de 0 a 3 sobre cuánto se parece una API a REST de verdad. |
+RPC | Llamar a una función remota como si fuera local. |
+SOAP / WSDL | Protocolo antiguo basado en XML y su descripción. |
+gRPC / Protocol Buffers | RPC moderno, rápido y con contratos. |
+GraphQL / query / mutation / resolver | Lenguaje de consulta; lectura; escritura; función que obtiene un campo. |
+tRPC | Llamadas tipadas entre cliente y servidor TypeScript. |
+OpenAPI / Swagger / Postman | Descripción estándar de APIs / interfaz para verlas / herramienta para probarlas. |
+Contrato de API (contract first / code first) | Escribir primero la descripción o primero el código. |
+Contract testing (Pact) | Pruebas que verifican que el cliente y el servidor cumplen el mismo contrato. |
+Mock server | Servidor falso que responde como la API real. |
+Webhook | El servidor llama a una dirección tuya cuando ocurre algo. |
+Polling / long polling | Preguntar cada cierto tiempo / mantener la pregunta abierta hasta que haya novedad. |
+Server-Sent Events (SSE) | El servidor envía eventos continuos al navegador. |
+WebSocket | Conexión bidireccional continua. |
+Rate limiting / cuota / throttling | Límite de peticiones. |
+Idempotency key | Clave que evita que una operación repetida se ejecute dos veces (pagos). |
+Timeout | Tiempo máximo de espera. |
+Retry con backoff exponencial | Reintentar esperando cada vez más. |
+Circuit breaker | Dejar de llamar a un servicio que falla. |
+Bulkhead (mamparo) | Aislar recursos para que un fallo no hunda todo. |
+Health check / readiness / liveness | «¿Estás vivo?» / «¿Estás listo para recibir tráfico?». |
+Graceful shutdown | Apagar atendiendo antes las peticiones en curso. |
+Hot reload / live reload | Recargar al guardar cambios sin reiniciar. |
+Framework web | Estructura para construir aplicaciones web (Spring Boot, ASP.NET Core, Express, Django, FastAPI, Rails, Laravel). |
+Spring Boot | Framework Java que arranca aplicaciones con poca configuración. |
+Spring Data / JPA / Hibernate | Acceso a datos en Java; estándar de mapeo; la implementación más conocida. |
+ASP.NET Core / Minimal APIs / Razor / Blazor | Framework web de .NET / APIs con muy poco código / plantillas de página / interfaz con C#. |
+Entity Framework (EF) / Dapper | ORM de .NET / micro-ORM más ligero. |
+LINQ | Consultas integradas en C#. |
+Maven / Gradle | Gestores de proyectos y dependencias de Java. |
+NuGet | Gestor de paquetes de .NET. |
+JAR / WAR / DLL | Paquetes compilados de Java / aplicación web Java / biblioteca de .NET. |
+Classpath | Dónde busca Java sus clases. |
+Garbage collection pause | Pausa del recolector de basura. |
+Heap / stack | Zonas de memoria: montón (objetos) / pila (llamadas y variables locales). |
+Stack overflow | Pila agotada por demasiada recursión. |
+Out of memory (OOM) | Sin memoria. |
+Profiler / profiling | Herramienta que mide dónde gasta tiempo y memoria un programa. |
+Thread dump / heap dump | Foto de los hilos / de la memoria para diagnosticar. |
+Hot path | Trozo de código que se ejecuta muchísimo. |
+N+1 queries | Fallo típico: una consulta inicial y luego una más por cada fila. |
+Lazy loading / eager loading | Cargar datos relacionados bajo demanda / de golpe. |
+Connection pool | Conjunto de conexiones a base de datos reutilizables. |
+Dead letter / poison message | Mensaje que no se procesa y bloquea. |
+Cron job / scheduler / batch job | Tarea programada / planificador / tarea por lotes. |
+ETL job | Tarea que mueve y transforma datos. |
+Idempotent consumer | Receptor que tolera recibir un mensaje repetido. |
+Soft delete / hard delete | Marcar como borrado / borrar de verdad. |
+Auditoría (audit log) | Registro de quién hizo qué y cuándo. |
+Feature toggle (backend) | Activar funciones por configuración. |
+Configuración externalizada | Sacar configuraciones del código. |
+Perfil (profile) | Conjunto de configuraciones para un entorno (dev, prod). |
+Secrets manager | Servicio para guardar claves de forma segura. |
+Multitenancy en backend | Resolver el tenant de cada petición y aislar datos. |
+Localización de servicios (service discovery) | Cómo se encuentran los servicios entre sí. |
+Configuración centralizada | Un lugar único para configurar muchos servicios. |
+Saga | Secuencia de pasos con compensaciones para operaciones distribuidas. |
+Transacción distribuida / 2PC | Confirmar a la vez en varios sistemas (costoso). |
+Compensación | Acción que deshace un paso anterior. |

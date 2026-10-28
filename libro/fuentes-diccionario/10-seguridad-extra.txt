@@ -1,0 +1,74 @@
+# Seguridad
+Ciberseguridad | Proteger sistemas, redes y datos. |
+Tríada CIA | Confidencialidad, integridad y disponibilidad. |
+Activo / amenaza / vulnerabilidad / riesgo / control | Lo que se protege / lo que puede dañarlo / debilidad / probabilidad × impacto / medida de protección. |
+Superficie de ataque | Todos los puntos por los que se podría atacar. |
+Vector de ataque | Camino que usa el atacante. |
+Defensa en profundidad | Varias capas de protección. |
+Seguridad por diseño / por defecto | Pensada desde el inicio / configuración segura de fábrica. |
+Shift-left security / DevSecOps | Seguridad desde el principio y dentro del pipeline. |
+Modelado de amenazas / STRIDE | Analizar cómo atacarían / categorías de amenazas (suplantación, manipulación…). |
+OWASP / Top 10 / ASVS | Proyecto de seguridad web / lista de riesgos / estándar de verificación. |
+Inyección (SQL, comandos, LDAP) | Datos que se interpretan como órdenes. |
+XSS / CSRF / SSRF / XXE / IDOR | Ataques web: script en página / petición falsificada / servidor engañado / entidades XML / acceso directo a objetos ajenos. |
+Deserialización insegura | Reconstruir objetos desde datos no fiables. |
+Autenticación rota / gestión de sesiones | Fallos en el inicio de sesión. |
+Fuerza bruta / credential stuffing / password spraying | Probar contraseñas / reutilizar filtradas / una contraseña común en muchas cuentas. |
+Phishing / spear phishing / smishing / vishing | Engaño por correo / dirigido / SMS / voz. |
+Ingeniería social | Manipular a las personas. |
+Malware / virus / gusano / troyano / ransomware / spyware | Software malicioso y sus tipos. |
+Botnet / DDoS | Red de equipos infectados / ataque de saturación. |
+Man-in-the-middle (MITM) | Atacante entre dos partes. |
+Zero-day | Vulnerabilidad sin parche conocida. |
+CVE / CWE / CVSS / KEV | Identificador / tipo de debilidad / gravedad / catálogo de explotadas. |
+Parche / gestión de parches | Corrección / proceso de aplicarlos. |
+Hardening (bastionado) | Reducir la superficie de ataque configurando con seguridad. |
+Mínimo privilegio / separación de funciones | Solo lo necesario / nadie hace todo. |
+Autenticación / autorización / contabilidad (AAA) | Quién eres / qué puedes / registro. |
+MFA / 2FA / FIDO2 / passkeys / TOTP | Varios factores / estándar sin contraseña / claves de acceso / códigos temporales. |
+SSO / SAML / OIDC / OAuth 2 | Inicio único y protocolos de federación. |
+JWT / refresh token / access token | Token firmado / para renovar / de acceso. |
+RBAC / ABAC / ACL | Control por rol / por atributos / lista de permisos. |
+Gestor de contraseñas | Programa que guarda contraseñas seguras. |
+Hash / sal (salt) / pimienta (pepper) | Huella / valor aleatorio por contraseña / secreto común. |
+bcrypt / scrypt / Argon2 | Algoritmos recomendados para guardar contraseñas. |
+Cifrado simétrico / asimétrico | Una clave / par público-privada. |
+AES / RSA / ECC / ChaCha20 | Algoritmos de cifrado. |
+HMAC / firma digital | Verificar integridad y origen. |
+PKI / certificado / CA | Infraestructura de claves públicas. |
+TLS / mTLS | Cifrado de transporte / ambos lados se autentican. |
+Cifrado de extremo a extremo (E2EE) | Solo emisor y receptor pueden leer. |
+KMS / HSM / bóveda de secretos | Gestores de claves. |
+Rotación de secretos | Cambiar claves periódicamente. |
+Secreto filtrado (leaked) | Clave publicada por error; hay que **revocarla**. |
+SAST / DAST / IAST / SCA | Análisis de código / de la aplicación en marcha / interactivo / de dependencias. |
+SBOM | Lista de componentes de un software. |
+Cadena de suministro / typosquatting / dependency confusion | Riesgo por terceros / paquetes con nombre parecido / paquete falso que sustituye al interno. |
+Escaneo de contenedores / imágenes | Buscar vulnerabilidades en imágenes. |
+WAF / RASP | Cortafuegos de aplicaciones / protección desde dentro. |
+SIEM / SOAR / SOC | Análisis de eventos / respuesta automatizada / centro de operaciones de seguridad. |
+EDR / XDR | Detección y respuesta en equipos / ampliada. |
+Honeypot / honeynet | Señuelo para detectar atacantes. |
+Threat intelligence (inteligencia de amenazas) / IOC | Información sobre atacantes / indicadores de compromiso. |
+MITRE ATT&CK | Catálogo de tácticas y técnicas de atacantes. |
+Pentest / red team / blue team / purple team | Pruebas de intrusión / atacantes / defensores / ambos juntos. |
+Bug bounty | Recompensas por reportar fallos. |
+Divulgación responsable | Avisar del fallo al responsable antes de publicarlo. |
+Respuesta a incidentes (IR) | Detectar, contener, erradicar y recuperar. |
+Forense digital | Investigación de evidencias tras un incidente. |
+Cadena de custodia | Registro de quién manejó las evidencias. |
+Copia de seguridad 3-2-1 | 3 copias, 2 soportes, 1 fuera. |
+Inmutabilidad de copias | Copias que no se pueden modificar. |
+RGPD / GDPR | Reglamento europeo de protección de datos. |
+LOPDGDD | Ley española de protección de datos. |
+Dato personal / dato sensible | Identifica a una persona / datos especialmente protegidos. |
+Consentimiento / base legal / minimización | Permiso / razón para tratar datos / recoger solo lo necesario. |
+DPO / DPIA | Delegado de protección de datos / evaluación de impacto. |
+Derecho al olvido / portabilidad / acceso | Derechos del interesado. |
+ISO 27001 / SOC 2 / PCI DSS / ENS / HIPAA | Normas y marcos de seguridad y cumplimiento. |
+Compliance / auditoría / control | Cumplimiento / revisión independiente / medida. |
+Seudonimización / anonimización | Datos que ya no apuntan directamente a una persona / imposibles de reidentificar. |
+Seguridad en IA | Proteger modelos y datos: inyección de prompt, fuga de datos, envenenamiento de datos. |
+Data poisoning | Contaminar los datos de entrenamiento. |
+Model extraction / inversion | Robar o reconstruir un modelo o sus datos. |
+Shadow IT / shadow AI | Herramientas usadas sin autorización de la empresa. |

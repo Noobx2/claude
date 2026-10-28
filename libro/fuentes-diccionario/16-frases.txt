@@ -1,0 +1,122 @@
+# Frases de reunión y jerga por perfil
+«Esto es legacy» | Es un sistema antiguo del que depende el negocio y que da miedo tocar. | Desarrollo, arquitectura
+«Hay mucha deuda técnica» | Se tomaron atajos que ahora frenan el trabajo. | Desarrollo, arquitectura, PM
+«Hay que refactorizar» | Reordenar el código sin cambiar lo que hace. | Desarrollo
+«No escala» | Cuando crezca la carga, dejará de funcionar bien. | Arquitectura, backend, infra
+«Es un cuello de botella» | La parte más lenta que limita a todo el sistema. | Backend, infra
+«Rompe la retrocompatibilidad» | Lo que antes funcionaba dejará de hacerlo. | Backend, producto
+«Es un breaking change» | Un cambio que obliga a los demás a adaptarse. | Backend, frontend
+«Mergeo y lo despliego» | Uno mi cambio a la rama principal y lo pongo en un entorno. | Desarrollo
+«La PR está lista para review» | Mi cambio está listo para que lo revisen. | Desarrollo
+«LGTM» / «nit» | Me parece bien / detalle menor. | Desarrollo
+«Se ha roto el pipeline» | La cadena automática de construcción y pruebas falla. | Desarrollo, DevOps
+«Está en verde» | Todas las pruebas y comprobaciones pasaron. | Todos
+«El build está en rojo» | La construcción falla; nadie debería integrar hasta arreglarlo. | Desarrollo
+«En mi máquina funciona» | El fallo depende del entorno, no de mi código (o eso creo). | Desarrollo, QA
+«No reproduce» | No consigo hacer que falle de nuevo. | QA, desarrollo
+«Es flaky» | Una prueba que falla a veces sin motivo. | QA
+«Cobertura al 80 %» | Las pruebas ejecutan el 80 % del código. | QA, desarrollo
+«Falta un caso de borde» | No se contempla una situación extrema. | QA, desarrollo
+«¿Hay pasos para reproducirlo?» | Dime cómo provocar el fallo. | QA
+«Es un bloqueante» | Impide continuar o publicar. | Todos
+«Lo bajamos a P2» | Reducimos su prioridad. | PM, QA
+«Está en staging» | Ya está en el entorno de ensayo, aún no en producción. | Todos
+«Pasa a producción esta noche» | Se publica fuera de horas de más uso. | Infra, PM
+«Hacemos un rollback» | Volvemos a la versión anterior. | Infra, desarrollo
+«Hot fix a producción» | Corrección urgente fuera del calendario. | Todos
+«Despliegue canario» | Se publica a unos pocos usuarios primero. | Infra
+«Detrás de un feature flag» | Está escondido tras un interruptor y se activa cuando se decida. | Desarrollo, producto
+«¿Cuál es el SLA?» | ¿Qué nivel de servicio nos hemos comprometido a dar? | PM, infra
+«Hemos agotado el error budget» | Ya hemos fallado lo permitido; toca estabilizar antes de añadir funciones. | SRE
+«¿Qué dice la observabilidad?» | ¿Qué muestran los logs, métricas y trazas? | Infra, backend
+«Hay un incidente SEV1» | El servicio está caído o muy afectado. | Infra, soporte
+«Haremos un postmortem» | Analizaremos qué pasó sin buscar culpables. | Infra, PM
+«Estoy de guardia (on-call)» | Me avisan si falla algo. | Infra, desarrollo
+«Es un single point of failure» | Si cae esa pieza, cae todo. | Arquitectura, infra
+«Necesitamos alta disponibilidad» | Que el sistema siga funcionando aunque algo falle. | Arquitectura, infra
+«Pasémoslo a microservicios» | Dividirlo en servicios pequeños e independientes. | Arquitectura
+«¿Monolito modular o microservicios?» | ¿Un solo bloque ordenado por dentro o muchos servicios separados? | Arquitectura
+«Hace falta un ADR» | Dejemos escrita la decisión técnica y sus motivos. | Arquitectura
+«Es un trade-off» | Ganamos algo a cambio de perder otra cosa. | Arquitectura
+«Cumple los NFR» | Cumple los requisitos de rendimiento, seguridad y similares. | Arquitectura
+«El dominio dice…» | Lo establece el negocio, no la tecnología. | Arquitectura, producto
+«Es multi-tenant» | Una instalación sirve a varios clientes con datos separados. | Arquitectura, backend
+«Idempotente» | Si se repite, el resultado es el mismo. | Backend
+«Eventualmente consistente» | Los datos acaban coincidiendo, pero no al instante. | Backend, datos
+«Es asíncrono» | No espera; responde más tarde. | Backend, frontend
+«Se queda en la cola» | El mensaje espera su turno para procesarse. | Backend
+«Hay una condición de carrera» | El resultado depende del orden impredecible de dos tareas. | Backend
+«Se me bloquea el hilo principal» | Una tarea larga congela la interfaz. | Frontend, móvil
+«Rehidrata en cliente» | La página llegó del servidor y el navegador la hace interactiva. | Frontend
+«Hay que mirar el LCP» | Medir cuánto tarda en verse el contenido principal. | Frontend
+«Es responsive / mobile first» | Se adapta a cualquier pantalla, empezando por el móvil. | Frontend, UX
+«Necesitamos el handoff» | Que diseño entregue las especificaciones a desarrollo. | UX, frontend
+«No cumple accesibilidad» | Hay personas que no podrán usarlo. | Frontend, UX, QA
+«Cuéntamelo como user story» | Escríbelo como «Como…, quiero…, para…». | Producto
+«¿Qué aporta valor?» | ¿Qué consigue el usuario o el negocio? | PO, PM
+«Entra en el sprint» | Se compromete para este periodo de trabajo. | Scrum
+«Lo metemos en el backlog» | Queda anotado, pero sin fecha. | PO, PM
+«Priorizamos por impacto» | Primero lo que más efecto tenga. | PO, PM
+«Hay scope creep» | El alcance crece sin control. | PM
+«Es camino crítico» | Si se retrasa, se retrasa todo el proyecto. | PM
+«Mitigamos el riesgo» | Reducimos su probabilidad o su efecto. | PM
+«Alineemos expectativas» | Asegurémonos de que todos esperan lo mismo. | PM, PO
+«Lo vemos en la daily / en la retro» | En la reunión diaria / de mejora del equipo. | Scrum
+«Un MVP primero» | Lo mínimo útil para aprender antes de invertir más. | Producto
+«Hay que pivotar» | Cambiar de rumbo según lo aprendido. | Producto
+«Nos falta product-market fit» | Aún no encaja con lo que el mercado quiere. | Producto
+«El stakeholder no está alineado» | Alguien interesado no comparte el plan. | PM, PO
+«Hay que hacer un spike» | Investigar un tiempo corto para resolver una duda técnica. | Desarrollo, PO
+«Eso es un nice to have» | Estaría bien, pero no es imprescindible. | Todos
+«Hay que hacer shift-left» | Probar y revisar la seguridad antes en el proceso. | QA, seguridad
+«Es un falso positivo» | Una alarma que no es un problema real. | Seguridad, QA
+«Hay que rotar las credenciales» | Cambiar claves y contraseñas. | Seguridad, infra
+«Mínimo privilegio» | Dar solo los permisos necesarios. | Seguridad, infra
+«Está en la lista de CVE» | Tiene una vulnerabilidad pública conocida. | Seguridad
+«Evalúalo con evals» | Mide con pruebas sistemáticas qué tan bien responde el sistema de IA. | IA
+«Es una alucinación» | El modelo se inventó el dato. | IA, desarrollo
+«Necesita más contexto» | Hay que darle al modelo más información en el prompt. | IA, desarrollo
+«Pásale la salida por un parser» | Convierte la respuesta del modelo en datos estructurados. | IA
+«Usa RAG» | Busca documentos y dáselos al modelo antes de responder. | IA
+«El agente llama a una herramienta» | El modelo decide usar una función o servicio externo. | IA
+«¿Cuánto cuesta por token?» | ¿Cuánto cobra el proveedor por cada trozo de texto procesado? | IA, PM
+«Se queda sin ventana de contexto» | Ya no cabe más texto en la memoria del modelo. | IA
+«Hay que revisar lo que genera la IA» | Nunca se acepta sin leer y ejecutar. | Todos
+«Es vibe coding» | Programar aceptando lo que sugiere la IA sin entenderlo del todo. | Desarrollo
+«Human in the loop» | Una persona revisa o aprueba antes de actuar. | IA, producto
+«Hay drift» | Los datos o el comportamiento cambiaron con el tiempo y el modelo empeora. | IA, datos
+«Hay que alinear el modelo» | Ajustarlo para que se comporte como queremos. | IA
+«Pásalo a un contenedor» | Empaquétalo con todo lo que necesita. | DevOps, desarrollo
+«Está dockerizado» | Ya se ejecuta en contenedor. | DevOps
+«Aplica el manifiesto» | Despliega lo que describe el archivo de configuración. | DevOps
+«Lo tenemos como IaC» | La infraestructura está descrita en código. | DevOps
+«Hay drift de configuración» | Lo real ya no coincide con lo declarado. | DevOps
+«Sube la réplica» | Añade una copia más del servicio. | Infra
+«Escala horizontalmente» | Añade más máquinas en vez de una más grande. | Infra, arquitectura
+«Hay latencia alta» | Las respuestas tardan demasiado. | Infra, backend
+«Cache miss» | El dato no estaba en caché y hubo que pedirlo. | Backend, infra
+«Hay un memory leak» | El programa consume cada vez más memoria. | Backend, desarrollo
+«Es CPU-bound / I/O-bound» | Limitado por cálculo / por esperas de disco o red. | Backend
+«N+1» | Una consulta por cada fila: lentísimo. | Backend
+«Falta un índice» | La base de datos busca sin atajos. | Backend, DBA
+«Haz la migración» | Aplica el cambio de estructura de la base. | Backend, DBA
+«Hay un deadlock en la base» | Dos transacciones se esperan para siempre. | DBA, backend
+«Tenemos un lag de replicación» | La copia va retrasada respecto a la principal. | DBA, infra
+«Eso es un DTO» | Un objeto solo para transportar datos. | Backend
+«Inyecta la dependencia» | Dale desde fuera lo que necesita. | Desarrollo
+«Es un singleton» | Existe una sola instancia en todo el programa. | Desarrollo
+«No es thread-safe» | Falla si lo usan varios hilos a la vez. | Desarrollo
+«Hay que parametrizar el flag» | Que la opción se pueda elegir al ejecutar (`--opción`). | Desarrollo
+«Dockeriza y haz el compose» | Contenedor y orquestación de varios servicios. | DevOps
+«Esto es un hack» | Es una solución chapucera y provisional. | Todos
+«Yak shaving» | Estamos resolviendo problemas laterales sin avanzar el principal. | Todos
+«Bikeshedding» | Discusión larga sobre un detalle trivial. | Todos
+«Eso no es un bug, es un feature» | Se comporta así a propósito (o se justifica así). | Todos
+«Lo hablamos offline» | Lo hablamos aparte de esta reunión. | Todos
+«Hagamos un quick win» | Una mejora rápida y de bajo coste. | PM, PO
+«No reinventemos la rueda» | Usemos algo que ya existe. | Arquitectura, desarrollo
+«Sigue el golden path» | Usa el camino recomendado y ya preparado. | Plataforma
+«Se necesita un PoC» | Una prueba de concepto antes de decidir. | Arquitectura, producto
+«Bus factor 1» | Solo una persona entiende esta parte. | PM, desarrollo
+«Pair programming» | Dos personas programan juntas. | Desarrollo
+«Hay que documentar» | Dejarlo por escrito para el futuro. | Todos
