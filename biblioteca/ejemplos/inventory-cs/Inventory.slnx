@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Inventory.Console/Inventory.Console.csproj" />
+    <Project Path="src/Inventory.Core/Inventory.Core.csproj" />
+    <Project Path="src/Inventory.WinForms/Inventory.WinForms.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Inventory.Tests/Inventory.Tests.csproj" />
+  </Folder>
+</Solution>
