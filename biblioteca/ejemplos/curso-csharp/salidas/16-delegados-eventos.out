@@ -1,0 +1,16 @@
+5 True
+HOLA
+10,20,30
+1,4,9
+closure: 20   (usa el factor actual, no el de cuando se creó)
+uno dos tres
+Set(20)
+  [pantalla] 0 -> 20
+Set(35)
+  [pantalla] 20 -> 35
+  [alarma] ¡demasiado calor!
+Set(10)
+  [pantalla] 35 -> 10
+  [temporal]
+Set(11)
+  [pantalla] 10 -> 11

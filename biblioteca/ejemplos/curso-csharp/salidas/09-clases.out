@@ -1,0 +1,10 @@
+Ana (32)
+Ana 32 True
+Teclado cuesta 59.9
+rechazado: value
+contadores creados: 3; ids: 1, 2, 3
+42 (método estático sin crear objeto)
+mismo objeto: False; == False; Equals False
+Ana: 150.00
+localhost:5432
+Person tiene campos privados, propiedades públicas y métodos

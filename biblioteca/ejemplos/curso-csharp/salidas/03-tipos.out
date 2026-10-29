@@ -1,0 +1,13 @@
+double: 0.30000000000000004   decimal: 0.3
+¿0.1+0.2 == 0.3?  double: False   decimal: True
+31 8100000000 255 4000000000 1.5 True Ñ Ana 42 3.14
+int es System.Int32, string es System.String, decimal es System.Decimal
+int.MaxValue = 2147483647, int.MinValue = -2147483648
+max + 1 sin comprobar = -2147483648  (da la vuelta, sin avisar)
+checked avisa: Arithmetic operation resulted in an overflow.
+3 31 42 False 0 '42' 8
+2 4 3  (redondeo bancario por defecto)
+Pi = 3.14159
+default(int) = 0, default(bool) = False, maybeNumber = null
+valor: a = 5, b = 99
+referencia: listA tiene 3 elementos, listB tiene 3 (son la misma lista)

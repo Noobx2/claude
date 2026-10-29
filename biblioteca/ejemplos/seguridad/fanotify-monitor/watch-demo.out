@@ -1,0 +1,5 @@
+11:43:00  pid=1967   ABRIR LEER             nota.txt  <-  (ya terminó)
+11:43:00  pid=1968   ABRIR                  nota.txt  <-  /usr/bin/python3.13
+11:43:00  pid=1968   LEER                   nota.txt  <-  /usr/bin/python3.13
+11:43:00  pid=1956   ABRIR ESCRIBIR CERRAR  nota.txt  <-  /usr/bin/bash
+11:43:00  pid=1970   ABRIR LEER             nota.txt  <-  (ya terminó)

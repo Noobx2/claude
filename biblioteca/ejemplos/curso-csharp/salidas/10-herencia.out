@@ -1,0 +1,13 @@
+Rectangle              área 12.00
+Circle                 área 3.14
+Cuadrado de lado 2     área 4.00
+Ana: 1530.00
+No se pudo: Máximo 1000 por operación
+es un círculo de radio 2
+as Shape: Circle; es IShape: True
+Vuelo
+Nado
+Sé nadar
+Derived.Virtual / Base.Hidden   (override respeta el tipo real; new no)
+Derived.Hidden
+no se puede heredar de mí
