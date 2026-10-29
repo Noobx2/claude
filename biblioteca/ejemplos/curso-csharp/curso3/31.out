@@ -1,0 +1,42 @@
+── IComparable<T> e IComparer<T>: ordenar ──
+natural (por nombre y edad): Ana(22), Ana(31), Luis(28), Marta(25)
+por edad desc.:              Ana(31), Luis(28), Marta(25), Ana(22)
+con lambda:                   Ana(22), Marta(25), Luis(28), Ana(31)
+
+── IEquatable<T>, Equals y GetHashCode ──
+Point (clase propia)   == : True; Equals: True
+HashSet contiene un punto igual: True   (necesita GetHashCode coherente con Equals)
+BadPoint sin GetHashCode: HashSet lo encuentra = False   <- ¡error clásico!
+
+── IEnumerable<T>: tu propia colección ──
+[Intro] [Tema 1] [Tema 2] 
+LINQ funciona sobre ella: Tema 1,Tema 2
+Con indexador: playlist[1] = Tema 1; playlist[^1] = Tema 2
+
+── IDisposable: using libera siempre ──
+   abrir base-1
+   ejecutar SELECT 1
+   cerrar base-1
+   abrir base-2
+   cerrar base-2
+   error: SQL incorrecto  (y aun así se liberó)
+
+── IFormattable: {valor:formato} ──
+1234.50 EUR | 1234.50 EUR | 1.234,50 EUR (importe en EUR)
+
+── IParsable<T>: TryParse genérico ──
+Parse<int>("42")    = 42
+Parse<double>("4.5") = 4.5
+Parse<Guid>("mal")   = 00000000-0000-0000-0000-000000000000
+Parse<Money>("9 USD") = 9.00 USD
+
+── Covarianza: IEnumerable<out T> ──
+IEnumerable<string> -> IEnumerable<object>: a,b
+
+── Implementación explícita (resolver choques de nombres) ──
+   Hello
+   Hola
+
+── Interfaces pequeñas y específicas ──
+   solo lectura ve: uno,dos
+   tras escribir: uno,dos,nuevo

@@ -1,0 +1,13 @@
+3 / -1
+sin ciudad
+Madrid
+NullReferenceException: usamos algo que era null
+10
+tiene más de 2 letras
+False -1 1
+30 30
+no existe
+1. No devuelvas null para "no hay datos": devuelve una lista vacía.
+2. Si algo puede faltar, decláralo con ? para que el compilador te obligue a comprobarlo.
+3. Usa TryXxx(out ...) o un tipo Result en lugar de null + excepciones.
+Lista vacía en lugar de null: 0 elementos

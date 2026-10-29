@@ -1,0 +1,42 @@
+── Strategy: algoritmos intercambiables ──
+   sin descuento              total =  225.00 €
+   10 % de descuento          total =  202.50 €
+   -30 € si pasa de 200       total =  195.00 €
+   función lambda (viernes negro) total =  157.50 €
+
+── Observer: avisar a los interesados ──
+   [pantalla] ACME: 100 -> 105
+   [pantalla] ACME: 105 -> 90
+   [alerta] ¡ACME cae más de un 10 %!
+
+── Command: acciones que se pueden deshacer ──
+   texto: "HOLA MUNDO"
+   deshacer -> "Hola mundo"
+   deshacer -> "Hola"
+   rehacer  -> "Hola mundo"
+
+── State: el comportamiento depende del estado ──
+   ship     -> ✗ un pedido nuevo no admite 'ship'
+   pay      -> estado: Paid
+   pay      -> ✗ un pedido pagado no admite 'pay'
+   ship     -> estado: Shipped
+   deliver  -> estado: Delivered
+   cancel   -> ✗ el pedido ya terminó
+
+── Chain of Responsibility: una tubería de pasos ──
+   [1 registro] entra /inicio
+   [1 registro] sale 200 OK (/inicio para ana)
+   => 200 OK (/inicio para ana)
+
+   [1 registro] entra /inicio
+   [1 registro] sale 401 No autenticado
+   => 401 No autenticado
+
+   [1 registro] entra /admin/panel
+   [1 registro] sale 403 Prohibido
+   => 403 Prohibido
+
+   [1 registro] entra /admin/panel
+   [1 registro] sale 200 OK (/admin/panel para admin)
+   => 200 OK (/admin/panel para admin)
+

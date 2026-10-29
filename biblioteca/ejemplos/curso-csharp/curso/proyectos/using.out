@@ -1,0 +1,8 @@
+Product { Name = Teclado, Price = 59.90 } | producto antiguo
+72.48
+Soy Thing, de otro namespace
+global using
+InvariantCulture (de <Using> en el csproj)
+1
+.cs
+UsingsDemo.Models | UsingsDemo.Legacy | Totally.Different.Name

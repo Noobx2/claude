@@ -1,0 +1,19 @@
+activos: Ana, Luis, Pablo, Sara, Iván
+suma 18300; media 3050.00; max 4100; min 2100
+top 3: Marta, Luis, Iván
+por departamento y edad descendente: rec:Sara, tec:Marta, tec:Iván, tec:Luis, ven:Ana, ven:Pablo
+Ana | nadie | Any True | All True | Count 2
+recursos    n=1 total=2800 media=2800
+tecnología  n=3 total=11000 media=3667
+ventas      n=2 total=4500 media=2250
+byId[3] = Marta
+recursos/tecnología/ventas
+SelectMany: 1,2,3,4,5,6
+Zip: a1, b2, c3
+Chunk: 1,2,3 | 4,5,6 | 7
+Aggregate: 24
+join: Ana->Carla, Luis->Diego, Marta->Diego, Pablo->Carla, Iván->Diego
+tras definir la consulta: counter = 0
+tras ToList: counter = 6; resultado 5
+tras Count: counter = 12  (cada recorrido repite el trabajo; usa ToList si lo necesitas varias veces)
+sintaxis de consulta: Iván, Luis, Marta

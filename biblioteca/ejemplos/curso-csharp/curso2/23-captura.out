@@ -1,0 +1,46 @@
+1) Tu nombre:   Ana García  
+   -> 'Ana García' (10 letras)
+2) Ciudad (obligatoria): 
+   Es obligatorio. Inténtalo otra vez.
+2) Ciudad (obligatoria): zz
+   -> zz
+3) Edad (0-120): abc
+   Eso no es un número entero.
+3) Edad (0-120): 200
+   Debe estar entre 0 y 120.
+3) Edad (0-120): 31
+   -> 31
+4) Precio: 12,5
+   -> 12,50 €
+5) Fecha de nacimiento (dd/mm/aaaa): 2026-02-03
+   Formato esperado: dd/mm/yyyy.
+5) Fecha de nacimiento (dd/mm/aaaa): 03/02/1995
+   -> viernes 3 de febrero de 1995
+6) ¿Quieres recibir novedades? (s/n): quizá
+   Responde s o n.
+6) ¿Quieres recibir novedades? (s/n): s
+   -> True
+7) Prioridad:
+     1) Low
+     2) Medium
+     3) High
+   Elige una opción: 9
+   Debe estar entre 1 y 3.
+   Elige una opción: 2
+   -> Medium (valor 2)
+8) Escribe 'nombre, edad' separados por coma: Ana, 31
+   -> Ana tiene 31 años
+9) Escribe notas (una línea vacía para terminar):
+primera nota
+segunda nota
+
+   -> 2 notas: primera nota | segunda nota
+10) Correo [ana@example.com]: ana@correo.es
+   -> ana@correo.es
+11) Puerto (1-65535): 99999
+   Puerto no válido.
+11) Puerto (1-65535): 8080
+   -> 8080
+
+Fin. La entrada se terminó o el usuario no escribió más.
+¿Hay más entrada? ReadLine devuelve: null (fin de la entrada)

@@ -1,0 +1,25 @@
+notas.txt | .txt | notas
+leído entero: 42 caracteres
+3 líneas; la segunda es 'segunda línea'; existe: True
+[evento 1] [evento 2] [evento 3] 
+ReadLines (perezoso): evento 2
+[
+  {
+    "Id": 1,
+    "Title": "Estudiar C#",
+    "Done": false
+  },
+  {
+    "Id": 2,
+    "Title": "Hacer la compra",
+    "Done": true
+  }
+]
+leídas 2 tareas; la primera: TaskItem { Id = 1, Title = Estudiar C#, Done = False }
+Ana 2 True
+tamaño: 18 bytes; hexadecimal: 2A0000001F85EB51B81E094004686F6C6101
+leídos en el mismo orden: 42 3.14 hola True
+archivos .txt (recursivo): a.txt, log.txt, notas.txt
+subcarpetas: sub
+FileNotFoundException: no-existe.txt
+carpeta borrada: True

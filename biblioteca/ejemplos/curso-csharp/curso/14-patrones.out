@@ -1,0 +1,16 @@
+42                     -> entero 42
+hola                   -> texto de 4 letras
+3.14                   -> decimal 3.1
+null                   -> null
+System.Int32[]         -> array de 3, primero 1
+Circle { Radius = 2 }  -> círculo grande (r=2)
+Square { Side = 3 }    -> figura
+-7                     -> entero negativo -7
+                       -> texto vacío
+150                    -> entero grande 150
+18.00
+0
+0
+de 1 a 5 | vacío | uno (9) | de 1 a 2
+agradable
+1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz

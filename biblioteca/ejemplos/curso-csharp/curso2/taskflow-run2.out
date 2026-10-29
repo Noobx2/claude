@@ -1,0 +1,78 @@
+$ TASKFLOW_FILE=/tmp/tf.json dotnet run --project src/TaskFlow.Console < sesion2.txt     # OTRA ejecución: los datos siguen ahí
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 2
+   Id    Título                     Prio   Límite    
+    2    Comprar cable HDMI         Baja   15/11/2030
+    1  ✓ Preparar el curso de C#    Alta   31/12/2030
+  2 tarea(s)
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 3
+Id: 2
+  Id:          2
+  Título:      Comprar cable HDMI
+  Descripción: (sin descripción)
+  Prioridad:   Baja
+  Límite:      15/11/2030
+  Estado:      pendiente
+  Creada:      29/10/2026 17:39
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 4
+Id a editar: 2
+  (Enter conserva el valor actual)
+Título [Comprar cable HDMI]: Comprar cable HDMI 2 m
+Descripción []: 
+Prioridad (actual: Baja)
+  1) Baja   2) Media   3) Alta
+  Elige [Enter = Baja]: 
+Fecha límite [15/11/2030]: 
+  ✓ Tarea actualizada.
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 6
+Id a borrar: 1
+¿Borrar «Preparar el curso de C#»? (s/n): n
+  Cancelado.
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 6
+Id a borrar: 1
+¿Borrar «Preparar el curso de C#»? (s/n): s
+  ✓ Borrada.
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 2
+   Id    Título                     Prio   Límite    
+    2    Comprar cable HDMI 2 m     Baja   15/11/2030
+  1 tarea(s)
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 8
+  Total 1 · hechas 0 · pendientes 1 · vencidas 0
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 0
+Hasta luego.
+
+$ cat /tmp/tf.json
+[
+  {
+    "Id": 2,
+    "Title": "Comprar cable HDMI 2 m",
+    "Description": null,
+    "Priority": "Low",
+    "DueDate": "2030-11-15",
+    "Done": false,
+    "CreatedAt": "2026-10-29T17:39:42.7525931+00:00"
+  }
+]

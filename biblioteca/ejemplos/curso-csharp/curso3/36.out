@@ -1,0 +1,35 @@
+/tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/curso3/36-herramientas.cs(120,43): warning IL2075: 'this' argument does not satisfy 'DynamicallyAccessedMemberTypes.PublicProperties' in call to 'System.Type.GetProperties()'. The return value of method 'System.Object.GetType()' does not have matching annotations. The source value must declare at least the same requirements as those declared on the target location it is assigned to.
+── Métodos de extensión ──
+   "hola mundo".Capitalize()  -> Hola mundo
+   "ana@correo.es".IsEmail()  -> True
+   [1,2,3,4,5,6].Chunked(4)   -> 1,2,3,4 | 5,6
+   LINQ entero está hecho así: Where, Select, OrderBy son métodos de extensión de IEnumerable<T>
+
+── Operadores propios ──
+   (1,2) + (3,4) = (4,6);  (1,2) * 3 = (3,6);  -(1,2) = (-1,-2);  |(3,4)| = 5
+   (1,2) == (1,2): True;  conversión implícita desde tupla: (5,6)
+
+── Indexadores: objeto[clave] ──
+   matrix[0,1] = 5, matrix[1,2] = 9
+   phone["Ana"] = 600111222; phone["Zoe"] = (no existe)
+
+── partial: una clase repartida en varios archivos ──
+   Ana Ruiz   (el código generado y el escrito a mano conviven sin pisarse)
+
+── Atributos + reflexión: el programa se lee a sí mismo ──
+   ✗ Name necesita al menos 3 caracteres
+   ✗ Email no es un correo válido
+   ✗ Age debe estar entre 18 y 120
+   (así funciona la validación automática de ASP.NET y de muchos frameworks)
+
+── Información del llamador ──
+   [Run:138] algo ocurrió
+   nameof(Vector2D.Length) = Length   (no se rompe al renombrar, a diferencia de un texto)
+
+── Matemáticas genéricas: INumber<T> ──
+   Sum<int>    = 6
+   Sum<double> = 4
+   Sum<decimal>= 0.3
+
+── Interfaces con miembros estáticos ──
+   perro hace guau / gato hace miau

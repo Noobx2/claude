@@ -1,0 +1,24 @@
+10 caracteres; mayúsculas: ANA GARCÍA; minúsculas: ana garcía
+Contiene 'Gar': True; empieza por 'A': True; posición de 'G': 4
+[hola] [hola  ] [  hola]
+García | Ana | García | An@ G@rcí@
+uno - dos - tres
+True True
+s sigue siendo 'a', t es 'A'
+Precio: 1234,57 | miles: 1.234,57 | moneda: 1.234,57 € | porcentaje: 25,6 % | relleno: 0007
+Alineado: [Ana García  ] [     7] [    1234,6]
+Fecha: 09/03/2026 14:05 | 2026-03-09 | lunes 9 de marzo
+es-ES: 1.234,57  | en-US: 1,234.57
+InvariantCulture (para archivos y APIs): 1234.5678
+== distingue mayúsculas: False; sin distinguir: True
+CompareTo: -1 (negativo = a va antes)
+C:\Users\ana\datos.txt
+Primera línea
+  con sangría relativa
+"comillas" sin escapar
+Con escapes: tab[	] salto de línea \n y comillas "dobles"
+[1,2,3,4,5]
+True True Ñ 65 B
+Length = 7 (un emoji ocupa 2 unidades UTF-16)
+a:6, d:2, e:2
+palabras: 5; invertida: aredarp al ed asac al

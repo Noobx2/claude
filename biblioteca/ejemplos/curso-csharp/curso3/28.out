@@ -1,0 +1,33 @@
+── Clase abstracta + patrón Plantilla (Template Method) ──
+Pago de 120.50 € con tarjeta ****1111
+   ✓ cargado a la tarjeta (comisión 1.81 €)
+   (registro estándar)
+   resultado: COBRADO
+
+Pago de 120.50 € con transferencia ES91…
+   ✓ transferencia ordenada (sin comisión)
+   (registro especial: se avisa al banco)
+   resultado: COBRADO
+
+Pago de 120.50 € con tarjeta ****1234
+   ✗ El número de tarjeta debe tener 16 dígitos.
+   resultado: RECHAZADO
+
+Total de pagos intentados: 3   (estado compartido en la base)
+
+── Interfaces: capacidades que se combinan ──
+   El pato nada
+   El pato vuela
+   Pato: nada y vuela
+   El pez nada
+   Fish: nada + respira bajo el agua
+   El robot vuela
+
+── Abstracta o interfaz ──
+Clase abstracta : relación "ES UN" con código y datos compartidos (solo se hereda de UNA).
+Interfaz        : capacidad "PUEDE HACER" sin código compartido (se cumplen VARIAS).
+Regla práctica  : empieza por una interfaz; usa una clase abstracta solo si necesitas compartir código o estado.
+── Composición: el comportamiento es una pieza que se enchufa ──
+   Pato salvaje: vuela con alas, ¡cuac!
+   Pato de goma: no vuela, ¡pii!
+   Pato de goma: vuela con un cohete, ¡pii!

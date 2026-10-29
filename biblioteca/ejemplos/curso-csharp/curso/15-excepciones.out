@@ -1,0 +1,17 @@
+Capturada: DivideByZeroException - Attempted to divide by zero.
+finally: se ejecuta SIEMPRE (con o sin error)
+84
+'abc' no es un número
+era null
+'99999999999' no cabe en un int
+filtro when: El importe no puede ser negativo (Parameter 'amount')
+Saldo insuficiente (faltan 40)
+traza conservada: True
+No se pudo leer la configuración <- causa: The input string 'x' was not in a correct format.
+trabajando con A
+Dispose de A
+A ya liberado
+trabajando con B
+Dispose de B
+TryParse: sin excepción, sin coste
+NullReferenceException, ArgumentException, InvalidOperationException, KeyNotFoundException, IndexOutOfRangeException, FileNotFoundException, NotImplementedException

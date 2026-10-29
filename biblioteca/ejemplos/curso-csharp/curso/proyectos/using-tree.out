@@ -1,0 +1,6 @@
+./GlobalUsings.cs
+./Legacy/Product.cs
+./Models/Product.cs
+./Program.cs
+./Services/PriceService.cs
+./Weird/Thing.cs

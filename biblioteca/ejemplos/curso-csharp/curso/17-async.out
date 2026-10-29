@@ -1,0 +1,12 @@
+En SECUENCIA: a listo, b listo -> ~600 ms
+En PARALELO : a listo, b listo -> ~300 ms
+WhenAny: rápida listo
+Cancelado a tiempo
+Capturada tras await: falló la tarea
+sin lock: 99862 (casi seguro < 100000) | con lock: 100000
+Interlocked: 100000
+consumidos: 1,2,3,4,5
+1. async/await se propaga hacia arriba: un método que espera suele ser async Task.
+2. NUNCA .Result ni .Wait() sobre una tarea: pueden bloquear la aplicación (sobre todo en interfaces).
+3. async void solo para manejadores de eventos; en lo demás, async Task.
+4. Pasa siempre un CancellationToken a las operaciones largas.

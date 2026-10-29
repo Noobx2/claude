@@ -1,0 +1,99 @@
+── Vista 1: lista simple ──
+1. Teclado mecánico - 59,90 €
+2. Ratón inalámbrico - 24,50 €
+3. Monitor 27" 4K - 329,00 €
+4. SSD 1 TB - 79,90 €
+5. Cable HDMI 2 m - 7,50 €
+
+── Vista 2: tabla alineada ──
+Id  Producto           Categoría       Precio  Stock
+--  -----------------  --------------  ------  -----
+1   Teclado mecánico   Periféricos      59,90     25
+2   Ratón inalámbrico  Periféricos      24,50     60
+3   Monitor 27" 4K     Monitores       329,00      4
+4   SSD 1 TB           Almacenamiento   79,90      0
+5   Cable HDMI 2 m     Cables            7,50     80
+
+── Vista 3: tabla con marco ──
+┌────────────────┬─────────┐
+│ Producto       │ Stock   │
+├────────────────┼─────────┤
+│ Teclado mecán… │ 25      │
+│ Ratón inalámb… │ 60      │
+│ Monitor 27" 4K │ 4       │
+│ SSD 1 TB       │ AGOTADO │
+│ Cable HDMI 2 m │ 80      │
+└────────────────┴─────────┘
+
+── Vista 4: detalle ──
+Id        3
+Nombre    Monitor 27" 4K
+Precio    329,00 €
+Stock     4 unidades   <-- poco stock
+Valor     1.316,00 €
+
+── Vista 5: agrupado ──
+Almacenamiento (1)
+   - SSD 1 TB                 79,90
+   Valor en stock              0,00
+Cables (1)
+   - Cable HDMI 2 m            7,50
+   Valor en stock            600,00
+Monitores (1)
+   - Monitor 27" 4K          329,00
+   Valor en stock          1.316,00
+Periféricos (2)
+   - Teclado mecánico         59,90
+   - Ratón inalámbrico        24,50
+   Valor en stock          2.967,50
+TOTAL EN ALMACÉN           4.883,50
+
+── Vista 6: paginación (2 por página) ──
+Página 1/3
+   Teclado mecánico
+   Ratón inalámbrico
+Página 2/3
+   Monitor 27" 4K
+   SSD 1 TB
+Página 3/3
+   Cable HDMI 2 m
+
+── Vista 7: barras ──
+Teclado mecánico ██████ 25
+Ratón inalámbri… ███████████████ 60
+Monitor 27" 4K   █ 4
+SSD 1 TB          0
+Cable HDMI 2 m   ████████████████████ 80
+
+── Vista 8: colores ──
+BAJO: Monitor 27" 4K
+AGOTADO: SSD 1 TB
+
+── Vista 9: JSON ──
+[
+  {
+    "Id": 1,
+    "Name": "Teclado mecánico",
+    "Category": "Periféricos",
+    "Price": 59.90,
+    "Stock": 25
+  },
+  {
+    "Id": 2,
+    "Name": "Ratón inalámbrico",
+    "Category": "Periféricos",
+    "Price": 24.50,
+    "Stock": 60
+  }
+]
+── Vista 10: CSV ──
+id;name;category;price;stock
+1;Teclado mecánico;Periféricos;59.90;25
+2;Ratón inalámbrico;Periféricos;24.50;60
+
+── Vista 11: --format ──
+[lista]
+  • Teclado mecánico (25)
+  • Ratón inalámbrico (60)
+[json]
+[{"Id":1,"Name":"Teclado mecánico"},{"Id":2,"Name":"Ratón inalámbrico"}]

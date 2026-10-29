@@ -1,0 +1,31 @@
+── Factory Method: la decisión en un único lugar ──
+   pdf   -> %PDF(2 líneas)
+   csv   -> Ana;Luis
+   json  -> ["Ana","Luis"]
+   xml   -> error: formato desconocido 'xml'
+   rgb(0,255,0) / rgb(255,136,0)   (Color.FromRgb y Color.FromHex en lugar de dos constructores confusos)
+
+── Abstract Factory: familias coherentes ──
+   Oscuro: ventana oscura con botón negro
+   Claro: ventana clara con botón blanco
+
+── Builder: construcción legible y validada ──
+   GET https://api.ejemplo.es/users?page=2&sort=name (timeout 10s, cabeceras: Accept=application/json)
+   Build() rechazó datos incompletos: la URL debe empezar por https://
+
+── Prototype: copiar y modificar ──
+   Bienvenida: Hola {nombre}
+   Oferta: Hola {nombre}, 20 % de descuento
+   OJO copia superficial: las listas se COMPARTEN -> True
+   copia profunda manual: 1 frente a 2 destinatarios
+
+── Object Pool: reutilizar en vez de crear y destruir ──
+   creadas: 3, en uso: 3, libres: 0
+   tras devolverlas: en uso 0, libres 3
+   se reutiliza una (id 3); total creadas sigue en 3
+
+── Inicialización perezosa: no se crea hasta que hace falta ──
+   ¿creado todavía? False
+   (creando el informe pesado...)
+   primer uso: Informe anual
+   segundo uso: Informe anual   (no se vuelve a crear)

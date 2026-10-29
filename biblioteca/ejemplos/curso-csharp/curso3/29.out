@@ -1,0 +1,23 @@
+── Versión 1: ingenua ──
+   Se crearon 8 instancias (¡debería ser 1!). Es una CARRERA DE DATOS.
+── Versión 2: lock + doble comprobación ──
+   Instancias creadas: 1
+── Versión 3: campo estático ──
+   Instancias creadas: 1   (se crea al primer uso de la clase)
+── Versión 4: Lazy<T> (se crea solo cuando alguien la pide) ──
+   antes de pedirla: creada = False
+   después: creada = True, instancias = 1
+── El problema: estado global compartido ──
+   código A cambia el tema a: oscuro
+   código B (otro lugar) lo ve:  oscuro   <- B depende de lo que hizo A sin enterarse
+   ServicioX dice: hola con el tema oscuro
+   ServicioX dice: hola con el tema claro   <- mismo código, otro resultado según lo que pasó antes
+── Alternativa: una instancia única, pero ENTREGADA (inyectada) ──
+   hola con el tema oscuro / hola con el tema oscuro   (misma instancia: True)
+   en una prueba: hola con el tema de prueba
+
+── Cuándo sí y cuándo no ──
+Sí   : una instancia por aplicación, entregada por el contenedor de dependencias (AddSingleton).
+Sí   : clases estáticas sin estado (Math, Path).
+No   : Singleton clásico con "Instance" estático y estado modificable: oculta dependencias,
+       impide las pruebas y es difícil de hacer seguro con hilos.

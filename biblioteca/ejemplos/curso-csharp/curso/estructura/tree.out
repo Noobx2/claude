@@ -1,0 +1,10 @@
+./.editorconfig
+./.gitignore
+./Tienda.slnx
+./global.json
+./src/Tienda.App/Program.cs
+./src/Tienda.App/Tienda.App.csproj
+./src/Tienda.Core/Class1.cs
+./src/Tienda.Core/Tienda.Core.csproj
+./tests/Tienda.Tests/Tienda.Tests.csproj
+./tests/Tienda.Tests/UnitTest1.cs

@@ -1,0 +1,22 @@
+TaskFlow.Tests.ConsoleAppTests.BusinessErrors_AreShownNotThrown
+TaskFlow.Tests.ConsoleAppTests.CreateAndList_ShowsTheTask
+TaskFlow.Tests.ConsoleAppTests.Delete_AsksForConfirmation
+TaskFlow.Tests.ConsoleAppTests.Edit_KeepsValuesOnEnter
+TaskFlow.Tests.ConsoleAppTests.EndOfInput_ExitsCleanlyInsteadOfLooping
+TaskFlow.Tests.ConsoleAppTests.InvalidInput_IsRetriedWithoutCrashing
+TaskFlow.Tests.RepositoryContractTests.Add_AssignsConsecutiveIds(kind: "json")
+TaskFlow.Tests.RepositoryContractTests.Add_AssignsConsecutiveIds(kind: "memory")
+TaskFlow.Tests.RepositoryContractTests.Json_PersistsBetweenInstances
+TaskFlow.Tests.RepositoryContractTests.Json_StoresPriorityAsText
+TaskFlow.Tests.RepositoryContractTests.Remove_ReturnsFalseWhenMissing(kind: "json")
+TaskFlow.Tests.RepositoryContractTests.Remove_ReturnsFalseWhenMissing(kind: "memory")
+TaskFlow.Tests.TaskServiceTests.Add_AssignsIdTrimsTitleAndStartsPending
+TaskFlow.Tests.TaskServiceTests.Add_RejectsDueDateInThePast
+TaskFlow.Tests.TaskServiceTests.Add_RejectsShortTitles(title: "  ")
+TaskFlow.Tests.TaskServiceTests.Add_RejectsShortTitles(title: "")
+TaskFlow.Tests.TaskServiceTests.Add_RejectsShortTitles(title: "ab")
+TaskFlow.Tests.TaskServiceTests.List_FiltersByTextAndOverdue
+TaskFlow.Tests.TaskServiceTests.List_OrdersPendingFirstThenByPriority
+TaskFlow.Tests.TaskServiceTests.MissingTask_ThrowsNotFound
+TaskFlow.Tests.TaskServiceTests.Stats_CountsDoneAndOverdue
+TaskFlow.Tests.TaskServiceTests.Update_ChangesOnlyWhatIsGiven

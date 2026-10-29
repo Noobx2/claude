@@ -1,0 +1,30 @@
+S · Una clase, una razón para cambiar
+   mal  : factura de 121.00 € impresa
+   mal  : guardada en la base de datos
+   bien : factura de 121.00 € impresa
+   bien : guardada en la base de datos
+
+O · Añadir una figura sin tocar el calculador
+   mal  : 12.57
+   bien : Circle 12.57, Rect 12.00, Triangle 6.00  (Triangle se añadió sin editar Calculator: 30.57)
+
+L · La subclase no debe romper lo que promete la base
+   mal  : Width=5, Height=2 -> área 4   (¡debería ser 10!) El Cuadrado rompió la promesa del Rectángulo.
+   bien : 10 y 9   (ninguno promete algo que el otro no cumpla)
+
+I · Interfaces pequeñas
+   mal  : un robot no come: ¡esta clase no debería tener que implementar Eat()!
+   bien : la persona trabaja
+   bien : el robot trabaja 24 h
+   bien : la persona come
+
+D · Depender de contratos
+   bien : con un falso se comprueba el mensaje sin enviar nada -> 'ALERTA: Disco al 95 %'
+   bien : [SMS real] ALERTA: Disco al 95 %
+
+── Resumen ──
+S  Cada clase hace UNA cosa.                          -> clases pequeñas y fáciles de probar
+O  Se añade comportamiento nuevo con código nuevo.     -> sin romper lo que ya funciona
+L  Una subclase cumple lo que la base promete.         -> la herencia no da sorpresas
+I  Muchas interfaces pequeñas mejor que una gigante.   -> nadie implementa lo que no usa
+D  Depender de contratos, no de clases concretas.      -> piezas intercambiables y probables

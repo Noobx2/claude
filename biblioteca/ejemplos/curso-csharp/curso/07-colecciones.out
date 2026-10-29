@@ -1,0 +1,18 @@
+4 elementos; primero 50; último 1; trozo 3,8
+ordenado: 1,3,8,50; índice del 8: 2
+grid[1,2] = 6; filas 2, columnas 3
+jagged[2][1] = 5
+Iván, Marta, Pablo, Sara | Count = 4 | ¿Marta? True | índice de Pablo 2
+ordenada inversa: Sara, Pablo, Marta, Iván
+Pedro no está
+Ana=31; Luis=28; Sara=36; 
+set: 1,2,3 (3); Add(2) devuelve False; Add(9) devuelve True
+intersección: 3,9
+pila: Pop = c, Peek = b
+cola: Dequeue = a, Peek = b
+Luis(28) Ana(31) Marta(41) 
+solo lectura: 4 elementos; no tiene Add
+Array: tamaño fijo conocido.   List<T>: lo normal.   Dictionary<K,V>: buscar por clave.
+HashSet<T>: sin repetidos.     Queue<T>/Stack<T>: orden de proceso.
+error esperado: Collection was modified; enumeration operation may not execute.
+1,3,5

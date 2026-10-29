@@ -1,0 +1,14 @@
+Point { X = 1, Y = 2 } | iguales: True | mismo objeto: False
+Point { X = 10, Y = 2 } | original: Point { X = 1, Y = 2 }
+x=1, y=2
+struct: s1.X = 1, s2.X = 99 (se copió)
+class : c1.Value = 99, c2.Value = 99 (misma referencia)
+Green = 1; desde texto: Blue; todos: Red,Green,Blue
+TryParse 'Pink': False
+permisos: Read, Write (3)
+¿puede escribir? True; ¿puede ejecutar? False
+ahora: Execute; todos: All; ninguno: None
+en binario: 0111
+Ana 31
+Money { Amount = 9.99, Currency = EUR } | Money { Amount = 5, Currency = EUR }
+Customer { Name = Ana, Address = Address { City = Madrid, Zip = 28001 } }

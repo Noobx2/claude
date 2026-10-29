@@ -1,0 +1,59 @@
+$ dotnet run 26-persistencia.cs -- list
+0 contacto(s) en contactos.json
+$ dotnet run 26-persistencia.cs -- add Ana Ruiz ana@correo.es --city Madrid
+creado 1: Ana Ruiz
+$ dotnet run 26-persistencia.cs -- add Luis "El Jefe" Pérez luis@correo.es
+creado 2: Luis "El Jefe" Pérez
+$ dotnet run 26-persistencia.cs -- add Marta; Gil marta@correo.es --city Bilbao
+creado 3: Marta; Gil
+$ dotnet run 26-persistencia.cs -- list
+  1 Ana Ruiz       ana@correo.es    Madrid
+  2 Luis "El Jefe" Pérez luis@correo.es   
+  3 Marta; Gil     marta@correo.es  Bilbao
+3 contacto(s) en contactos.json
+$ dotnet run 26-persistencia.cs -- update 2 --city Sevilla
+actualizado 2
+$ dotnet run 26-persistencia.cs -- delete 1
+borrado 1
+$ dotnet run 26-persistencia.cs -- list
+  2 Luis "El Jefe" Pérez luis@correo.es   Sevilla
+  3 Marta; Gil     marta@correo.es  Bilbao
+2 contacto(s) en contactos.json
+
+$ cat contactos.json
+[
+  {
+    "Id": 2,
+    "Name": "Luis \"El Jefe\" Pérez",
+    "Email": "luis@correo.es",
+    "City": "Sevilla"
+  },
+  {
+    "Id": 3,
+    "Name": "Marta; Gil",
+    "Email": "marta@correo.es",
+    "City": "Bilbao"
+  }
+]
+$ dotnet run 26-persistencia.cs -- export contactos.csv
+exportados 2 a contactos.csv
+$ cat contactos.csv
+﻿id;name;email;city
+2;"Luis ""El Jefe"" Pérez";luis@correo.es;Sevilla
+3;"Marta; Gil";marta@correo.es;Bilbao
+$ dotnet run 26-persistencia.cs -- import contactos.csv
+importados 2
+$ dotnet run 26-persistencia.cs -- list
+  2 Luis "El Jefe" Pérez luis@correo.es   Sevilla
+  3 Marta; Gil     marta@correo.es  Bilbao
+  4 Luis "El Jefe" Pérez luis@correo.es   Sevilla
+  5 Marta; Gil     marta@correo.es  Bilbao
+4 contacto(s) en contactos.json
+$ CONTACTS_FILE=otro.csv dotnet run 26-persistencia.cs -- add Pedro pedro@correo.es --city Cádiz
+creado 1: Pedro
+$ cat otro.csv
+﻿id;name;email;city
+1;Pedro;pedro@correo.es;Cádiz
+$ dotnet run 26-persistencia.cs -- update 99 --city X
+no existe 99
+código de salida: 3

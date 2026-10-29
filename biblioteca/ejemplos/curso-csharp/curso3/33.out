@@ -1,0 +1,37 @@
+── Adapter: que lo viejo hable el idioma nuevo ──
+   CelsiusSensor                21.5 °C
+   FahrenheitSensorAdapter      22.5 °C
+
+── Decorator: capas de comportamiento apilables ──
+   [log] Madrid = 18.5 °C (lento)
+   -> 18.5 °C
+
+   [caché] acierto para Madrid
+   [log] Madrid = 18.5 °C (rápido)
+   -> 18.5 °C
+
+   [log] Sevilla = 24 °C (lento)
+   -> 24 °C
+
+   [caché] acierto para Madrid
+   [log] Madrid = 18.5 °C (rápido)
+   -> 18.5 °C
+
+── Facade: una puerta sencilla a muchos pasos ──
+   ✓ envío de teclado para mañana
+   ✗ No hay 5 unidades de monitor
+
+── Proxy: control de acceso ──
+   visita lee: ✗ acceso denegado
+   admin lee:  Plan secreto
+
+── Composite: el árbol se trata como una sola cosa ──
+   + proyecto/ (28 KB)
+      - README.md (2 KB)
+      + src/ (25 KB)
+         - Program.cs (5 KB)
+         - Service.cs (12 KB)
+         + tests/ (8 KB)
+            - Tests.cs (8 KB)
+      - proyecto.csproj (1 KB)
+   Tamaño total: 28 KB   (la misma llamada vale para un archivo, una carpeta o todo el árbol)

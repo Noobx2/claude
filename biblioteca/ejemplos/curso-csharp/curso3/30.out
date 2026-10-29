@@ -1,0 +1,38 @@
+/tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/curso3/30-inyeccion.cs(99,1): info SP0001: Diagnostic 'IL2026: Using member 'Microsoft.Extensions.DependencyInjection.OptionsBuilderConfigurationExtensions.Bind<TOptions>(OptionsBuilder<TOptions>, IConfiguration)' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. TOptions's dependent types may have their members trimmed. Ensure all required members are preserved.' was programmatically suppressed by a DiagnosticSuppressor with suppression ID 'SYSLIBSUPPRESS0002' and justification 'The target method has been intercepted by a generated static variant.'
+/tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/curso3/30-inyeccion.cs(99,1): info SP0001: Diagnostic 'IL3050: Using member 'Microsoft.Extensions.DependencyInjection.OptionsBuilderConfigurationExtensions.Bind<TOptions>(OptionsBuilder<TOptions>, IConfiguration)' which has 'RequiresDynamicCodeAttribute' can break functionality when AOT compiling. Binding strongly typed objects to configuration values may require generating dynamic code at runtime.' was programmatically suppressed by a DiagnosticSuppressor with suppression ID 'SYSLIBSUPPRESS0003' and justification 'The target method has been intercepted by a generated static variant.'
+── 1. DI manual: componer a mano ──
+   [log] pedido de Teclado
+   [log] enviando correo: Pedido de Teclado confirmado
+
+── 2. Constructor / propiedad / método ──
+Constructor : la dependencia es OBLIGATORIA (lo normal). new OrderService(sender, logger)
+Propiedad   : OPCIONAL, se puede cambiar después. service.Logger = otro   (poco usada)
+Método      : solo para UNA operación. service.Export(IExporter exporter)
+── 3. Contenedor: registrar y resolver ──
+   Transient distinto cada vez: True
+   Scoped igual dentro del ámbito: True
+   Singleton igual siempre: True
+
+── 4. Dependencia cautiva (captive dependency) ──
+   El contenedor lo detectó al construirse:
+   Error while validating the service descriptor 'ServiceType: CachedReport Lifetime: Singleton ImplementationType: CachedReport': Cannot consume scoped service 'IUnitOfWork' from singleton 'CachedReport'.
+
+── 5. Varias implementaciones de una interfaz ──
+   [email] Servidor caído
+   [sms] Servidor caído
+   La última registrada gana si se pide una sola: SmsNotifier
+   Por clave 'urgente': SmsNotifier
+
+── 6. Registro con fábrica (decide al crear) ──
+   Se eligió: SmsNotifier
+
+── 7. Opciones: configuración tipada e inyectada ──
+   Servidor smtp.ejemplo.es:587, remitente no-reply@ejemplo.es
+
+── 8. Antipatrón: pedir las cosas al contenedor desde dentro ──
+   class Malo(IServiceProvider sp) { void Hacer() { var x = sp.GetRequiredService<IAlgo>(); } }
+   Esconde qué necesita la clase (no se ve en el constructor) y falla en ejecución, no al compilar.
+   Úsalo solo en la raíz de la aplicación, nunca dentro de la lógica.
+── 9. En una prueba se entrega un falso ──
+   [log] pedido de Ratón
+   El falso recibió: [Pedido de Ratón confirmado]  (no se envió ningún correo real)

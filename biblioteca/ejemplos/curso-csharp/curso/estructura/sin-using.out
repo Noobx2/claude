@@ -1,0 +1,2 @@
+Program.cs(1,16): error CS0246: The type or namespace name 'List<>' could not be found (are you missing a using directive or an assembly reference?)
+Program.cs(2,1): error CS0103: The name 'Console' does not exist in the current context

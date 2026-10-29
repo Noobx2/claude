@@ -1,0 +1,6 @@
+Recibí 7 argumentos: [--name] [Ana] [--times] [2] [--shout] [datos.txt] [notas.txt]
+GREETING = Hola; HOME existe: True
+HOLA, ANA!
+HOLA, ANA!
+Archivos recibidos: datos.txt, notas.txt
+Nombre del programa: 23b-argumentos

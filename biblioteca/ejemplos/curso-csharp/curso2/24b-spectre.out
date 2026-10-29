@@ -1,0 +1,9 @@
+                 Inventario                  
+╭────┬───────────────────┬────────┬─────────╮
+│ Id │ Producto          │ Precio │   Stock │
+├────┼───────────────────┼────────┼─────────┤
+│ 1  │ Teclado mecánico  │  59,90 │      25 │
+│ 2  │ Ratón inalámbrico │  24,50 │      60 │
+│ 3  │ SSD 1 TB          │  79,90 │ AGOTADO │
+╰────┴───────────────────┴────────┴─────────╯
+Listo. Con la salida redirigida los colores se omiten solos.

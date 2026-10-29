@@ -1,0 +1,57 @@
+$ TASKFLOW_FILE=/tmp/tf.json dotnet run --project src/TaskFlow.Console < sesion1.txt
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 1
+Título: Preparar el curso de C#
+Descripción (opcional): Lecciones 1 a 5
+Prioridad
+  1) Baja   2) Media   3) Alta
+  Elige: 3
+Fecha límite (dd/mm/aaaa, vacío = ninguna): 31/12/2030
+  ✓ Tarea 1 creada.
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 1
+Título: Comprar cable HDMI
+Descripción (opcional): 
+Prioridad
+  1) Baja   2) Media   3) Alta
+  Elige: 1
+Fecha límite (dd/mm/aaaa, vacío = ninguna): 31/02/2030
+  Formato esperado: dd/mm/aaaa.
+Fecha límite (dd/mm/aaaa, vacío = ninguna): 15/11/2030
+  ✓ Tarea 2 creada.
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 2
+   Id    Título                     Prio   Límite    
+    1    Preparar el curso de C#    Alta   31/12/2030
+    2    Comprar cable HDMI         Baja   15/11/2030
+  2 tarea(s)
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 5
+Id a completar: 1
+  ✓ «Preparar el curso de C#» marcada como hecha.
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 7
+Texto a buscar: cable
+   Id    Título                     Prio   Límite    
+    2    Comprar cable HDMI         Baja   15/11/2030
+  1 tarea(s)
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 8
+  Total 2 · hechas 1 · pendientes 1 · vencidas 0
+
+=== TASKFLOW ===
+1) Nueva  2) Listar  3) Detalle  4) Editar  5) Completar  6) Borrar  7) Buscar  8) Resumen  0) Salir
+Opción: 0
+Hasta luego.

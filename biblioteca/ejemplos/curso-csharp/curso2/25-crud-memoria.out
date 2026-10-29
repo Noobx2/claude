@@ -1,0 +1,113 @@
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 2
+(no hay contactos)
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 1
+-- Nuevo contacto --
+Nombre: Ana Ruiz
+Correo: ana-correo
+  Correo no válido (ejemplo: ana@correo.es).
+Correo: ana@correo.es
+Teléfono (opcional): 600 111 222
+Ciudad (opcional): Madrid
+Contacto creado con id 1.
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 1
+-- Nuevo contacto --
+Nombre: Luis Pérez
+Correo: luis@correo.es
+Teléfono (opcional): 
+Ciudad (opcional): 
+Contacto creado con id 2.
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 1
+-- Nuevo contacto --
+Nombre: Marta Gil
+Correo: marta@correo.es
+Teléfono (opcional): +34 611 000 111
+Ciudad (opcional): Madrid
+Contacto creado con id 3.
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 2
+ Id  Nombre             Correo                 Teléfono         Ciudad
+  1  Ana Ruiz           ana@correo.es          600 111 222      Madrid
+  2  Luis Pérez         luis@correo.es                          
+  3  Marta Gil          marta@correo.es        +34 611 000 111  Madrid
+3 contacto(s)
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 3
+Id del contacto: 2
+Id: 2
+Nombre: Luis Pérez
+Correo: luis@correo.es
+Teléfono: 
+Ciudad: 
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 3
+Id del contacto: 99
+No existe el contacto 99.
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 4
+Id del contacto a editar: 2
+(pulsa Enter para dejar el valor actual)
+Nombre [Luis Pérez]: Luis P. Díaz
+Correo [luis@correo.es]: 
+Teléfono []: abc
+  Solo dígitos, espacios y +.
+Teléfono []: 600 222 333
+Ciudad []: Sevilla
+Contacto actualizado.
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 6
+Buscar en nombre, correo o ciudad: mad
+ Id  Nombre             Correo                 Teléfono         Ciudad
+  1  Ana Ruiz           ana@correo.es          600 111 222      Madrid
+  3  Marta Gil          marta@correo.es        +34 611 000 111  Madrid
+2 contacto(s)
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 5
+Id del contacto a borrar: 3
+¿Borrar a Marta Gil? (s/n): n
+Cancelado.
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 5
+Id del contacto a borrar: 3
+¿Borrar a Marta Gil? (s/n): s
+Borrado.
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 2
+ Id  Nombre             Correo                 Teléfono         Ciudad
+  1  Ana Ruiz           ana@correo.es          600 111 222      Madrid
+  2  Luis P. Díaz       luis@correo.es         600 222 333      Sevilla
+2 contacto(s)
+
+=== AGENDA ===
+1) Crear   2) Listar   3) Ver detalle   4) Editar   5) Borrar   6) Buscar   0) Salir
+Opción: 7
+Entre 0 y 6.
+Opción: 0
+Hasta luego.

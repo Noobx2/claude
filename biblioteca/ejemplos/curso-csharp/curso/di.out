@@ -1,0 +1,8 @@
+  [log 1] pedido de Teclado
+  [email] Pedido de Teclado confirmado
+mismo ámbito, IRequestLog compartido: True
+mismo ámbito, ISender distinto cada vez: True
+Singleton compartido: True
+otro ámbito, IRequestLog nuevo: 2
+  [log 3] pedido de Prueba
+  [falso, no envía nada] Pedido de Prueba confirmado
