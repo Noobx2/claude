@@ -1,0 +1,17 @@
+Passed Juego.Tests.CooldownTests.NoSePuedeUsarDosVecesSeguidas_PeroSiTrasLaRecarga
+Passed Juego.Tests.StateMachineTests.SoloPermiteLasTransicionesDeclaradas
+Passed Juego.Tests.HealthTests.LaVidaNuncaBajaDeCero_YMorirseAvisaUnaSolaVez
+Passed Juego.Tests.HealthTests.DanoNegativo_Lanza [< 1 ms]
+Passed Juego.Tests.HealthTests.CurarNoSuperaElMaximo_NiResucita [< 1 ms]
+Passed Juego.Tests.HealthTests.VidaMaximaInvalida_Lanza(max: 0) [< 1 ms]
+Passed Juego.Tests.HealthTests.VidaMaximaInvalida_Lanza(max: -5) [< 1 ms]
+Passed Juego.Tests.HealthTests.RecibirDano_BajaLaVida_YAvisaConAnteriorYNueva
+Passed Juego.Tests.StateMachineTests.DeMuertoNoSeSale_YLaTransicionAvisa
+Passed Juego.Tests.CorrutinaTests.YieldReturnNull_EsperaExactamenteUnFotograma
+Passed Juego.Tests.EventChannelTests.LosOyentesRecibenElValor_YDarseDeBajaFunciona
+Passed Juego.Tests.EventChannelTests.UnOyentePuedeDarseDeBajaMientrasSeEmite
+Passed Juego.Tests.CorrutinaTests.EsperarSegundos_ReanudaCuandoSeAcumulaElTiempo
+Passed Juego.Tests.PoolTests.ReutilizaObjetosEnVezDeCrearNuevos
+Passed Juego.Tests.CorrutinaTests.EsperarHasta_EsperaALaCondicion_YVariasCorrutinasSeAlternan
+Passed Juego.Tests.PoolTests.LlamaALosGanchosDeActivarYDesactivar [< 1 ms]
+Passed Juego.Tests.PoolTests.RespetaElMaximo_YDetectaLaDobleDevolucion [< 1 ms]

@@ -1,0 +1,38 @@
+Orden de los mensajes (simulación del orden documentado por Unity):
+
+— Fotograma 0: se crean los objetos —
+Jugador.Awake
+Jugador.OnEnable
+Enemigo.Awake
+— Fotograma 1 —
+Jugador.Start
+Jugador.FixedUpdate
+Jugador.Update
+Jugador.LateUpdate
+— Fotograma 2 —
+(el script activa al Enemigo)
+Enemigo.OnEnable
+Enemigo.Start
+Jugador.FixedUpdate
+Enemigo.FixedUpdate
+Jugador.FixedUpdate
+Enemigo.FixedUpdate
+Jugador.Update
+Enemigo.Update
+Jugador.LateUpdate
+Enemigo.LateUpdate
+— Fotograma 3 —
+(el script destruye al Jugador)
+Jugador.OnDisable
+Jugador.OnDestroy
+Enemigo.FixedUpdate
+Enemigo.Update
+Enemigo.LateUpdate
+
+--- Corrutinas: un iterador que se avanza un paso por fotograma ---
+
+  fotograma 0: empieza el parpadeo
+  fotograma 2: parpadea 1
+  fotograma 5: parpadea 2
+  fotograma 6: fin
+  (no hay hilos: es una máquina de estados que el motor avanza en el hilo principal)

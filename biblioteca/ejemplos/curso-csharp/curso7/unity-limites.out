@@ -1,0 +1,22 @@
+Compilado con <TargetFramework>netstandard2.1</TargetFramework> y <LangVersion>9.0</LangVersion> (los límites de Unity):
+
+Característica                Resultado
+--------------------------------------------
+record (C# 9)                 ERROR CS0518
+init (C# 9)                   ERROR CS0518
+pattern and/or/not (C# 9)     compila
+new() inferido (C# 9)         compila
+namespace de archivo (C# 10)  ERROR CS8773
+record struct (C# 10)         ERROR CS8773
+required (C# 11)              ERROR CS8773
+patrón de lista (C# 11)       ERROR CS8773
+texto crudo """ (C# 11)       ERROR CS8773
+constructor primario (C# 12)  ERROR CS8773
+colección [..] (C# 12)        ERROR CS8773
+params Span (C# 13)           ERROR CS8773
+field (C# 14)                 ERROR CS8773
+extension(...) (C# 14)        ERROR CS1513
+
+Con este «polyfill» añadido a CUALQUIER archivo del proyecto, record e init sí compilan:
+
+    namespace System.Runtime.CompilerServices { internal static class IsExternalInit { } }

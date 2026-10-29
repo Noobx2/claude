@@ -1,0 +1,8 @@
+<Application x:Class="Mvvm.Wpf.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <!-- Convierte true/false en Visible/Collapsed para mostrar la barra de progreso -->
+        <BooleanToVisibilityConverter x:Key="BoolAVisibilidad"/>
+    </Application.Resources>
+</Application>

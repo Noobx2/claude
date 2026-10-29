@@ -1,0 +1,21 @@
+$ MUTACIÓN: (original)
+Passed!  - Failed:     0, Passed:    17, Skipped:     0, Total:    17, Duration: 105 ms
+
+$ MUTACIÓN: un muerto sigue recibiendo daño (Died se dispararía varias veces)
+Failed Juego.Tests.HealthTests.LaVidaNuncaBajaDeCero_YMorirseAvisaUnaSolaVez
+Failed!  - Failed:     1, Passed:    16, Skipped:     0, Total:    17, Duration: 99 ms
+
+$ MUTACIÓN: EventChannel recorre la lista original en vez de una copia
+Failed Juego.Tests.EventChannelTests.UnOyentePuedeDarseDeBajaMientrasSeEmite
+Failed!  - Failed:     1, Passed:    16, Skipped:     0, Total:    17, Duration: 103 ms
+
+$ MUTACIÓN: la piscina deja de detectar la doble devolución
+Failed Juego.Tests.PoolTests.RespetaElMaximo_YDetectaLaDobleDevolucion
+Failed!  - Failed:     1, Passed:    16, Skipped:     0, Total:    17, Duration: 114 ms
+
+$ MUTACIÓN: StartCoroutine ya no ejecuta el primer tramo al instante
+Failed Juego.Tests.CorrutinaTests.YieldReturnNull_EsperaExactamenteUnFotograma
+Failed Juego.Tests.CorrutinaTests.EsperarSegundos_ReanudaCuandoSeAcumulaElTiempo
+Failed Juego.Tests.CorrutinaTests.EsperarHasta_EsperaALaCondicion_YVariasCorrutinasSeAlternan
+Failed!  - Failed:     3, Passed:    14, Skipped:     0, Total:    17, Duration: 128 ms
+

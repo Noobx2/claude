@@ -1,0 +1,10 @@
+$ find ProyectoUnity -type f | sort
+ProyectoUnity/Assets/Scripts/Runtime/BulletSpawner.cs
+ProyectoUnity/Assets/Scripts/Runtime/CargaAsincrona.cs
+ProyectoUnity/Assets/Scripts/Runtime/GameManager.cs
+ProyectoUnity/Assets/Scripts/Runtime/GameSettings.cs
+ProyectoUnity/Assets/Scripts/Runtime/HealthEventChannel.cs
+ProyectoUnity/Assets/Scripts/Runtime/Juego.Runtime.asmdef
+ProyectoUnity/Assets/Scripts/Runtime/PlayerHealth.cs
+ProyectoUnity/Assets/Scripts/Tests/EditMode/GameSettingsTests.cs
+ProyectoUnity/Assets/Scripts/Tests/EditMode/Juego.Tests.EditMode.asmdef

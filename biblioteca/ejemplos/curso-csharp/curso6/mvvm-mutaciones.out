@@ -1,0 +1,19 @@
+$ MUTACIÓN: (ninguna: el código original)
+Passed!  - Failed:     0, Passed:    17, Skipped:     0, Total:    17, Duration: 162 ms
+
+$ MUTACIÓN: se quita CrearCommand.NotificarCambio() del setter de NuevoTitulo
+Failed Mvvm.Tests.ViewModelManualTests.BotonCrear_AvisaCuandoCambiaSuEstado
+Failed!  - Failed:     1, Passed:    16, Skipped:     0, Total:    17, Duration: 172 ms
+
+$ MUTACIÓN: se quita el aviso de la propiedad calculada PuedeCrear
+Failed Mvvm.Tests.ViewModelManualTests.CambiarUnaPropiedad_AvisaALaInterfaz
+Failed!  - Failed:     1, Passed:    16, Skipped:     0, Total:    17, Duration: 181 ms
+
+$ MUTACIÓN: AsyncRelayCommand deja de bloquearse mientras se ejecuta (el doble clic pasaría)
+Failed Mvvm.Tests.ViewModelManualTests.MientrasCarga_EstaOcupado_YElBotonNoSePuedePulsarDeNuevo
+Failed!  - Failed:     1, Passed:    16, Skipped:     0, Total:    17, Duration: 169 ms
+
+$ MUTACIÓN: Set() avisa SIEMPRE, aunque el valor no cambie
+Failed Mvvm.Tests.ViewModelManualTests.AsignarElMismoValor_NoAvisa
+Failed!  - Failed:     1, Passed:    16, Skipped:     0, Total:    17, Duration: 185 ms
+

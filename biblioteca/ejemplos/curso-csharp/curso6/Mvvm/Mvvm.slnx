@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Mvvm.Core/Mvvm.Core.csproj" />
+    <Project Path="src/Mvvm.Wpf/Mvvm.Wpf.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Mvvm.Tests/Mvvm.Tests.csproj" />
+  </Folder>
+</Solution>

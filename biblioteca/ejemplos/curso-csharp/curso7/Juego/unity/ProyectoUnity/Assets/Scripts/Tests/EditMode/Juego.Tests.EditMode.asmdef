@@ -1,0 +1,11 @@
+{
+  "name": "Juego.Tests.EditMode",
+  "rootNamespace": "Juego.Tests",
+  "references": ["Juego.Runtime", "UnityEngine.TestRunner", "UnityEditor.TestRunner"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "overrideReferences": true,
+  "precompiledReferences": ["nunit.framework.dll"],
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "autoReferenced": false
+}

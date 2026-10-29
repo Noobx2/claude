@@ -1,0 +1,7 @@
+$ dotnet build src/Mvvm.Wpf    (desde Linux; el proyecto es net10.0-windows con EnableWindowsTargeting=true)
+    0 Error(s)
+    0 Warning(s)
+  Mvvm.Wpf -> /tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/curso6/Mvvm/src/Mvvm.Wpf/bin/Debug/net10.0-windows/Mvvm.Wpf.dll
+
+$ dotnet test   (toda la solución: el ViewModel se prueba en Linux)
+Passed!  - Failed:     0, Passed:    17, Skipped:     0, Total:    17, Duration: 142 ms

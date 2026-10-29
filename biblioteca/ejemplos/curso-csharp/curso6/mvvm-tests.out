@@ -1,0 +1,17 @@
+Passed Mvvm.Tests.ViewModelManualTests.BotonCrear_AvisaCuandoCambiaSuEstado
+Passed Mvvm.Tests.ViewModelToolkitTests.Crear_ConElComandoGenerado_FuncionaDeExtremoAExtremo
+Passed Mvvm.Tests.ViewModelToolkitTests.ElComandoGenerado_RespetaSuCondicion
+Passed Mvvm.Tests.ViewModelToolkitTests.LaPropiedadGeneradaAvisaDeSuCambio_YDeLaCalculada
+Passed Mvvm.Tests.ViewModelManualTests.MientrasCarga_EstaOcupado_YElBotonNoSePuedePulsarDeNuevo
+Passed Mvvm.Tests.ViewModelToolkitTests.SiLaApiFalla_ElErrorSeMuestra
+Passed Mvvm.Tests.ViewModelManualTests.Completar_ReemplazaLaTareaPorSuCopiaHecha
+Passed Mvvm.Tests.ViewModelManualTests.Completar_NoSePuedeEnUnaTareaYaHecha [< 1 ms]
+Passed Mvvm.Tests.ViewModelManualTests.BotonCrear_SoloSeHabilitaConTituloValido(titulo: "abc", esperado: True)
+Passed Mvvm.Tests.ViewModelManualTests.BotonCrear_SoloSeHabilitaConTituloValido(titulo: "  ab  ", esperado: False) [< 1 ms]
+Passed Mvvm.Tests.ViewModelManualTests.BotonCrear_SoloSeHabilitaConTituloValido(titulo: "ab", esperado: False) [< 1 ms]
+Passed Mvvm.Tests.ViewModelManualTests.BotonCrear_SoloSeHabilitaConTituloValido(titulo: "", esperado: False) [< 1 ms]
+Passed Mvvm.Tests.ViewModelManualTests.Cargar_LlenaLaColeccionYAvisaDeCadaElemento
+Passed Mvvm.Tests.ViewModelManualTests.SiLaApiFalla_ElErrorSeMuestra_YElBotonVuelveAHabilitarse
+Passed Mvvm.Tests.ViewModelManualTests.AsignarElMismoValor_NoAvisa [< 1 ms]
+Passed Mvvm.Tests.ViewModelManualTests.CambiarUnaPropiedad_AvisaALaInterfaz [< 1 ms]
+Passed Mvvm.Tests.ViewModelManualTests.Crear_AnadeLaTareaYLimpiaElCampo [< 1 ms]
