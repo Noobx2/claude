@@ -1,0 +1,5 @@
+/tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/t/synth/refs.cs(12,20): warning IL2026: Using member 'System.Reflection.Assembly.LoadFrom(String)' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. Types and members the loaded assembly depends on might be removed.
+/tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/t/synth/refs.cs(13,17): warning IL2026: Using member 'System.Reflection.Assembly.GetReferencedAssemblies()' which has 'RequiresUnreferencedCodeAttribute' can break functionality when trimming application code. Assembly references might be removed.
+C#  (Inventory.Core): System.Collections, System.Linq, System.Runtime, System.Text.Encoding.Extensions, System.Text.Encodings.Web, System.Text.Json
+F#  (Inventory.FSharp): FSharp.Core, Inventory.Core, netstandard, System.Runtime
+VB  (Inventory.VB): Inventory.Core, Microsoft.VisualBasic.Core, System.Console, System.Linq, System.Runtime

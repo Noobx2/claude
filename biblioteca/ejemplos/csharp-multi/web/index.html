@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario</title>
+  </head>
+  <body>
+    <h1>Inventario</h1>
+    <form id="search"><input id="q" placeholder="Buscar..." /></form>
+    <table id="table"><thead><tr><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Stock</th></tr></thead><tbody></tbody></table>
+    <form id="add">
+      <input name="name" placeholder="Nombre" />
+      <input name="category" placeholder="Categoría" />
+      <input name="price" type="number" step="0.01" placeholder="Precio" />
+      <input name="stock" type="number" placeholder="Stock" />
+      <button>Añadir</button>
+    </form>
+    <p id="error" role="alert"></p>
+    <pre id="summary"></pre>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

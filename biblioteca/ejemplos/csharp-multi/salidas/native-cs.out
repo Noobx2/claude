@@ -1,0 +1,4 @@
+Sistema: Ubuntu 24.04.5 LTS
+getpid() de libc (P/Invoke) = 1462
+Environment.ProcessId       = 1462   <- la biblioteca base ya lo envuelve
+getpid() estilo clásico (DllImport) = 1462

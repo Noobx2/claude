@@ -1,0 +1,8 @@
+Monitor 24"           139.00  InStock 10
+Teclado mecánico       59.90  InStock 25
+Ratón inalámbrico      24.50  InStock 60
+rechazado: El precio no puede ser negativo (Parameter 'price')
+Productos: 4 | Unidades: 95 | Valor total: 4.357,50 €
+  Monitores         1.390,00 €
+  Periféricos       2.967,50 €
+
