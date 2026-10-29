@@ -23,6 +23,11 @@ builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<DomainExceptionHandler>();
 builder.Services.AddHealthChecks().AddDbContextCheck<TaskFlowDbContext>("postgres");
 builder.Services.AddOpenApi();
+
+// CORS: el navegador solo deja que una página llame a una API de OTRO origen si la API lo permite expresamente.
+// Los orígenes permitidos vienen de la configuración (Cors:Origins), nunca "cualquiera".
+string[] origenesPermitidos = builder.Configuration.GetSection("Cors:Origins").Get<string[]>() ?? [];
+builder.Services.AddCors(o => o.AddPolicy("Web", p => p.WithOrigins(origenesPermitidos).AllowAnyHeader().AllowAnyMethod()));
 builder.Services.AddValidation();   // .NET 10: valida los atributos [Required], [StringLength]... de los DTO y responde 400
 
 builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
@@ -44,6 +49,7 @@ var app = builder.Build();
 
 // ---- Pipeline de middleware (el orden importa) ----
 app.UseExceptionHandler();
+app.UseCors("Web");          // antes de autenticar: las peticiones de «pre-vuelo» (OPTIONS) no llevan token
 app.UseAuthentication();
 app.UseAuthorization();
 if (app.Environment.IsDevelopment()) app.MapOpenApi();

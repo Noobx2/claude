@@ -1,0 +1,9 @@
+$ dotnet publish -c Release -o publish   (TaskFlow.Web)
+Archivos de la aplicación (sin comprimir) :   59 archivos,    9.7 MB
+Los mismos con Brotli (.br)               :   55 archivos,    2.9 MB   ← lo que viaja si el servidor sirve Brotli
+Los mismos con gzip (.gz)                 :   55 archivos,    3.6 MB
+Los más grandes:
+       2931 KB  dotnet.native.3zpaws0drs.wasm
+       1742 KB  System.Private.CoreLib.6p9vom0h7c.wasm
+       1081 KB  icudt_no_CJK.lfu7j35m59.dat
+        934 KB  icudt_CJK.tjcz0u77k5.dat

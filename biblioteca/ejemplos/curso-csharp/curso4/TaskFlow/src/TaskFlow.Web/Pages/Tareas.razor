@@ -1,0 +1,134 @@
+@page "/"
+@implements IDisposable
+@inject ApiClient Api
+@inject Sesion Sesion
+@inject NavigationManager Navegacion
+
+<PageTitle>Tareas · TaskFlow</PageTitle>
+
+@if (!_listo)
+{
+    <p>Cargando…</p>
+}
+else
+{
+    <h1>Mis tareas</h1>
+
+    @if (_estadisticas is { } s)
+    {
+        <div class="resumen" data-testid="estadisticas">
+            <span>Total <b>@s.Total</b></span><span>Pendientes <b>@s.Pending</b></span>
+            <span>Hechas <b>@s.Done</b></span><span class="vencida">Vencidas <b>@s.Overdue</b></span>
+        </div>
+    }
+
+    @if (_error is not null)
+    {
+        <p class="error" role="alert" data-testid="error">@_error <button class="enlace-boton" @onclick="() => _error = null">cerrar</button></p>
+    }
+
+    <section class="tarjeta">
+        <h2>Nueva tarea</h2>
+        <EditForm Model="_nueva" OnValidSubmit="Crear" FormName="nueva-tarea">
+            <DataAnnotationsValidator />
+            <label>Título <InputText @bind-Value="_nueva.Title" data-testid="titulo" /></label>
+            <div class="mensaje"><ValidationMessage For="() => _nueva.Title" /></div>
+            <label>Descripción <InputTextArea @bind-Value="_nueva.Description" rows="2" data-testid="descripcion" /></label>
+            <div class="fila">
+                <label>Prioridad
+                    <InputSelect @bind-Value="_nueva.Priority" data-testid="prioridad">
+                        <option value="@Prioridad.Low">Baja</option>
+                        <option value="@Prioridad.Medium">Media</option>
+                        <option value="@Prioridad.High">Alta</option>
+                    </InputSelect>
+                </label>
+                <label>Fecha límite <InputDate @bind-Value="_nueva.DueDate" data-testid="fecha" /></label>
+            </div>
+            <button class="boton" type="submit" data-testid="crear">Añadir tarea</button>
+        </EditForm>
+    </section>
+
+    <section class="tarjeta">
+        <h2>Filtros</h2>
+        <div class="fila">
+            <label>Buscar <input @bind="_texto" @bind:event="oninput" @bind:after="Cargar" placeholder="texto…" data-testid="buscar" /></label>
+            <label>Estado
+                <select @bind="_estado" @bind:after="Cargar" data-testid="estado">
+                    <option value="">Todas</option><option value="pend">Pendientes</option><option value="hechas">Hechas</option>
+                </select>
+            </label>
+        </div>
+    </section>
+
+    @if (_tareas.Count == 0)
+    {
+        <p class="vacio" data-testid="vacio">No hay tareas que mostrar.</p>
+    }
+    else
+    {
+        <div class="tabla-envoltorio">
+        <table class="tabla" data-testid="tabla">
+            <thead><tr><th>Tarea</th><th>Prioridad</th><th>Límite</th><th></th></tr></thead>
+            <tbody>
+                @foreach (var tarea in _tareas)
+                {
+                    <FilaTarea @key="tarea.Id" Tarea="tarea" PuedeBorrar="Sesion.EsAdmin" AlCompletar="Completar" AlEliminar="Eliminar" />
+                }
+            </tbody>
+        </table>
+        </div>
+    }
+}
+
+@code {
+    private List<Tarea> _tareas = [];
+    private Estadisticas? _estadisticas;
+    private readonly NuevaTareaModelo _nueva = new();
+    private string _texto = "", _estado = "";
+    private string? _error;
+    private bool _listo;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Sesion.RestaurarAsync();
+        if (!Sesion.EstaAutenticado) { Navegacion.NavigateTo("login"); return; }   // protección de ruta (solo comodidad: el servidor es quien protege)
+        Sesion.Cambio += AlCambiarSesion;
+        await Cargar();
+        _listo = true;
+    }
+
+    private void AlCambiarSesion() => InvokeAsync(StateHasChanged);
+    public void Dispose() => Sesion.Cambio -= AlCambiarSesion;
+
+    private async Task Cargar()
+    {
+        try
+        {
+            bool? hechas = _estado switch { "hechas" => true, "pend" => false, _ => null };
+            _tareas = await Api.ListarAsync(hechas, null, _texto);
+            _estadisticas = await Api.EstadisticasAsync();
+        }
+        catch (ApiException e) when (e.Estado == 401) { await Sesion.CerrarAsync(); Navegacion.NavigateTo("login"); }
+        catch (ApiException e) { _error = e.Message; }
+    }
+
+    private async Task Crear()
+    {
+        await Ejecutar(async () =>
+        {
+            await Api.CrearAsync(_nueva);
+            _nueva.Title = ""; _nueva.Description = null; _nueva.DueDate = null; _nueva.Priority = Prioridad.Medium;
+        });
+    }
+
+    private Task Completar(int id) => Ejecutar(() => Api.CompletarAsync(id));
+    private Task Eliminar(int id) => Ejecutar(() => Api.EliminarAsync(id));
+
+    // Patrón común: ejecutar una acción, mostrar el error si falla, y recargar los datos
+    private async Task Ejecutar(Func<Task> accion)
+    {
+        _error = null;
+        try { await accion(); await Cargar(); }
+        catch (ApiException e) { _error = e.Message; }
+    }
+}

@@ -1,0 +1,14 @@
+@page "/contador"
+@rendermode InteractiveServer
+
+<PageTitle>Contador</PageTitle>
+
+<h1>Contador (Blazor Server)</h1>
+<p role="status">Pulsaciones: <span id="cuenta">@_cuenta</span></p>
+<p>Este código C# se ejecuta <b>en el servidor</b>. Hilo: <span id="hilo">@Environment.CurrentManagedThreadId</span></p>
+<button id="sumar" @onclick="Sumar">Sumar</button>
+
+@code {
+    private int _cuenta;
+    private void Sumar() => _cuenta++;    // el clic viaja al servidor por SignalR (WebSocket); el servidor devuelve solo la diferencia del HTML
+}

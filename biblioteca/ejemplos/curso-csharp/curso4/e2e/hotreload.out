@@ -1,0 +1,6 @@
+1. Tras 3 clics: cuenta = 3 | título = Contador (Blazor Server)
+2. Se editó el archivo .razor en disco (cambio del título)…
+3. La página mostró el cambio a los 4507 ms | título = Contador EDITADO EN CALIENTE
+   ¿Se recargó la página?  No (la marca de la ventana sigue ahí)
+   Cuenta tras el cambio: 3 (el estado del componente se conserva si el cambio es solo de marcado)
+4. Se editó también el CÓDIGO C# (Sumar suma 10). Un clic más → cuenta = 13 (3 + 10 = 13 si el cambio se aplicó sin reiniciar)

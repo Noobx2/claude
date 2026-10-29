@@ -1,0 +1,51 @@
+:root { --fondo:#f5f6fa; --tarjeta:#fff; --texto:#1f2430; --suave:#667085; --acento:#2457d6; --peligro:#c0392b; --borde:#dfe3ec; --ok:#1d7f4e; }
+@media (prefers-color-scheme: dark) { :root { --fondo:#12141a; --tarjeta:#1b1e27; --texto:#e8eaf0; --suave:#9aa3b5; --acento:#6c93ff; --peligro:#ff7b6b; --borde:#2d3240; --ok:#4cc38a; } }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--fondo); color:var(--texto); line-height:1.5; }
+.barra { display:flex; justify-content:space-between; align-items:center; padding:.75rem 1.25rem; background:var(--tarjeta); border-bottom:1px solid var(--borde); position:sticky; top:0; }
+.marca { font-weight:700; color:var(--acento); text-decoration:none; font-size:1.15rem; }
+.barra nav { display:flex; gap:.75rem; align-items:center; }
+.rol { background:var(--borde); border-radius:999px; padding:.05rem .5rem; margin-left:.35rem; }
+.contenido { max-width:880px; margin:0 auto; padding:1.25rem 1rem 3rem; }
+h1 { font-size:1.6rem; margin:.25rem 0 1rem; } h2 { font-size:1.05rem; margin:.1rem 0 .6rem; }
+.tarjeta { background:var(--tarjeta); border:1px solid var(--borde); border-radius:10px; padding:1rem 1.1rem; margin-bottom:1rem; }
+.estrecha { max-width:420px; margin:2rem auto; }
+label { display:block; font-weight:600; font-size:.9rem; margin:.5rem 0 .2rem; }
+input, select, textarea { display:block; width:100%; padding:.5rem .6rem; border:1px solid var(--borde); border-radius:7px; background:var(--fondo); color:var(--texto); font:inherit; margin-top:.2rem; }
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible { outline:2px solid var(--acento); outline-offset:2px; }
+.fila { display:grid; grid-template-columns:1fr 1fr; gap:.75rem; } @media (max-width:560px){ .fila { grid-template-columns:1fr; } }
+.boton { background:var(--acento); color:#fff; border:0; border-radius:7px; padding:.55rem 1rem; font:inherit; font-weight:600; cursor:pointer; margin-top:.8rem; }
+.boton:disabled { opacity:.6; cursor:wait; }
+.boton.secundario { background:transparent; color:var(--texto); border:1px solid var(--borde); margin:0; }
+.boton.pequeno { padding:.25rem .6rem; margin:0 0 0 .3rem; font-size:.85rem; } .boton.peligro { background:var(--peligro); }
+.enlace-boton { background:none; border:0; color:var(--acento); cursor:pointer; font:inherit; text-decoration:underline; margin-left:.5rem; }
+.enlace { color:var(--acento); }
+.error, .validation-message { color:var(--peligro); font-size:.9rem; margin:.25rem 0; }
+.tabla { width:100%; border-collapse:collapse; background:var(--tarjeta); border:1px solid var(--borde); border-radius:10px; overflow:hidden; }
+.tabla th, .tabla td { text-align:left; padding:.6rem .75rem; border-bottom:1px solid var(--borde); vertical-align:top; }
+.tabla th { font-size:.8rem; text-transform:uppercase; color:var(--suave); letter-spacing:.04em; }
+tr.hecha strong { text-decoration:line-through; color:var(--suave); }
+.acciones { text-align:right; white-space:nowrap; }
+.nota { color:var(--suave); font-size:.85rem; }
+.insignia { border-radius:999px; padding:.05rem .6rem; font-size:.8rem; font-weight:700; border:1px solid currentColor; }
+.insignia.high { color:var(--peligro); } .insignia.medium { color:var(--acento); } .insignia.low { color:var(--ok); }
+.vencida { color:var(--peligro); font-weight:600; }
+.resumen { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; } .resumen span { background:var(--tarjeta); border:1px solid var(--borde); border-radius:8px; padding:.35rem .8rem; }
+.vacio { color:var(--suave); text-align:center; padding:2rem 0; }
+.valid.modified:not([type=checkbox]) { outline:0; } .invalid { border-color:var(--peligro); }
+#blazor-error-ui { background:#fff3cd; color:#000; bottom:0; display:none; left:0; padding:.6rem 1.25rem; position:fixed; width:100%; z-index:1000; }
+#blazor-error-ui .dismiss { cursor:pointer; position:absolute; right:.75rem; top:.5rem; }
+
+/* Espacio reservado para el mensaje de validación: así, al aparecer o desaparecer, el botón NO se desplaza.
+   (Si se mueve entre que se pulsa el ratón y se suelta, el clic se pierde.) */
+.mensaje { min-height: 1.5rem; }
+
+/* Pantallas estrechas: los botones de la fila pasan a ocupar varias líneas en vez de ensanchar la tabla */
+@media (max-width: 560px) {
+  .acciones { white-space: normal; text-align: left; }
+  .acciones .boton.pequeno { margin: .2rem .3rem 0 0; }
+  .tabla th, .tabla td { padding: .5rem .5rem; }
+}
+
+/* Si la tabla no cabe, se desplaza ELLA (con su propia barra), no toda la página */
+.tabla-envoltorio { overflow-x: auto; }

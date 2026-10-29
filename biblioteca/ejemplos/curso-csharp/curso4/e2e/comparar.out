@@ -1,0 +1,4 @@
+Primera carga SIN caché, en local (sin latencia de red real):
+  Modelo                              Descarga  Peticiones   Listo en
+  Blazor Server (servidor)               86 KB           8     152 ms
+  Blazor WebAssembly (navegador)      23052 KB         211    1844 ms

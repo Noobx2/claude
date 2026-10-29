@@ -1,0 +1,34 @@
+<tr class="@(Tarea.Done ? "hecha" : "")" data-testid="fila">
+    <td>
+        <strong>@Tarea.Title</strong>
+        @if (!string.IsNullOrEmpty(Tarea.Description)) { <div class="nota">@Tarea.Description</div> }
+    </td>
+    <td><span class="insignia @Tarea.Priority.ToLower()">@Traducir(Tarea.Priority)</span></td>
+    <td>
+        @if (Tarea.DueDate is { } fecha)
+        {
+            <span class="@(Tarea.IsOverdue ? "vencida" : "")">@fecha.ToString("dd/MM/yyyy")@(Tarea.IsOverdue ? " ⚠" : "")</span>
+        }
+        else { <span class="nota">—</span> }
+    </td>
+    <td class="acciones">
+        @if (!Tarea.Done)
+        {
+            <button class="boton pequeno" @onclick="() => AlCompletar.InvokeAsync(Tarea.Id)" data-testid="completar">Completar</button>
+        }
+        @if (PuedeBorrar)
+        {
+            <button class="boton pequeno peligro" @onclick="() => AlEliminar.InvokeAsync(Tarea.Id)" data-testid="eliminar">Eliminar</button>
+        }
+    </td>
+</tr>
+
+@code {
+    // Un componente recibe datos con [Parameter] (hacia dentro) y avisa con EventCallback (hacia fuera).
+    [Parameter, EditorRequired] public Tarea Tarea { get; set; } = default!;
+    [Parameter] public bool PuedeBorrar { get; set; }
+    [Parameter] public EventCallback<int> AlCompletar { get; set; }
+    [Parameter] public EventCallback<int> AlEliminar { get; set; }
+
+    private static string Traducir(string p) => p switch { "High" => "Alta", "Medium" => "Media", "Low" => "Baja", _ => p };
+}

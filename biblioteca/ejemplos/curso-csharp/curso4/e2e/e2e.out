@@ -1,0 +1,19 @@
+ 1. Sin sesión, «/» redirige a /login
+ 2. Formulario vacío → mensajes de validación («Escribe tu usuario»)
+ 3. Contraseña de 3 caracteres → «Mínimo 8 caracteres» (validado en el cliente)
+ 4. Registro + entrada → «Mis tareas», usuario «ana Admin» (primer usuario = Admin)
+ 5. Título de 2 letras → mensaje de validación en el formulario
+ 6. Fecha pasada → la API rechaza y la página muestra: «La fecha límite no puede estar en el pasado.»
+ 7. Tres tareas creadas → tabla con 3 filas
+ 8. Completar una tarea → estadísticas: Total 3 Pendientes 2 Hechas 1 Vencidas 0
+ 9. Filtro «Hechas» → 1 fila
+10. Búsqueda «jwt» (sin distinguir mayúsculas) → solo «Revisar JWT»
+11. Recarga (F5) → sigue la sesión y los datos
+12. Eliminar como Admin → 2 filas
+13. Usuario «luis» (rol User): la interfaz NO muestra «Eliminar»
+14. Saltándose la interfaz: DELETE directo a la API con el token de «luis» → 403 (el servidor es quien protege)
+15. Contraseña incorrecta → «Credenciales incorrectas o sesión caducada.»
+16. Ancho de móvil (390 px): sin desplazamiento horizontal
+17. Consola del navegador: 3 respuestas 400/401/403 (las provocadas a propósito en los pasos 6, 14 y 15) y 0 errores inesperados
+
+RESULTADO: todos los pasos pasaron

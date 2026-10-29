@@ -1,0 +1,41 @@
+@inherits LayoutComponentBase
+@implements IDisposable
+@inject Sesion Sesion
+@inject NavigationManager Navegacion
+
+<header class="barra">
+    <a class="marca" href="">✔ TaskFlow</a>
+    <nav>
+        @if (Sesion.EstaAutenticado)
+        {
+            <span class="usuario" data-testid="usuario">@Sesion.Usuario <small class="rol">@Sesion.Rol</small></span>
+            <button class="boton secundario" @onclick="Salir" data-testid="salir">Salir</button>
+        }
+        else
+        {
+            <NavLink href="login" class="enlace">Entrar</NavLink>
+        }
+    </nav>
+</header>
+
+<main class="contenido">
+    @Body
+</main>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        Sesion.Cambio += AlCambiar;                   // nos enteramos cuando alguien entra o sale
+        await Sesion.RestaurarAsync();
+    }
+
+    private void AlCambiar() => InvokeAsync(StateHasChanged);
+
+    private async Task Salir()
+    {
+        await Sesion.CerrarAsync();
+        Navegacion.NavigateTo("login");
+    }
+
+    public void Dispose() => Sesion.Cambio -= AlCambiar;   // sin esto la suscripción mantendría el componente vivo (fuga de memoria)
+}
