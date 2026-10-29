@@ -1,0 +1,30 @@
+$ curl /openapi/v1.json  → rutas descritas automáticamente (solo en Development)
+OpenAPI 3.1.1 - 6 rutas
+  /auth/register     POST
+  /auth/login        POST
+  /tasks             GET, POST
+  /tasks/stats       GET
+  /tasks/{id}        GET, PUT, DELETE
+  /tasks/{id}/done   POST
+
+$ Un JWT son tres trozos en Base64 separados por puntos: cabecera.contenido.firma
+cabecera : {"alg": "HS256", "typ": "JWT"}
+contenido: nameidentifier                                                         1
+contenido: name                                                                   ana
+contenido: role                                                                   Admin
+contenido: exp                                                                    1793299425
+contenido: iss                                                                    TaskFlow
+contenido: aud                                                                    TaskFlow.Clients
+firma    : 8mnUHIO4fmxE3oZyIxNz…  (43 caracteres: HMAC-SHA256)
+
+$ Cualquiera puede LEER el contenido (no está cifrado); lo que nadie puede es MODIFICARLO sin invalidar la firma.
+$ Alterar el contenido a mano (cambiar el rol a Admin) → 401
+  respuesta del servidor: 401
+
+$ Consultas SQL que EF Core generó (log de Development, solo las del último GET)
+FROM users AS u
+WHERE u."UserName" = @req_UserName
+LIMIT 1
+SELECT t."Id", t."CreatedAt", t."Description", t."Done", t."DueDate", t."Priority", t."Title"
+FROM tasks AS t
+ORDER BY t."Id"

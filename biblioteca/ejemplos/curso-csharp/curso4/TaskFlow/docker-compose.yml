@@ -1,0 +1,31 @@
+# Arranque local: docker compose up --build
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: taskflow
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?define DB_PASSWORD en un archivo .env (no se sube a Git)}
+      POSTGRES_DB: taskflow
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U taskflow -d taskflow"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy      # espera a que PostgreSQL responda
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      # "__" separa niveles de la configuración: ConnectionStrings:TaskFlow
+      ConnectionStrings__TaskFlow: Host=db;Database=taskflow;Username=taskflow;Password=${DB_PASSWORD}
+      Jwt__Key: ${JWT_KEY:?define JWT_KEY (mínimo 32 caracteres) en el archivo .env}
+    ports:
+      - "8080:8080"
+
+volumes:
+  dbdata:

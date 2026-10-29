@@ -1,0 +1,4 @@
+$ dotnet test   (toda la solución)
+Passed!  - Failed:     0, Passed:    22, Total:    22,  - TaskFlow.Tests.dll
+Passed!  - Failed:     0, Passed:    18, Total:    18,  - TaskFlow.Api.Tests.dll
+Total de pruebas que pasan: 40

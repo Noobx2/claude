@@ -1,0 +1,56 @@
+$ dotnet Config.dll                                            # sin entorno → Production por defecto
+Entorno            : Production
+Nombre             : Tienda REAL
+MaxPedidosPorDia   : 10000
+Moneda             : EUR
+Cadena de conexión : Host=l… (27 caracteres, oculto)
+Clave de API       : (no definida)
+
+$ DOTNET_ENVIRONMENT=Development dotnet Config.dll             # appsettings.Development.json sobrescribe
+Entorno            : Development
+Nombre             : Tienda (desarrollo)
+MaxPedidosPorDia   : 5
+Moneda             : EUR
+Cadena de conexión : Host=l… (27 caracteres, oculto)
+Clave de API       : (no definida)
+
+$ DOTNET_ENVIRONMENT=Development Tienda__MaxPedidosPorDia=77 dotnet Config.dll   # variable de entorno (__ = nivel)
+Entorno            : Development
+Nombre             : Tienda (desarrollo)
+MaxPedidosPorDia   : 77
+Moneda             : EUR
+Cadena de conexión : Host=l… (27 caracteres, oculto)
+Clave de API       : (no definida)
+
+$ DOTNET_ENVIRONMENT=Development Tienda__MaxPedidosPorDia=77 dotnet Config.dll --Tienda:MaxPedidosPorDia=3 --Tienda:Moneda=USD   # argumentos: ganan a todo
+Entorno            : Development
+Nombre             : Tienda (desarrollo)
+MaxPedidosPorDia   : 3
+Moneda             : USD
+Cadena de conexión : Host=l… (27 caracteres, oculto)
+Clave de API       : (no definida)
+
+$ Tienda__Moneda=euros dotnet Config.dll                       # configuración INVÁLIDA → falla al arrancar el host
+fail: Microsoft.Extensions.Hosting.Internal.Host[11]
+      Hosting failed to start
+      Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'TiendaOptions' members: 'Moneda' with the error: 'La moneda debe ser un código de 3 letras mayúsculas (ISO 4217)'.
+      --- End of stack trace from previous location ---
+         at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+Unhandled exception. Microsoft.Extensions.Options.OptionsValidationException: DataAnnotation validation failed for 'TiendaOptions' members: 'Moneda' with the error: 'La moneda debe ser un código de 3 letras mayúsculas (ISO 4217)'.
+(el proceso aborta con código 134, es decir, SIGABRT: NO llega a funcionar con datos malos)
+
+$ dotnet user-secrets set "ApiKey" "sk-demo-1234567890abcdef"   # se guarda FUERA del proyecto, en el perfil del usuario
+$ DOTNET_ENVIRONMENT=Development dotnet Config.dll   # los secretos solo se leen en Development
+Cadena de conexión : Host=l… (27 caracteres, oculto)
+Clave de API       : sk-dem… (24 caracteres, oculto)
+
+$ dotnet Config.dll   # en Production NO se leen los user-secrets: allí se usa variable de entorno o un almacén (Key Vault…)
+Clave de API       : (no definida)
+
+$ ApiKey=desde-entorno dotnet Config.dll
+Clave de API       : desde-… (13 caracteres, oculto)
+
+$ dotnet user-secrets list   # dónde están
+ApiKey = sk-demo-1234567890abcdef
+$ ls ~/.microsoft/usersecrets/curso-csharp-config-demo
+secrets.json

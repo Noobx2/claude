@@ -1,0 +1,16 @@
+$ Un JWT son tres trozos en Base64 separados por puntos: cabecera.contenido.firma
+cabecera : {"alg": "HS256", "typ": "JWT"}
+contenido: nameidentifier   2
+contenido: name             luis
+contenido: role             User
+contenido: exp              1793299454
+contenido: iss              TaskFlow
+contenido: aud              TaskFlow.Clients
+firma    : dk_GrvZICR94qCDMxqTS…  (HMAC-SHA256 de cabecera+contenido con la clave secreta del servidor)
+
+Cualquiera puede LEER el contenido (Base64 no es cifrado). Lo que nadie puede es modificarlo sin romper la firma.
+
+$ DELETE /tasks/1 con el token auténtico de «luis» (rol User)      → 403
+$ El atacante cambia el rol a «Admin» y conserva la firma antigua → 401 (firma inválida)
+$ Token con la firma recortada                                    → 401
+$ Sin cabecera Authorization                                      → 401

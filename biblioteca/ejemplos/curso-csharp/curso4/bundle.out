@@ -1,0 +1,19 @@
+$ dotnet ef migrations bundle --self-contained -r linux-x64 -o /tmp/efbundle   (un ejecutable que aplica las migraciones; útil en CI/CD sin instalar dotnet-ef)
+Done. Migrations Bundle: /tmp/efbundle
+Don't forget to copy appsettings.json alongside your bundle if you need it to apply migrations.
+tamaño del bundle: 128 MB
+
+$ /tmp/efbundle --connection "..."  (contra una base NUEVA taskflow_bundle)
+Applying migration '20261029175255_InitialCreate'.
+Applying migration '20261029181438_AddUserCreatedAt'.
+Done.
+
+$ psql taskflow_bundle -c "\dt"
+                 List of relations
+ Schema |         Name          | Type  |  Owner   
+--------+-----------------------+-------+----------
+ public | __EFMigrationsHistory | table | taskflow
+ public | tasks                 | table | taskflow
+ public | users                 | table | taskflow
+(3 rows)
+

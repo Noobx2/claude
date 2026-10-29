@@ -1,16 +1,18 @@
-Passed TaskFlow.Api.Tests.PasswordHasherTests.Hash_SamePasswordTwice_ProducesDifferentHashes 
+Passed TaskFlow.Api.Tests.ArquitecturaTests.Core_NoDependeDeInfraestructuraNiDeFrameworks
+Passed TaskFlow.Api.Tests.ArquitecturaTests.Infraestructura_NoDependeDeLaApi [< 1 ms]
+Passed TaskFlow.Api.Tests.ArquitecturaTests.ElDetector_SiVeEfCoreDondeSiEstaPresente
+Passed TaskFlow.Api.Tests.ArquitecturaTests.Api_ConoceTodasLasCapas_PorqueEsLaRaizDeComposicion
+Passed TaskFlow.Api.Tests.PasswordHasherTests.Hash_SamePasswordTwice_ProducesDifferentHashes
 Passed TaskFlow.Api.Tests.PasswordHasherTests.Verify_WithGarbageStoredValue_ReturnsFalse(stored: "") [< 1 ms]
 Passed TaskFlow.Api.Tests.PasswordHasherTests.Verify_WithGarbageStoredValue_ReturnsFalse(stored: "no-es-un-hash") [< 1 ms]
 Passed TaskFlow.Api.Tests.PasswordHasherTests.Verify_WithGarbageStoredValue_ReturnsFalse(stored: "1.2") [< 1 ms]
-Passed TaskFlow.Api.Tests.PasswordHasherTests.Verify_AcceptsCorrectPassword_RejectsWrongOne 
-Passed TaskFlow.Api.Tests.ApiTests.Login_WithWrongPassword_Returns401 
-Passed TaskFlow.Api.Tests.ApiTests.Create_WithInvalidData_Returns400(json: "{\"title\":\"Tarea\",\"dueDate\":\"2001-01-01\"}") 
-Passed TaskFlow.Api.Tests.ApiTests.Create_WithInvalidData_Returns400(json: "{\"title\":\"Tarea\",\"priority\":\"Urgente\"}") 
-Passed TaskFlow.Api.Tests.ApiTests.Create_WithInvalidData_Returns400(json: "{\"title\":\"ab\"}") 
-Passed TaskFlow.Api.Tests.ApiTests.Health_ReportsHealthy 
-Passed TaskFlow.Api.Tests.ApiTests.Tasks_WithoutToken_Returns401 
-Passed TaskFlow.Api.Tests.ApiTests.Get_Missing_Returns404WithProblemDetails 
-Passed TaskFlow.Api.Tests.ApiTests.Delete_AsNormalUser_Returns403 
-Passed TaskFlow.Api.Tests.ApiTests.Create_ThenGet_RoundTripsThroughPostgres 
-Total tests: 14
-Total time: 5.9737 Seconds
+Passed TaskFlow.Api.Tests.PasswordHasherTests.Verify_AcceptsCorrectPassword_RejectsWrongOne
+Passed TaskFlow.Api.Tests.ApiTests.Login_WithWrongPassword_Returns401
+Passed TaskFlow.Api.Tests.ApiTests.Create_WithInvalidData_Returns400(json: "{\"title\":\"Tarea\",\"dueDate\":\"2001-01-01\"}")
+Passed TaskFlow.Api.Tests.ApiTests.Create_WithInvalidData_Returns400(json: "{\"title\":\"Tarea\",\"priority\":\"Urgente\"}")
+Passed TaskFlow.Api.Tests.ApiTests.Create_WithInvalidData_Returns400(json: "{\"title\":\"ab\"}")
+Passed TaskFlow.Api.Tests.ApiTests.Health_ReportsHealthy
+Passed TaskFlow.Api.Tests.ApiTests.Tasks_WithoutToken_Returns401
+Passed TaskFlow.Api.Tests.ApiTests.Get_Missing_Returns404WithProblemDetails
+Passed TaskFlow.Api.Tests.ApiTests.Delete_AsNormalUser_Returns403
+Passed TaskFlow.Api.Tests.ApiTests.Create_ThenGet_RoundTripsThroughPostgres

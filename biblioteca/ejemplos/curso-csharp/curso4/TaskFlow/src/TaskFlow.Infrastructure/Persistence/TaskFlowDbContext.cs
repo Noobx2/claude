@@ -10,6 +10,7 @@ public sealed class UserAccount
     public string UserName { get; set; } = "";
     public string PasswordHash { get; set; } = "";   // formato: iteraciones.sal.hash (base64)
     public string Role { get; set; } = "User";        // "User" o "Admin"
+    public DateTime CreatedAt { get; set; }           // lo rellena la base de datos (ver OnModelCreating)
 }
 
 /// <summary>El DbContext es la "sesión" con la base: EF Core lo usa para consultar y guardar.</summary>
@@ -37,6 +38,7 @@ public sealed class TaskFlowDbContext(DbContextOptions<TaskFlowDbContext> option
             e.HasIndex(u => u.UserName).IsUnique();         // dos usuarios no pueden llamarse igual
             e.Property(u => u.UserName).HasMaxLength(40).IsRequired();
             e.Property(u => u.Role).HasMaxLength(20).IsRequired();
+            e.Property(u => u.CreatedAt).HasDefaultValueSql("now()");   // valor por defecto calculado por PostgreSQL
         });
     }
 }

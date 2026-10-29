@@ -1,0 +1,67 @@
+Sembrado: 17 filas guardadas en una sola transacción
+
+=== 1) LINQ → SQL (ToQueryString muestra el SQL sin ejecutarlo) ===
+
+-- Libros de más de 300 páginas, ordenados
+SELECT l."Id", l."AutorId", l."Paginas", l."Titulo", l.xmin
+FROM "Libros" AS l
+WHERE l."Paginas" > 300
+ORDER BY l."Titulo"
+
+-- Proyección: solo título y nombre del autor
+SELECT l."Titulo", a."Nombre" AS "Autor"
+FROM "Libros" AS l
+INNER JOIN "Autores" AS a ON l."AutorId" = a."Id"
+
+-- Agrupar: páginas totales por autor
+SELECT a."Nombre" AS "Autor", COALESCE(sum(l."Paginas"), 0)::int AS "Total"
+FROM "Libros" AS l
+INNER JOIN "Autores" AS a ON l."AutorId" = a."Id"
+GROUP BY a."Nombre"
+
+-- Paginación: página 2 de tamaño 2
+-- @p='2'
+SELECT l."Id", l."AutorId", l."Paginas", l."Titulo", l.xmin
+FROM "Libros" AS l
+ORDER BY l."Id"
+LIMIT @p OFFSET @p
+
+-- Búsqueda sin distinguir mayúsculas
+SELECT l."Id", l."AutorId", l."Paginas", l."Titulo", l.xmin
+FROM "Libros" AS l
+WHERE l."Titulo" ILIKE '%quij%'
+
+=== 2) Change tracking ===
+Tras cargar: estado = Unchanged
+Tras cambiar Paginas: estado = Modified (EF detectó el cambio solo)
+SaveChanges envió 1 comando(s); solo actualiza la columna modificada: UPDATE "Libros" SET "Paginas" = @p0 WHERE "Id" = @p1 AND xmin = @p2 RETURNING xm…
+Con AsNoTracking: estado = Detached (más rápido para consultas de solo lectura)
+
+=== 3) El problema N+1 ===
+Cargar libros autor por autor     : 5 consultas  (1 + 4)
+Con Include (un JOIN)               : 1 consulta   (5 libros)
+Proyección (solo lo que se muestra) : 1 consulta
+    Cervantes   2 libro(s), 1600 páginas
+    Borges      2 libro(s), 380 páginas
+    Sagan       1 libro(s), 375 páginas
+    Sin libros  0 libro(s), 0 páginas
+
+=== 4) Muchos a muchos ===
+Libros etiquetados «novela»: El Quijote, Ficciones, La Galatea
+Tabla intermedia creada por EF: EtiquetaLibro
+
+=== 5) Transacciones ===
+Dentro de la transacción hay 5 autores
+Tras el rollback hay 4 autores (el «Temporal» desapareció)
+
+=== 6) Concurrencia optimista (dos usuarios editan lo mismo) ===
+Ana guarda: correcto
+Luis guarda: DbUpdateConcurrencyException → la fila cambió desde que la leyó (no se pisan los cambios de Ana)
+
+=== 7) ExecuteUpdate / ExecuteDelete (sin cargar entidades) ===
+ExecuteUpdate: 2 filas en 1 comando · SQL: UPDATE "Libros" AS l SET "Paginas" = l."Paginas" + 1 WHERE l."Paginas" < 300
+ExecuteDelete: 1 autor(es) sin libros eliminados
+
+=== 8) SQL propio e inyección SQL ===
+CONCATENANDO el texto del usuario : 5 filas devueltas  ← ¡devolvió TODA la tabla!
+Con FromSql (interpolación segura): 0 filas devueltas  ← el texto viaja como parámetro, no como SQL

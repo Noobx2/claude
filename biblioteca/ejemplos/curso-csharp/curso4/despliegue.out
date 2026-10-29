@@ -1,0 +1,41 @@
+$ dotnet publish src/TaskFlow.Api -c Release -o publish    (lo mismo que hace la etapa «build» del Dockerfile)
+  TaskFlow.Api -> /tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/curso4/TaskFlow/src/TaskFlow.Api/bin/Release/net10.0/TaskFlow.Api.dll
+  TaskFlow.Api -> /tmp/tf-publish/
+
+$ ls publish | grep -v -E "\\.(pdb|xml)$" | head -12
+Microsoft.AspNetCore.Authentication.JwtBearer.dll
+Microsoft.AspNetCore.OpenApi.dll
+Microsoft.Bcl.Cryptography.dll
+Microsoft.EntityFrameworkCore.Abstractions.dll
+Microsoft.EntityFrameworkCore.Relational.dll
+Microsoft.EntityFrameworkCore.dll
+Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
+Microsoft.IdentityModel.Abstractions.dll
+Microsoft.IdentityModel.JsonWebTokens.dll
+Microsoft.IdentityModel.Logging.dll
+Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+Microsoft.IdentityModel.Protocols.dll
+
+$ du -sh publish
+9.0M
+
+$ ... y se ejecuta como lo haría el contenedor: Production + variables de entorno
+$ curl localhost:5120/health
+Healthy
+$ curl -o /dev/null -w "%{http_code}" localhost:5120/openapi/v1.json   (en Production la documentación NO se expone)
+404
+$ curl -o /dev/null -w "%{http_code}" localhost:5120/tasks   (sigue protegido)
+401
+
+$ primeras líneas del log de Production
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5120
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+
+--- Sin los secretos (cadena de conexión, Jwt:Key) la aplicación NO arranca: falla rápido, a propósito ---
+$ dotnet TaskFlow.Api.dll   (sin secretos)
+Unhandled exception. System.InvalidOperationException: Falta ConnectionStrings:TaskFlow (usa user-secrets o una variable de entorno).
+   at TaskFlow.Infrastructure.DependencyInjection.AddInfrastructure(IServiceCollection services, IConfiguration config) in /tmp/claude-0/-home-user-claude/ddd43a70-8f87-5

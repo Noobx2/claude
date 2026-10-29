@@ -1,0 +1,14 @@
+$ POST /tareas  {"titulo":"Aprender rebanadas"}
+{"id":1,"titulo":"Aprender rebanadas"}
+
+$ POST /tareas  {"titulo":"x"}   → 400
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"titulo":["Mínimo 3 caracteres"]}}
+
+$ POST /tareas/1/completar
+204
+
+$ GET /tareas?hechas=true
+[{"id":1,"titulo":"Aprender rebanadas","hecha":true}]
+
+$ GET /tareas
+[{"id":1,"titulo":"Aprender rebanadas","hecha":true},{"id":2,"titulo":"Segunda tarea","hecha":false}]

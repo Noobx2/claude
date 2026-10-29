@@ -1,0 +1,3 @@
+Passed TaskFlow.Api.Tests.ArquitecturaTests.Core_NoDependeDeInfraestructuraNiDeFrameworks [7 ms]
+Passed TaskFlow.Api.Tests.ArquitecturaTests.Infraestructura_NoDependeDeLaApi [1 ms]
+Passed TaskFlow.Api.Tests.ArquitecturaTests.Api_ConoceTodasLasCapas_PorqueEsLaRaizDeComposicion [3 ms]
