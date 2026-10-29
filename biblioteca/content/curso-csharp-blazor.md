@@ -750,9 +750,13 @@ RESULTADO: todos los pasos pasaron
 | 16 | **Móvil (390 px):** sin desplazamiento horizontal |
 | 17 | Ningún error inesperado en la consola del navegador |
 
-```text
-Capturas del recorrido (en la carpeta de ejemplos): e2e-01-vacia.png · e2e-02-tareas.png · e2e-03-movil.png
-```
+**Capturas del recorrido** (tomadas por el propio test en Chromium):
+
+![Escritorio (1000 px): formulario de nueva tarea, filtros y tabla con tres tareas](ejemplos/curso-csharp/curso4/e2e/e2e-02-tareas.png)
+
+![Móvil (390 px): la tabla se desplaza dentro de su contenedor; los botones de la derecha quedan parcialmente fuera hasta desplazarla](ejemplos/curso-csharp/curso4/e2e/e2e-03-movil.png)
+
+Fíjate en la vista móvil: **no hay desplazamiento horizontal de la página**, pero la tabla **sí** se desplaza dentro de su contenedor y los botones «Completar» quedan **recortados** hasta que se desliza. **Es una solución aceptable, no una buena**: lo mejor sería convertir cada fila en una **tarjeta** en pantallas estrechas (ejercicio 52.4).
 
 ### Los tres defectos que aparecieron al ejecutarla (y que ninguna lectura del código habría mostrado)
 
@@ -785,6 +789,8 @@ Capturas del recorrido (en la carpeta de ejemplos): e2e-01-vacia.png · e2e-02-t
 > **Ejercicio 52.2:** añade el *debounce* de 300 ms al buscador con un `CancellationTokenSource`.
 >
 > **Ejercicio 52.3:** añade un paso al recorrido E2E para el botón «Editar» y comprueba que **falla antes** de implementarlo.
+>
+> **Ejercicio 52.4:** en pantallas de menos de 560 px, haz que cada fila de la tabla se muestre como una **tarjeta** apilada (con CSS, sin cambiar el C#) y verifica con el recorrido E2E que no hay recortes.
 
 ---
 

@@ -1,8 +1,8 @@
-# Curso de C# completo
+# Curso de C# · Parte I: el lenguaje
 
-Curso práctico de **C# de cero a avanzado**, pensado para quien **recuerda la sintaxis a medias** y sobre todo no recuerda **lo que va arriba de los archivos y cómo se organizan carpetas y proyectos**: por eso empieza justo ahí.
+Esta es la **Parte I** de un curso de once partes (consulta el **índice general**): aquí se aprende **el lenguaje**. Es un curso práctico de **C# de cero a avanzado**, pensado para quien **recuerda la sintaxis a medias** y sobre todo no recuerda **lo que va arriba de los archivos y cómo se organizan carpetas y proyectos**: por eso empieza justo ahí.
 
-*Verificado: 2026-10-29 con .NET SDK 10.0.113 en Linux. **Todas las lecciones se ejecutaron** y la salida que ves es la real. Lo que no se pudo ejecutar (Unity, WinForms, WPF) se indica.*
+*Verificado: 2026-10-29 con .NET SDK 10.0.113 en Linux. **Todas las lecciones se ejecutaron** y la salida que ves es la real, salvo la lección 22 (Unity), que no se pudo ejecutar y se **amplía y corrige en la Parte X**.*
 
 ## Cómo usar este curso
 
@@ -412,8 +412,9 @@ El `global.json`:
 >
 > **Ejercicio 2.3:** abre `bin/` y `obj/` y explica con tus palabras qué hay en cada uno; luego bórralos y vuelve a compilar.
 
----
+**Profundiza:** la lección **38** (soluciones, ensamblados, NuGet propio y Git) y la **37** (qué es .NET por dentro y cómo fijar su versión).
 
+---
 
 ## Lección 3 · Tipos y variables
 
@@ -979,8 +980,9 @@ error esperado: Collection was modified; enumeration operation may not execute.
 >
 > **Ejercicio 7.3:** Invierte una cola usando una pila.
 
----
+**Profundiza:** la lección **40** (cuándo usar cada colección, **medido**: `List` frente a `HashSet`, boxing, `StringBuilder`).
 
+---
 
 ## Lección 8 · LINQ
 
@@ -1355,8 +1357,9 @@ no se puede heredar de mí
 >
 > **Ejercicio 10.3:** Explica con un ejemplo la diferencia entre `new` y `override`.
 
----
+**Profundiza:** la lección **28** (clases abstractas frente a interfaces y composición), la **29** (singleton) y la **30** (inyección de dependencias).
 
+---
 
 ## Lección 11 · Records, structs, enums y flags
 
@@ -1653,8 +1656,9 @@ Lista vacía en lugar de null: 0 elementos
 >
 > **Ejercicio 13.3:** Convierte un método que devuelve `null` en uno que devuelve una lista vacía.
 
----
+**Profundiza:** el **Anexo B** (tipado estático, `var`, `object` y `dynamic`).
 
+---
 
 ## Lección 14 · Pattern matching
 
@@ -1892,8 +1896,9 @@ NullReferenceException, ArgumentException, InvalidOperationException, KeyNotFoun
 >
 > **Ejercicio 15.3:** Muestra el orden de ejecución de `try`, `catch` y `finally` con mensajes.
 
----
+**Profundiza:** la lección **40** (el coste de las excepciones frente a `TryParse`) y el **Anexo A** (liberar recursos con `IDisposable`).
 
+---
 
 ## Lección 16 · Delegados, lambdas y eventos
 
@@ -1995,8 +2000,9 @@ Set(11)
 >
 > **Ejercicio 16.3:** Explica qué pasa si no te desuscribes de un evento.
 
----
+**Profundiza:** la lección **34** (el patrón Observer es un evento) y el **Anexo A** (fugas de memoria por eventos no desuscritos).
 
+---
 
 ## Lección 17 · Asincronía y concurrencia
 
@@ -2120,8 +2126,9 @@ consumidos: 1,2,3,4,5
 >
 > **Ejercicio 17.3:** Arregla una carrera de datos con `lock` y con `Interlocked`.
 
----
+**Profundiza:** la lección **43** (hilos, condiciones de carrera, `lock`, deadlock) y la **44** (cancelación, progreso, `IAsyncEnumerable` y el deadlock «sync over async»).
 
+---
 
 ## Lección 18 · Archivos, JSON y binarios
 
@@ -2251,8 +2258,9 @@ carpeta borrada: True
 >
 > **Ejercicio 18.3:** Escribe y lee un archivo binario con tres tipos de dato.
 
----
+**Profundiza:** la lección **48** (guardar en una base de datos con EF Core) y el **Anexo B** (`JsonNode` para leer JSON sin clases).
 
+---
 
 ## Lección 19 · Pruebas con xUnit
 
@@ -2391,6 +2399,8 @@ Passed!  - Failed:     0, Passed:    11, Skipped:     1, Total:    12, Duration:
 >
 > **Ejercicio 19.3:** añade una prueba que compruebe que una cantidad negativa **no** modifica el total.
 
+**Profundiza:** la lección **45** (pirámide de pruebas, **TDD** paso a paso, dobles con NSubstitute, **BDD**, cobertura).
+
 ---
 
 ## Lección 20 · NuGet e inyección de dependencias
@@ -2502,6 +2512,8 @@ Por qué importa: en las **pruebas** entregas un falso (`FakeSender`) sin tocar 
 >
 > **Ejercicio 20.3:** busca un paquete en nuget.org y añádelo a un proyecto con `dotnet add package`.
 
+**Profundiza:** la lección **30** (inyección de dependencias a fondo) y la **38** (crear tu propio paquete NuGet).
+
 ---
 
 ## Lección 21 · De Java a C#
@@ -2554,6 +2566,8 @@ Si vienes de Java, **casi todo lo que sabes sirve**. Esta es la tabla de traducc
 
 ## Lección 22 · De C# a Unity
 
+> **Esta lección es solo una primera introducción.** Se **amplía y corrige** en la **Parte X (lecciones 54 y 55)**. Un dato importante que aquí aparece solo como «puede que falten novedades»: a fecha de este curso **Unity está limitado a C# 9** (y a .NET Standard 2.1), de modo que **casi todo lo de C# 10–14 no se puede usar en Unity**; la Parte X lo comprueba compilando.
+
 <span class="tag mute">GENERAL</span> **Nada de esta lección se ejecutó**: Unity no está disponible aquí. Contrasta cada punto con la documentación de **tu versión** de Unity.
 
 | Tema | Qué esperar |
@@ -2595,9 +2609,12 @@ public class Health
 
 ---
 
-## Qué hacer después de este curso
+## Qué sigue
 
-1. Rehaz las lecciones 3–8 **sin mirar** (una por día).
-2. Construye el **inventario** (módulos *C# sin frameworks* y *C#: análisis, bucles y mapa*).
-3. Haz una **API** (módulo *C# (.NET)*, sección 10).
-4. Sigue el [Roadmap](#roadmap) a la fase siguiente.
+Has terminado **la Parte I: el lenguaje**. Lo que viene:
+
+1. **Parte II (lecciones 23–27):** aprender a **capturar datos** de todas las formas y a construir un **CRUD de verdad**, que hasta aquí solo se había rozado.
+2. **Parte III (28–36):** **clases abstractas**, **singleton**, **inyección de dependencias**, **patrones de diseño** y **SOLID**.
+3. Y a partir de ahí, según tu objetivo: **web** (partes IV, VII, VIII), **escritorio** (IX), **juegos** (X), **calidad** (VI y el Anexo C).
+
+> **Antes de seguir, comprueba esto:** rehaz las lecciones 3–8 **sin mirar**, una por día. Si no te salen, **no avances**: el resto del curso se apoya en ellas.

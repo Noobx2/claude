@@ -2639,4 +2639,4 @@ TaskFlow.Tests.TaskServiceTests.Update_ChangesOnlyWhatIsGiven
 | Guardar en JSON y CSV sin tocar la lógica | Lección 26 |
 | Separar en capas, inyectar dependencias y **probar** | Lección 27 |
 
-**Sigue con la Parte III** (clases abstractas, interfaces, singleton, patrones de diseño y SOLID) y con la **Parte IV** (el mismo TaskFlow convertido en API web con base de datos y seguridad).
+**Sigue con la Parte III** (clases abstractas, interfaces, singleton, patrones de diseño y SOLID). El mismo TaskFlow se convertirá en **API web con base de datos, seguridad y pruebas** en la **Parte VII**, tras ver cómo funciona .NET por dentro (Parte IV) y el C# avanzado (V y VI).

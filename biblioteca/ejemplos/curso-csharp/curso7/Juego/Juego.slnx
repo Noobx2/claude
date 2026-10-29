@@ -1,5 +1,7 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/Juego.Combate/Juego.Combate.csproj" />
+    <Project Path="src/Juego.CombateConsola/Juego.CombateConsola.csproj" />
     <Project Path="src/Juego.Core/Juego.Core.csproj" />
     <Project Path="src/Juego.Simulacion/Juego.Simulacion.csproj" />
   </Folder>

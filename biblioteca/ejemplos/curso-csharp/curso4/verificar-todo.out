@@ -1,0 +1,47 @@
+
+== 1/6 Compilar toda la solución (Release) ==
+    0 Warning(s)
+    0 Error(s)
+
+== 2/6 Pruebas unitarias y de integración (PostgreSQL real) ==
+Passed!  - Failed:     0, Passed:    22, Skipped:     0, Total:    22
+Passed!  - Failed:     0, Passed:    18, Skipped:     0, Total:    18
+
+== 3/6 Migraciones: la base se deja al día ==
+      No migrations were applied. The database is already up to date.
+2 migraciones aplicadas
+
+== 4/6 Arrancar la API (entorno Development) y comprobar su estado ==
+GET /health → Healthy
+GET /tasks sin token → HTTP 401
+
+== 5/6 Arrancar la interfaz Blazor ==
+GET / → HTTP 200
+
+== 6/6 Recorrido de extremo a extremo en Chromium (Playwright) ==
+ 1. Sin sesión, «/» redirige a /login
+ 2. Formulario vacío → mensajes de validación («Escribe tu usuario»)
+ 3. Contraseña de 3 caracteres → «Mínimo 8 caracteres» (validado en el cliente)
+ 4. Registro + entrada → «Mis tareas», usuario «ana Admin» (primer usuario = Admin)
+ 5. Título de 2 letras → mensaje de validación en el formulario
+ 6. Fecha pasada → la API rechaza y la página muestra: «La fecha límite no puede estar en el pasado.»
+ 7. Tres tareas creadas → tabla con 3 filas
+ 8. Completar una tarea → estadísticas: Total 3 Pendientes 2 Hechas 1 Vencidas 0
+ 9. Filtro «Hechas» → 1 fila
+10. Búsqueda «jwt» (sin distinguir mayúsculas) → solo «Revisar JWT»
+11. Recarga (F5) → sigue la sesión y los datos
+12. Eliminar como Admin → 2 filas
+13. Usuario «luis» (rol User): la interfaz NO muestra «Eliminar»
+14. Saltándose la interfaz: DELETE directo a la API con el token de «luis» → 403 (el servidor es quien protege)
+15. Contraseña incorrecta → «Credenciales incorrectas o sesión caducada.»
+16. Ancho de móvil (390 px): sin desplazamiento horizontal
+17. Consola del navegador: 3 respuestas 400/401/403 (las provocadas a propósito en los pasos 6, 14 y 15) y 0 errores inesperados
+
+RESULTADO: todos los pasos pasaron
+
+TODO CORRECTO
+
+real	0m47.147s
+user	0m34.616s
+sys	0m5.422s
+procesos que quedan escuchando: 0

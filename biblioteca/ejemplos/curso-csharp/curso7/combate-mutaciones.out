@@ -1,0 +1,28 @@
+$ MUTACIÓN: el daño mínimo pasa de 1 a 0 (combates que no acaban)
+Failed Juego.Tests.CombateTests.FormulaDeDano(ataque: 2, defensa: 20, mult: 1, critico: False, esperado: 1)
+Failed!  - Failed:     1, Passed:    33, Skipped:     0, Total:    34
+
+$ MUTACIÓN: actúa primero el más lento
+Failed Juego.Tests.CombateTests.UnMuertoNoActuaEnELMismoTurno
+Failed Juego.Tests.CombateTests.AtacaAlEnemigoMasDebil
+Failed Juego.Tests.CombateTests.ActuanDelMasRapidoAlMasLento
+
+$ MUTACIÓN: ataca al más fuerte en vez de al más débil
+Failed Juego.Tests.CombateTests.AtacaAlEnemigoMasDebil
+Failed!  - Failed:     1, Passed:    33, Skipped:     0, Total:    34
+
+$ MUTACIÓN: un muerto sigue actuando en su turno
+Passed!  - Failed:     0, Passed:    34, Skipped:     0, Total:    34      ← ¡SOBREVIVIÓ! Hueco en las pruebas (ver abajo)
+
+$ MUTACIÓN: la condición del crítico está invertida
+Failed Juego.Tests.CombateTests.ElCriticoDependeDelAzarInyectado
+Failed!  - Failed:     1, Passed:    33, Skipped:     0, Total:    34
+
+
+--- Se añadió la prueba que faltaba y se repitió ESA mutación ---
+$ (original)
+Passed!  - Failed:     0, Passed:    35, Skipped:     0, Total:    35
+
+$ MUTACIÓN: un muerto sigue actuando en su turno   (el mutante que SOBREVIVIÓ la primera vez)
+Failed Juego.Tests.CombateTests.UnMuertoNoActuaAunqueElCombateSigaEnCurso
+Failed!  - Failed:     1, Passed:    34, Skipped:     0, Total:    35

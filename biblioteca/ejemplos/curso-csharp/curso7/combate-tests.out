@@ -1,0 +1,18 @@
+Passed Juego.Tests.CombateTests.UnMuertoNoActuaAunqueElCombateSigaEnCurso
+Passed Juego.Tests.CombateTests.UnMuertoNoActuaEnELMismoTurno [< 1 ms]
+Passed Juego.Tests.CombateTests.AtacaAlEnemigoMasDebil [< 1 ms]
+Passed Juego.Tests.CombateTests.ActuanDelMasRapidoAlMasLento
+Passed Juego.Tests.CombateTests.LosHeroesGananCuandoNoQuedanEnemigos
+Passed Juego.Tests.CombateTests.MismoAzar_MismoCombate [< 1 ms]
+Passed Juego.Tests.CombateTests.FormulaDeDano(ataque: 10, defensa: 0, mult: 1, critico: True, esperado: 20) [< 1 ms]
+Passed Juego.Tests.CombateTests.FormulaDeDano(ataque: 10, defensa: 6, mult: 1, critico: False, esperado: 7) [< 1 ms]
+Passed Juego.Tests.CombateTests.FormulaDeDano(ataque: 10, defensa: 0, mult: 1, critico: False, esperado: 10) [< 1 ms]
+Passed Juego.Tests.CombateTests.FormulaDeDano(ataque: 10, defensa: 0, mult: 2, critico: False, esperado: 20) [< 1 ms]
+Passed Juego.Tests.CombateTests.FormulaDeDano(ataque: 10, defensa: 0, mult: 2, critico: True, esperado: 40) [< 1 ms]
+Passed Juego.Tests.CombateTests.FormulaDeDano(ataque: 2, defensa: 20, mult: 1, critico: False, esperado: 1) [< 1 ms]
+Passed Juego.Tests.CombateTests.NoSePuedeEjecutarDosVeces [< 1 ms]
+Passed Juego.Tests.CombateTests.SiNadieCaeSeTerminaPorLimiteDeTurnosEnEmpate
+Passed Juego.Tests.CombateTests.LaHabilidadTieneRecargaEnTurnos
+Passed Juego.Tests.CombateTests.LosEnemigosGananCuandoNoQuedanHeroes [< 1 ms]
+Passed Juego.Tests.CombateTests.ElCriticoDependeDelAzarInyectado
+Passed Juego.Tests.CombateTests.ExigeAlMenosUnCombatientePorBando [< 1 ms]

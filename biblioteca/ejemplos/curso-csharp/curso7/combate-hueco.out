@@ -1,0 +1,6 @@
+$ (original)
+Passed!  - Failed:     0, Passed:    35, Skipped:     0, Total:    35
+
+$ MUTACIÓN: un muerto sigue actuando en su turno   (el mutante que SOBREVIVIÓ la primera vez)
+Failed Juego.Tests.CombateTests.UnMuertoNoActuaAunqueElCombateSigaEnCurso
+Failed!  - Failed:     1, Passed:    34, Skipped:     0, Total:    35

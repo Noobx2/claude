@@ -2108,4 +2108,4 @@ static class Tracer
 | Acciones que se deshacen | **Command** |
 | Mantener el diseño sano | **SOLID** y sentido común |
 
-**Sigue con la Parte IV:** convertir TaskFlow en una **API web** con base de datos, seguridad y pruebas.
+**Sigue con la Parte IV:** cómo funciona **.NET por dentro** (CLR, IL, JIT), soluciones, NuGet, Git, depuración y rendimiento. Más adelante, en la **Parte VII**, TaskFlow se convierte en una **API web**.

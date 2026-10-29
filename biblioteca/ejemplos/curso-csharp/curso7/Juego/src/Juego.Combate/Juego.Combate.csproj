@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- Mismos límites que Unity: se puede copiar tal cual a un proyecto de Unity -->
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <RootNamespace>Juego.Combate</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="..\Juego.Core\Juego.Core.csproj" /></ItemGroup>
+</Project>
