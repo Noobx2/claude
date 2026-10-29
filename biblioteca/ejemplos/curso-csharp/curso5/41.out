@@ -1,0 +1,50 @@
+=== C# 8 ===
+??=            → valor por defecto
+switch expr.   → menor, mayor
+using decl.    → recurso A abierto
+índices/rangos → último=50, segundo..cuarto=[20,30,40]
+stream:1 stream:2 stream:3 
+
+=== C# 9 ===
+record+with    → Producto { Nombre = Teclado, Precio = 25 } / Producto { Nombre = Teclado, Precio = 30 }  (iguales por valor: True)
+init           → Ana
+patrones and/or/not → entero 1..9, no es texto
+
+=== C# 10 ===
+record struct  → Punto2D { X = 3, Y = 4, Distancia = 5 }, distancia=5.0
+CallerArgumentExpression → la condición «punto.X > 100» es False
+lambda natural → Hola, Eva  (tipo: Func`2)
+
+=== C# 11 ===
+raw string     → {"nombre": "Ana", "cita": "dijo \"hola\""}
+list pattern   → empieza en 1 y acaba en 5
+required       → Toby
+u8 literal     → 4 bytes
+generic math   → Sumar(3, 4) = 7, Sumar(1.5, 2.25) = 3.75
+
+=== C# 12 ===
+ctor primario  → Concierto el 2027-05-01
+colecciones [..] → 1,2,0,3,4
+alias de tupla  → Lat=40.4
+lambda con default → 25 y 1024
+
+=== C# 13 ===
+params + Span  → 10 (sin crear un arreglo en el heap)
+Lock         → sección crítica con System.Threading.Lock
+escape \e      → 1 carácter (ESC, útil para colores ANSI)
+[^1] en inicializador → último=99
+
+=== C# 14 (NUEVO) ===
+extension property → "reconocer".EsPalindromo = True
+extension method   → "ab".Repetir(3) = ababab
+extension genérica → new List<int>().EstaVacia = True
+extension estática → int.Dos = 2
+field              → "Ana" (se recortó solo)
+                     rechazó vacío: El nombre no puede estar vacío
+a?.b = valor       → ninguno sigue null: True; perfil.Nombre=Beatriz
+span implícito     → arr.Suma() = 15 (extensión sobre ReadOnlySpan<int> aplicada a un int[])
+lambda con 'out'   → True → 42
+nameof unbound     → Dictionary
+operador +=        → 16
+partial ctor       → 10
+using decl.    → recurso A liberado (al terminar el programa)

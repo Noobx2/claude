@@ -1,0 +1,27 @@
+$ dotnet test   # PASO 1 - ROJO: las pruebas existen, el código aún no
+  Failed Tienda.Pruebas.CarritoTests.Total_SumaPrecioPorCantidad 
+   System.NotImplementedException : The method or operation is not implemented.
+  Failed Tienda.Pruebas.CarritoTests.CarritoVacio_TieneTotalCero
+   System.NotImplementedException : The method or operation is not implemented.
+Failed!  - Failed:     2, Passed:     0, Skipped:     0, Total:     2, Duration: 56 ms - Tienda.Pruebas.dll (net10.0)
+
+$ dotnet test   # PASO 2 - VERDE: lo mínimo que hace pasar las pruebas
+Passed!  - Failed:     0, Passed:     2, Skipped:     0, Total:     2, Duration: 50 ms - Tienda.Pruebas.dll (net10.0)
+
+$ dotnet test   # PASO 3 - ROJO: dos requisitos nuevos (descuento y validación)
+  Failed Tienda.Pruebas.CarritoTests.Total_AplicaDiezPorCientoDesdeCien(bruto: 200, esperado: 180) 
+   Assert.Equal() Failure: Values differ
+Expected: 180
+Actual:   200
+  Failed Tienda.Pruebas.CarritoTests.Total_AplicaDiezPorCientoDesdeCien(bruto: 100, esperado: 90)
+   Assert.Equal() Failure: Values differ
+Expected: 90
+Actual:   100
+  Failed Tienda.Pruebas.CarritoTests.Anadir_ConCantidadNoPositiva_LanzaExcepcion 
+   Assert.Throws() Failure: No exception was thrown
+Expected: typeof(System.ArgumentOutOfRangeException)
+Failed!  - Failed:     3, Passed:     3, Skipped:     0, Total:     6, Duration: 68 ms - Tienda.Pruebas.dll (net10.0)
+
+$ dotnet test   # PASO 4 - VERDE + REFACTOR
+Passed!  - Failed:     0, Passed:     6, Skipped:     0, Total:     6, Duration: 40 ms - Tienda.Pruebas.dll (net10.0)
+

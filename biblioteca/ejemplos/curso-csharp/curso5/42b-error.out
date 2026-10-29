@@ -1,0 +1,11 @@
+$ dotnet run --project App    (primera versión del generador)
+Libro.Describir.g.cs(4,44): error CS1073: Unexpected token '{'
+Libro.Describir.g.cs(4,53): error CS1525: Invalid expression term '{'
+Persona.Describir.g.cs(4,46): error CS1073: Unexpected token '{'
+Persona.Describir.g.cs(4,55): error CS1525: Invalid expression term '{'
+The build failed. Fix the build errors and run again.
+
+$ cat generado/.../Persona.Describir.g.cs
+{
+    public string Describir() => $"Persona { Nombre = {Nombre}, Edad = {Edad} }";
+}

@@ -1,0 +1,30 @@
+Tipo: Cuenta  | ensamblado: 42-reflexion  | sellado: True
+Constructores : (String titular, Decimal saldo)
+Propiedades   : String Titular, Decimal Saldo
+Métodos       : get_Titular, set_Titular, get_Saldo, Ingresar, CompareTo, ToString
+Campos privados: _saldo, <Titular>k__BackingField
+Interfaces    : IComparable`1
+
+Creada y usada por reflexión: Ana López: 150 €
+Leído un campo PRIVADO: _saldo = 150  (reflexión salta la visibilidad: úsalo con mucha cautela)
+
+--- Validador basado en atributos (como hacen DataAnnotations) ---
+'ana' es válido
+Errores: Nombre es obligatorio; Edad debe estar entre 18 y 120; Email no parece un correo
+
+--- Comandos descubiertos por atributo [Comando] ---
+  fecha    Muestra la fecha fija    → 2026-10-29
+  saludo   Dice hola                → ¡Hola!
+  version  Versión del runtime      → 10.0.13
+
+MakeGenericType → List`1[Decimal] con Count=1
+
+--- Coste (1.000.000 de lecturas de una propiedad) ---
+Acceso directo c1.Saldo                       6.94 ms
+Reflexión: prop.GetValue(c1) cada vez        46.00 ms
+Delegado creado UNA vez (CreateDelegate)     11.23 ms
+Expression Tree compilado UNA vez            10.97 ms
+
+--- Emisión de IL (System.Reflection.Emit) ---
+Potencia(2, 40) generado en memoria = 1,099,511,627,776
+Tipo creado al vuelo: Saludador.Saludar("Eva") = Hola, Eva

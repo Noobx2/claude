@@ -1,0 +1,70 @@
+$ git init -q -b main proyecto
+
+$ printf 'bin/\nobj/\n.vs/\n*.user\nappsettings.Local.json\n' > .gitignore; cat .gitignore
+bin/
+obj/
+.vs/
+*.user
+appsettings.Local.json
+
+$ dotnet new console -n App -o . >/dev/null; git status --short
+?? .gitignore
+?? App.csproj
+?? Program.cs
+
+$ git add . && git commit -qm 'Proyecto inicial' && git log --oneline
+a7aecde Proyecto inicial
+
+$ git switch -c ampliar-saludo
+Switched to a new branch 'ampliar-saludo'
+
+$ echo 'Console.WriteLine("Adiós");' >> Program.cs; git diff --stat
+ Program.cs | 1 +
+ 1 file changed, 1 insertion(+)
+
+$ git commit -qam 'Añade despedida' && git log --oneline --graph --all
+* 84ce63a Añade despedida
+* a7aecde Proyecto inicial
+
+$ git switch -q main; echo 'Console.WriteLine("Hola desde main");' >> Program.cs; git commit -qam 'Cambia main'; git merge ampliar-saludo 2>&1 | tail -4
+Auto-merging Program.cs
+CONFLICT (content): Merge conflict in Program.cs
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git status --short; git diff --name-only --diff-filter=U
+UU Program.cs
+Program.cs
+
+$ cat Program.cs
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+<<<<<<< HEAD
+Console.WriteLine("Hola desde main");
+=======
+Console.WriteLine("Adiós");
+>>>>>>> ampliar-saludo
+
+$ printf '// Saludo y despedida\nConsole.WriteLine("Hola desde main");\nConsole.WriteLine("Adiós");\n' > Program.cs; cat Program.cs
+// Saludo y despedida
+Console.WriteLine("Hola desde main");
+Console.WriteLine("Adiós");
+
+$ git add Program.cs && git commit -qm 'Resuelve el conflicto' && git log --oneline --graph --all
+*   8d8a5af Resuelve el conflicto
+|\  
+| * 84ce63a Añade despedida
+* | cda6d16 Cambia main
+|/  
+* a7aecde Proyecto inicial
+
+$ git tag v1.0.0 && git tag
+v1.0.0
+
+$ git switch -c error-mio; git switch -q main; git branch -d error-mio
+Switched to a new branch 'error-mio'
+Deleted branch error-mio (was 8d8a5af).
+
+$ git restore --source=HEAD~1 Program.cs && git diff --stat && git restore Program.cs   # deshacer cambios de un archivo
+ Program.cs | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+

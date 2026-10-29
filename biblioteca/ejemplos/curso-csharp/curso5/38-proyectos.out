@@ -1,0 +1,57 @@
+$ dotnet new sln -n Tienda
+
+$ dotnet new classlib -n Tienda.Nucleo -o src/Tienda.Nucleo
+
+$ dotnet new console -n Tienda.App -o src/Tienda.App
+
+$ dotnet sln add src/Tienda.Nucleo src/Tienda.App
+Project `src/Tienda.Nucleo/Tienda.Nucleo.csproj` added to the solution.
+Project `src/Tienda.App/Tienda.App.csproj` added to the solution.
+$ dotnet add src/Tienda.App reference src/Tienda.Nucleo   (referencia de proyecto)
+Reference `..\Tienda.Nucleo\Tienda.Nucleo.csproj` added to the project.
+
+$ cat src/Tienda.App/Tienda.App.csproj | grep -i reference
+    <ProjectReference Include="..\Tienda.Nucleo\Tienda.Nucleo.csproj" />
+
+$ dotnet sln list
+Project(s)
+----------
+src/Tienda.App/Tienda.App.csproj
+src/Tienda.Nucleo/Tienda.Nucleo.csproj
+
+$ dotnet run --project src/Tienda.App
+100 € netos = 121.00 € con IVA
+La clase Precio vive en el ensamblado: Tienda.Nucleo.dll
+
+$ ls src/Tienda.App/bin/Debug/net10.0/*.dll   (el .dll de la biblioteca se copia junto al ejecutable)
+Tienda.App.dll
+Tienda.Nucleo.dll
+
+--- NuGet: empaquetar la biblioteca y consumirla desde un "feed" local ---
+$ dotnet pack src/Tienda.Nucleo -c Release -o feed -p:Version=1.2.0
+  Successfully created package '/tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/curso5/lab2/feed/Tienda.Nucleo.1.2.0.nupkg'.
+$ ls feed
+Tienda.Nucleo.1.2.0.nupkg
+$ unzip -l feed/Tienda.Nucleo.1.2.0.nupkg   (un .nupkg es un .zip)
+_rels/.rels
+Tienda.Nucleo.nuspec
+lib/net10.0/Tienda.Nucleo.dll
+[Content_Types].xml
+package/services/metadata/core-properties/2830531eaaf24609bcb1b3bced9ba28d.psmdcp
+
+$ dotnet add Consumidor package Tienda.Nucleo --version 1.2.0 --source ./feed
+info : Adding PackageReference for package 'Tienda.Nucleo' into project '/tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/curso5/lab2/Consumidor/Consumidor.csproj'.
+info : PackageReference for package 'Tienda.Nucleo' version '1.2.0' added to file '/tmp/claude-0/-home-user-claude/ddd43a70-8f87-5490-9d3f-755ecbba3013/scratchpad/curso5/lab2/Consumidor/Consumidor.csproj'.
+$ grep PackageReference Consumidor/Consumidor.csproj
+    <PackageReference Include="Tienda.Nucleo" Version="1.2.0" />
+
+$ dotnet list Consumidor package   (qué paquetes usa un proyecto)
+   Top-level Package      Requested   Resolved
+   > Tienda.Nucleo        1.2.0       1.2.0   
+
+
+$ dotnet list Consumidor package --outdated  (¿hay versiones nuevas? necesita internet)
+   Top-level Package      Requested   Resolved   Latest                  
+   > Newtonsoft.Json      12.0.1      12.0.1     13.0.4                  
+   > Tienda.Nucleo        1.2.0       1.2.0      Not found at the sources
+

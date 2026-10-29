@@ -1,0 +1,54 @@
+Runtime ......: .NET 10.0.13
+SO / arquitec.: Ubuntu 24.04.5 LTS / X64
+Versión CLR ..: 10.0.13
+Ensamblado ...: 37-clr-il (ejecutable en memoria)
+Ensamblado de List<T>: System.Private.CoreLib
+
+--- IL del método Calculadora.Sumar(int a, int b) ---
+Bytes: 0203582A
+  IL_0000: ldarg.0    
+  IL_0001: ldarg.1    
+  IL_0002: add        
+  IL_0003: ret        
+
+--- IL de un método con un bucle: Calculadora.SumaHasta(int n) ---
+  IL_0000: nop        
+  IL_0001: ldc.i4.0   
+  IL_0002: stloc.0    
+  IL_0003: ldc.i4.1   
+  IL_0004: stloc.1    
+  IL_0005: br.s       IL_000F
+  IL_0007: ldloc.0    
+  IL_0008: ldloc.1    
+  IL_0009: add        
+  IL_000A: stloc.0    
+  IL_000B: ldloc.1    
+  IL_000C: ldc.i4.1   
+  IL_000D: add        
+  IL_000E: stloc.1    
+  IL_000F: ldloc.1    
+  IL_0010: ldarg.0    
+  IL_0011: cgt        
+  IL_0013: ldc.i4.0   
+  IL_0014: ceq        
+  IL_0016: stloc.2    
+  IL_0017: ldloc.2    
+  IL_0018: brtrue.s   IL_0007
+  IL_001A: ldloc.0    
+  IL_001B: stloc.3    
+  IL_001C: br.s       IL_001E
+  IL_001E: ldloc.3    
+  IL_001F: ret        
+
+--- JIT: primera llamada frente a las siguientes ---
+Métodos compilados por el JIT en este tramo: 1
+Primera llamada (compila + ejecuta): más lenta
+Segunda llamada es 142800x más rápida que la primera (los valores exactos cambian en cada máquina)
+
+Tiered compilation activa: sí
+
+--- Managed vs unmanaged ---
+Array administrado: generación del GC = 0
+Bloque no administrado en una dirección de memoria: reservado
+PID desde una función C nativa (P/Invoke a libc): True
+Modo del GC: estación de trabajo, latencia: Interactive

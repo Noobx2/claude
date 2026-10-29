@@ -1,0 +1,58 @@
+$ dotnet --list-sdks
+10.0.113 [/usr/lib/dotnet/sdk]
+
+$ dotnet --list-runtimes
+Microsoft.AspNetCore.App 10.0.13 [/usr/lib/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.NETCore.App 10.0.13 [/usr/lib/dotnet/shared/Microsoft.NETCore.App]
+
+$ dotnet new globaljson --sdk-version 10.0.113 --roll-forward latestFeature
+
+
+$ cat global.json
+{
+  "sdk": {
+    "rollForward": "latestFeature",
+    "version": "10.0.113"
+  }
+}
+
+$ dotnet --version   (con global.json presente)
+10.0.113
+
+--- pedimos un SDK que NO está instalado, con rollForward desactivado ---
+$ dotnet --version
+The command could not be loaded, possibly because:
+  * You intended to execute a .NET application:
+      The application '--version' does not exist or is not a managed .dll or .exe.
+  * You intended to execute a .NET SDK command:
+
+$ dotnet new console -n Hola -o Hola
+
+
+
+$ cat Hola/Hola.csproj
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
+
+$ dotnet build -c Release Hola | tail -3
+    0 Error(s)
+
+Time Elapsed 00:00:01.65
+
+$ ls Hola/bin/Release/net10.0
+Hola
+Hola.deps.json
+Hola.dll
+Hola.pdb
+Hola.runtimeconfig.json
+
+$ dotnet Hola/bin/Release/net10.0/Hola.dll   (un .dll ejecutable con el host "dotnet")
+Hello, World!

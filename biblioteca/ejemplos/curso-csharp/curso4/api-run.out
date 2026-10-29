@@ -1,0 +1,60 @@
+$ curl -i /tasks   (sin token)
+HTTP/1.1 401 Unauthorized
+
+$ curl /health
+Healthy
+
+$ POST /auth/register (primer usuario = Admin)
+{"userName":"ana","role":"Admin"}
+
+$ POST /auth/register (contraseña corta -> 400)
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"Password":["The field Password must be a string with a minimum length of 8 and a maximum length of 100."]},"traceId":"00-e6894dece3fe6e7c175b1dbff6263428-2d0c2451fc8de799-00"}
+
+$ POST /auth/login (mala contraseña)
+HTTP/1.1 401 Unauthorized
+
+token (recortado): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ...
+
+$ POST /tasks
+{"id":1,"title":"Estudiar EF Core","description":null,"priority":"High","dueDate":"2030-01-15","done":false,"createdAt":"2026-10-29T17:54:08.0853164Z","isOverdue":false}
+
+$ POST /tasks con prioridad inválida -> 400
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"Solicitud mal formada","status":400,"detail":"Failed to read parameter \"CreateTaskRequest req\" from the request body as JSON.","traceId":"00-c512e033f2585e10cb08bf1a54ac2071-e71ed487e8eed815-00"}
+
+$ POST /tasks con título corto -> 400
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"Title":["The field Title must be a string with a minimum length of 3 and a maximum length of 80."]},"traceId":"00-40a9d6569643c829e4580dcba32aca1e-a841a881d96c16d8-00"}
+
+$ POST /tasks con fecha pasada -> 400 (regla del dominio)
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"Datos inválidos","status":400,"detail":"La fecha límite no puede estar en el pasado.","traceId":"00-ecaf81dd2ea41e86286889502ef1baba-65696cbdc6799e2b-00"}
+
+$ GET /tasks?priority=High
+[{"id":1,"title":"Estudiar EF Core","description":null,"priority":"High","dueDate":"2030-01-15","done":false,"createdAt":"2026-10-29T17:54:08.085316Z","isOverdue":false}]
+
+$ PUT /tasks/2
+{"id":2,"title":"Leer sobre JWT","description":"Revisar claims y roles","priority":"High","dueDate":null,"done":false,"createdAt":"2026-10-29T17:54:08.154747Z","isOverdue":false}
+
+$ POST /tasks/1/done
+{"id":1,"title":"Estudiar EF Core","description":null,"priority":"High","dueDate":"2030-01-15","done":true,"createdAt":"2026-10-29T17:54:08.085316Z","isOverdue":false}
+
+$ GET /tasks/stats
+{"total":2,"done":1,"pending":1,"overdue":0}
+
+$ GET /tasks/99 -> 404
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.5","title":"No encontrado","status":404,"detail":"No existe la tarea 99.","traceId":"00-7066fc5244bdffd8d28ba1d86bc4e439-2e71f0a8efb28b91-00"}
+
+$ DELETE /tasks/2 con rol User -> 403
+403
+
+$ DELETE /tasks/2 con rol Admin -> 204
+204
+
+$ token manipulado -> 401
+401
+
+$ psql: lo que guarda la base (hash, nunca la contraseña)
+ Id | UserName | Role  |                  hash                   
+----+----------+-------+-----------------------------------------
+  1 | ana      | Admin | 210000.l+m9lO+Aa/ciwYQHL6YczA==.FMRY...
+  2 | luis     | User  | 210000.Of27n8SLu+S/r8WwGqo2/g==.yNmv...
+(2 rows)
+

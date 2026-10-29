@@ -1,0 +1,34 @@
+Núcleos lógicos de esta máquina: 4
+
+=== 1) Thread y Task ===
+  Thread manual: id=4, ¿del pool? False
+  Task.Run     : id=5, ¿del pool? True
+  Un Thread es caro (1 MB de pila reservado); las Task reutilizan hilos del ThreadPool.
+
+=== 2) Condición de carrera ===
+  Esperado: 1,600,000   Sin proteger: 838,149   (se pierden incrementos: 761,851)
+  Con lock     : 1,600,000   (correcto, pero los hilos hacen cola)
+  Interlocked  : 1,600,000   (correcto y sin bloqueo: una instrucción atómica del procesador)
+
+=== 3) Colecciones concurrentes ===
+  ConcurrentDictionary: p0=2000, p1=2000, p2=2000, p3=2000, p4=2000
+
+=== 4) Productor/consumidor con Channel<T> ===
+  consumidor 1 procesó [2,3,6,7]
+  consumidor 2 procesó [1,4,5,8]
+
+=== 5) SemaphoreSlim: como mucho 3 a la vez ===
+  12 trabajos lanzados; máximo simultáneo observado = 3
+
+=== 6) Deadlock ===
+  Hilo 1 (A luego B): tengo mi candado y NO consigo el otro tras 300 ms → habría quedado bloqueado para siempre
+  Hilo 2 (B luego A): tengo mi candado y NO consigo el otro tras 300 ms → habría quedado bloqueado para siempre
+  Solución: tomar SIEMPRE los candados en el mismo orden (A y luego B en los dos hilos), o evitar anidarlos.
+  Con orden fijo ambos terminan: True
+
+=== 7) Parallel y PLINQ (trabajo de CPU) ===
+  Tamaño     secuencial     PLINQ    aceleración
+      2,000       0.3 ms       0.9 ms     0.4x   (mismo resultado: True)
+    300,000      55.6 ms      36.1 ms     1.5x   (mismo resultado: True)
+  3,000,000     626.3 ms     209.5 ms     3.0x   (mismo resultado: True)
+  Con poco trabajo repartir cuesta más que calcular; con mucho, el paralelismo compensa (tope = nº de núcleos).

@@ -1,0 +1,13 @@
+$ GET /api/notas
+[{"id":1,"texto":"Primera nota"}]
+
+$ POST /api/notas
+HTTP/1.1 201 Created
+Location: http://localhost:5102/api/Notas/2
+{"id":2,"texto":"Segunda nota"}
+
+$ POST con texto corto -> 400 automático
+{"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"Texto":["The field Texto must be a string or array type with a minimum length of '3'."]},"traceId":"00-00e8de7a80d05b27beda8d6ba377106c-9fd7d3d286a55777-00"}
+
+$ GET /api/notas/9 -> 404
+404

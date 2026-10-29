@@ -1,0 +1,10 @@
+Novedad                           LangVersion=13    LangVersion=14
+----------------------------------------------------------------------
+extension (propiedad)             ERROR CS1513      compila
+field                             ERROR CS9260      compila
+a?.b = valor                      ERROR CS9260      compila
+lambda (s, out r)                 ERROR CS9260      compila
+nameof(Dictionary<,>)             ERROR CS9260      compila
+operador +=                       ERROR CS9260      compila
+constructor partial               ERROR CS0246      compila
+Span implícito (extensión)        ERROR CS1929      compila

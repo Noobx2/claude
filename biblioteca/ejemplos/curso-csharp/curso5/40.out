@@ -1,0 +1,28 @@
+=== Valor vs referencia ===
+struct: a.X=1, b.X=99   → cada variable tiene su propia copia
+class : p1=Luis, p2=Luis   → las dos variables apuntan al mismo objeto
+tras Cambiar(): a.X=1 (el struct no cambió), p1.Nombre=Cambiado (la clase sí)
+
+=== Colecciones ===
+Stack (deshacer): guardar editar abrir 
+Queue (turnos)  : Ana Luis Eva 
+Dictionary: Ana=31, ¿existe Pedro? False
+HashSet: 3 elementos (el duplicado se ignoró); contiene 'net': True
+SortedDictionary recorre ordenado por clave: kiwi, manzana, pera
+LinkedList (insertar al inicio sin desplazar): 0,1,2,3
+PriorityQueue: urgente media baja 
+
+=== Mediciones (Release; los tiempos cambian en cada máquina, lo que importa es la proporción) ===
+Buscar 2000 valores en List<int> (Contains)      7.131 ms
+Buscar 2000 valores en HashSet<int>              0.076 ms
+Sumar 1.000.000 int en ArrayList (boxing)       33.208 ms
+Sumar 1.000.000 int en List<int> (sin box)       1.674 ms
+1000 boxings guardados reservaron 24,000 bytes en el heap (~24 bytes por int de 4 bytes)
+Concatenar 20.000 veces con +=                  51.256 ms
+Concatenar 20.000 veces con StringBuilder        0.033 ms
+Validar 5000 textos con try/catch                5.811 ms
+Validar 5000 textos con int.TryParse             0.070 ms
+Suma con for sobre array                         6.495 ms
+Suma con foreach sobre array                     2.837 ms
+Suma con LINQ (Sum de long)                     11.069 ms
+Suma con Span<int> (sin copiar)                  2.741 ms

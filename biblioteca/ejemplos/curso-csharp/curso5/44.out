@@ -1,0 +1,38 @@
+=== 1) Tres llamadas lentas (cada una simula 200 ms de red) ===
+  En serie (await uno a uno)   :  608 ms
+  En paralelo (Task.WhenAll)   :  201 ms
+  Bloqueando el hilo (Sleep)   :  600 ms
+  async NO crea hilos: libera el hilo mientras se espera (E/S), y lo recupera cuando hay respuesta.
+
+=== 2) Dónde se ejecuta cada tramo ===
+  Antes del await : hilo 7
+  Después         : hilo 7  (en consola puede ser otro: no hay contexto que lo devuelva al original)
+
+=== 3) Excepciones ===
+  await propaga la excepción original: un fallo
+  WhenAll con 2 fallos: await relanza SOLO UNA («fallo 1»); las dos están en varias.Exception.InnerExceptions, que contiene 2
+  Tarea no esperada: IsFaulted=True — nadie vio el error. Regla: SIEMPRE await (o guarda el Task).
+
+=== 4) CancellationToken ===
+  Cancelado por tiempo límite (CancelAfter): OperationCanceledException
+  Cancelado a mano; tarea.IsCanceled=True
+
+=== 5) Progreso ===
+  Recibido: 20% 40% 60% 80% 100%
+
+=== 6) WhenAny y tiempo límite ===
+  La primera en terminar: rápida
+  WaitAsync(timeout) → TimeoutException
+
+=== 7) IAsyncEnumerable<T> ===
+  Recibidos antes de cancelar: 1, 4, 9, 16, 25
+
+=== 8) ValueTask / PeriodicTimer ===
+  1.ª vez (asíncrona): dato-1  · 2.ª vez (síncrona, sin asignar Task): dato-1
+  tic 1
+  tic 2
+
+=== 9) Deadlock por bloquear con .Result (reproducido con un contexto tipo interfaz gráfica) ===
+  Con .Wait() dentro del contexto: terminó = False  (false = DEADLOCK; se abandonó a los 500 ms)
+  Con await en vez de .Wait()    : terminó = True
+  Reglas: 1) no bloquees con .Result/.Wait()/GetAwaiter().GetResult()  2) async hasta arriba  3) en bibliotecas, ConfigureAwait(false).

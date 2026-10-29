@@ -1,0 +1,16 @@
+$ dotnet run -c Release 39-depuracion.cs      (configuración Release)
+Configuración: RELEASE (optimizada)
+Símbolo TRAZA_EXTRA definido con #define
+Debugger.IsAttached = False  (true solo si lo ejecutas con F5 en el IDE)
+39-depuracion Information: 0 : Inicio del proceso
+39-depuracion Warning: 0 : Queda poco espacio en disco
+39-depuracion Error: 0 : No se pudo abrir la conexión
+Mensaje condicional (la condición era cierta)
+El archivo de traza tiene 4 líneas
+(esto SÍ sale: Warning está activado)
+DebuggerDisplay mostraría en la ventana Locales: Pedido {Numero} — {Cliente} — {Total} €
+dbug: Tienda.Pedidos[0] Detalle fino para depurar
+info: Tienda.Pedidos[0] Pedido 1042 de Ana por ¤59.97
+warn: Tienda.Pedidos[0] => PedidoId=1042 Stock bajo para Teclado
+fail: Tienda.Pedidos[0] => PedidoId=1042 Falló el cobro System.InvalidOperationException: Pago rechazado    at Program.<Main>$(String[] args) in /tmp
+Tiempo medido: True

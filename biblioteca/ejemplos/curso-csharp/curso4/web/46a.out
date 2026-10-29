@@ -1,0 +1,43 @@
+$ curl -i http://localhost:5101/visita
+HTTP/1.1 200 OK
+Content-Type: text/plain; charset=utf-8
+Date: Thu, 29 Oct 2026 17:57:10 GMT
+Server: Kestrel
+Set-Cookie: visitas=1; max-age=3600; path=/; samesite=strict; httponly
+Transfer-Encoding: chunked
+X-Protocolo: HTTP/1.1
+X-Duracion-ms: 13.4
+
+Visita número 1
+
+$ curl con el "tarro de cookies" (-c guarda, -b envía)
+Visita número 1
+Visita número 2
+Visita número 3
+
+$ cat jar.txt  (la cookie que guardó curl)
+localhost	FALSE	/	FALSE	1793300231	visitas	3
+
+$ curl --http2-prior-knowledge -i http://localhost:5103/visita  (HTTP/2)
+HTTP/2 200 
+content-type: text/plain; charset=utf-8
+date: Thu, 29 Oct 2026 17:57:10 GMT
+server: Kestrel
+set-cookie: visitas=1; max-age=3600; path=/; samesite=strict; httponly
+x-protocolo: HTTP/2
+x-duracion-ms: 0.1
+
+Visita número 1
+
+$ curl -i /privado  (el 2.º middleware corta la cadena; el 1.º igualmente añade su cabecera)
+HTTP/1.1 401 Unauthorized
+Date: Thu, 29 Oct 2026 17:57:10 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+X-Protocolo: HTTP/1.1
+X-Duracion-ms: 0.1
+
+Falta X-Clave
+
+$ curl -H "X-Clave: 1" /privado
+Contenido privado

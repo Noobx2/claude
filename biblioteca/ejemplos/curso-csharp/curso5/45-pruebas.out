@@ -1,0 +1,20 @@
+$ dotnet test --logger "console;verbosity=normal"
+Passed Tienda.Pruebas.CarritoTests.Total_AplicaDiezPorCientoDesdeCien(bruto: "99.99", esperado: "99.99")
+Passed Tienda.Pruebas.CarritoTests.Total_AplicaDiezPorCientoDesdeCien(bruto: "200", esperado: "180") [< 1 ms]
+Passed Tienda.Pruebas.CarritoTests.Total_AplicaDiezPorCientoDesdeCien(bruto: "100", esperado: "90") [< 1 ms]
+Passed Tienda.Pruebas.CarritoTests.Anadir_ConCantidadNoPositiva_LanzaExcepcion
+Passed Tienda.Pruebas.CarritoTests.Total_SumaPrecioPorCantidad [< 1 ms]
+Passed Tienda.Pruebas.CarritoTests.CarritoVacio_TieneTotalCero [< 1 ms]
+Passed Tienda.Pruebas.ServicioPedidosTests.Cobrar_RecibeElTotalConDescuento
+Passed Tienda.Pruebas.ServicioPedidosTests.ConDoblesManuales_PagoAceptado_GuardaPagadoYAvisa
+Passed Compra por debajo del umbral
+Passed Tienda.Pruebas.ServicioPedidosTests.ConNSubstitute_PagoRechazado_NoDiceQueSePago
+Passed Varias líneas que juntas superan el umbral
+Passed Compra en el umbral
+
+$ dotnet test --collect:"XPlat Code Coverage"   # y se lee coverage.cobertura.xml
+Cobertura global de líneas: 92 %  · ramas: 100 %
+  Tienda.Nucleo.Carrito              líneas 85 %
+  Tienda.Nucleo.ResultadoPago        líneas 100 %
+  Tienda.Nucleo.Pedido               líneas 100 %
+  Tienda.Nucleo.ServicioPedidos      líneas 100 %
